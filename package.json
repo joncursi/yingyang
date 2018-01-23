@@ -1,26 +1,415 @@
 {
   "author": "Jon Cursi",
+  "babel": {
+    "env": {
+      "development": {
+        "presets": [
+          "next/babel"
+        ]
+      },
+      "production": {
+        "presets": [
+          "next/babel"
+        ]
+      },
+      "test": {
+        "presets": [
+          [
+            "next/babel",
+            {
+              "preset-env": {
+                "modules": "commonjs"
+              }
+            }
+          ]
+        ]
+      }
+    },
+    "plugins": [
+      "transform-flow-strip-types",
+      [
+        "lodash",
+        {
+          "id": [
+            "lodash",
+            "recompose"
+          ]
+        }
+      ]
+    ]
+  },
   "bugs": {
     "url": "https://github.com/joncursi/yingyang/issues"
   },
-  "dependencies": {
-    "next": "4.2.3",
-    "react": "16.2.0",
-    "react-dom": "16.2.0"
+  "config": {
+    "coverageDir": "coverage"
   },
-  "description": "Wedding website for Michelle and I.",
+  "dependencies": {
+    "express": "4.16.2",
+    "htmlescape": "1.1.1",
+    "next": "4.2.3",
+    "next-routes": "1.2.0",
+    "react": "16.2.0",
+    "react-dom": "16.2.0",
+    "sitemap": "1.13.0",
+    "styled-jsx": "2.2.1"
+  },
+  "description": "💍 Wedding website for Michelle and I",
+  "devDependencies": {
+    "babel-eslint": "8.2.1",
+    "babel-jest": "22.1.0",
+    "babel-plugin-transform-flow-strip-types": "6.22.0",
+    "babili-webpack-plugin": "0.1.2",
+    "cross-env": "5.1.3",
+    "dotenv": "4.0.0",
+    "eslint": "4.16.0",
+    "eslint-config-airbnb": "16.1.0",
+    "eslint-plugin-disable": "1.0.1",
+    "eslint-plugin-filenames": "1.2.0",
+    "eslint-plugin-flowtype": "2.41.0",
+    "eslint-plugin-flowtype-errors": "3.3.7",
+    "eslint-plugin-immutable": "1.0.0",
+    "eslint-plugin-import": "2.8.0",
+    "eslint-plugin-jest": "21.7.0",
+    "eslint-plugin-jsx-a11y": "6.0.3",
+    "eslint-plugin-lodash": "2.5.1",
+    "eslint-plugin-new-with-error": "1.1.0",
+    "eslint-plugin-no-loops": "0.3.0",
+    "eslint-plugin-promise": "3.6.0",
+    "eslint-plugin-react": "7.5.1",
+    "eslint-plugin-security": "1.4.0",
+    "eslint-plugin-you-dont-need-lodash-underscore": "6.3.1",
+    "flow-bin": "0.63.1",
+    "flow-typed": "2.2.3",
+    "husky": "0.14.3",
+    "jest": "22.1.4",
+    "lint-staged": "6.0.1",
+    "npm-run-all": "4.1.2",
+    "rimraf": "2.6.2",
+    "webpack-bundle-analyzer": "2.9.2"
+  },
+  "eslintConfig": {
+    "env": {
+      "jest/globals": true
+    },
+    "extends": [
+      "airbnb",
+      "plugin:flowtype/recommended",
+      "plugin:import/errors",
+      "plugin:import/warnings",
+      "plugin:jest/recommended",
+      "plugin:jsx-a11y/recommended",
+      "plugin:lodash/recommended",
+      "plugin:react/recommended"
+    ],
+    "parser": "babel-eslint",
+    "parserOptions": {
+      "ecmaVersion": 2017
+    },
+    "plugins": [
+      "disable",
+      "filenames",
+      "flowtype",
+      "flowtype-errors",
+      "immutable",
+      "import",
+      "jest",
+      "jsx-a11y",
+      "lodash",
+      "new-with-error",
+      "no-loops",
+      "promise",
+      "react",
+      "security",
+      "you-dont-need-lodash-underscore"
+    ],
+    "rules": {
+      "filenames/match-regex": 2,
+      "filenames/match-exported": [
+        2,
+        [
+          "camel",
+          "pascal"
+        ],
+        "\\.(android|ios)$"
+      ],
+      "flowtype/delimiter-dangle": [
+        2,
+        "always-multiline"
+      ],
+      "flowtype/require-return-type": [
+        2,
+        "always"
+      ],
+      "flowtype/require-valid-file-annotation": [
+        2,
+        "always",
+        {
+          "annotationStyle": "block"
+        }
+      ],
+      "flowtype/require-variable-type": [
+        0
+      ],
+      "flowtype/semi": [
+        2,
+        "always"
+      ],
+      "flowtype/sort-keys": [
+        2,
+        "asc",
+        {
+          "caseSensitive": true,
+          "natural": false
+        }
+      ],
+      "flowtype/type-id-match": [
+        2,
+        "([A-Z][a-z]*)+FlowType$"
+      ],
+      "flowtype-errors/show-errors": 2,
+      "function-paren-newline": 0,
+      "immutable/no-let": 0,
+      "immutable/no-this": 0,
+      "immutable/no-mutation": 2,
+      "import/named": 2,
+      "import/namespace": [
+        2,
+        {
+          "allowComputed": true
+        }
+      ],
+      "import/no-extraneous-dependencies": [
+        2,
+        {
+          "devDependencies": [
+            "**/*.tests.js"
+          ]
+        }
+      ],
+      "import/no-named-as-default": 0,
+      "import/order": [
+        "error",
+        {
+          "groups": [
+            "builtin",
+            "external",
+            "parent",
+            "sibling",
+            "index"
+          ],
+          "newlines-between": "always"
+        }
+      ],
+      "jsx-a11y/href-no-hash": "off",
+      "lodash/prefer-lodash-method": 0,
+      "new-with-error/new-with-error": "error",
+      "no-loops/no-loops": 2,
+      "no-underscore-dangle": [
+        "error",
+        {
+          "allowAfterThis": true
+        }
+      ],
+      "prefer-destructuring": [
+        "off",
+        {
+          "array": true,
+          "object": true
+        },
+        {
+          "enforceForRenamedProperties": true
+        }
+      ],
+      "promise/always-return": "error",
+      "promise/avoid-new": "warn",
+      "promise/catch-or-return": "error",
+      "promise/no-callback-in-promise": "warn",
+      "promise/no-nesting": "warn",
+      "promise/no-promise-in-callback": "warn",
+      "promise/no-return-wrap": "error",
+      "promise/param-names": "error",
+      "promise/prefer-await-to-callbacks": "warn",
+      "promise/prefer-await-to-then": "warn",
+      "react/jsx-filename-extension": [
+        1,
+        {
+          "extensions": [
+            ".js"
+          ]
+        }
+      ],
+      "react/sort-comp": [
+        2,
+        {
+          "order": [
+            "static-methods",
+            "lifecycle",
+            "everything-else",
+            "render"
+          ],
+          "groups": {
+            "static-methods": [
+              "props",
+              "state",
+              "displayName",
+              "contextTypes",
+              "propTypes",
+              "defaultProps",
+              "getInitialProps",
+              "navigationOptions"
+            ],
+            "lifecycle": [
+              "childContextTypes",
+              "constructor",
+              "getDefaultProps",
+              "getInitialState",
+              "getChildContext",
+              "componentWillMount",
+              "componentDidMount",
+              "componentWillReceiveProps",
+              "shouldComponentUpdate",
+              "componentWillUpdate",
+              "componentDidUpdate",
+              "componentWillUnmount"
+            ]
+          }
+        }
+      ],
+      "security/detect-unsafe-regex": "error",
+      "security/detect-non-literal-regexp": "error",
+      "security/detect-non-literal-require": "error",
+      "security/detect-object-injection": "off",
+      "security/detect-possible-timing-attacks": "error",
+      "sort-keys": [
+        "error",
+        "asc",
+        {
+          "caseSensitive": false
+        }
+      ],
+      "you-dont-need-lodash-underscore/all": 1,
+      "you-dont-need-lodash-underscore/any": 1,
+      "you-dont-need-lodash-underscore/assign": 1,
+      "you-dont-need-lodash-underscore/collect": 1,
+      "you-dont-need-lodash-underscore/concat": 1,
+      "you-dont-need-lodash-underscore/contains": 1,
+      "you-dont-need-lodash-underscore/detect": 1,
+      "you-dont-need-lodash-underscore/each": 1,
+      "you-dont-need-lodash-underscore/every": 1,
+      "you-dont-need-lodash-underscore/fill": 1,
+      "you-dont-need-lodash-underscore/filter": 1,
+      "you-dont-need-lodash-underscore/find": 1,
+      "you-dont-need-lodash-underscore/find-index": 1,
+      "you-dont-need-lodash-underscore/foldl": 1,
+      "you-dont-need-lodash-underscore/foldr": 1,
+      "you-dont-need-lodash-underscore/for-each": 1,
+      "you-dont-need-lodash-underscore/includes": 1,
+      "you-dont-need-lodash-underscore/index-of": 1,
+      "you-dont-need-lodash-underscore/inject": 1,
+      "you-dont-need-lodash-underscore/is-nan": 1,
+      "you-dont-need-lodash-underscore/join": 1,
+      "you-dont-need-lodash-underscore/keys": 1,
+      "you-dont-need-lodash-underscore/last-index-of": 1,
+      "you-dont-need-lodash-underscore/map": 1,
+      "you-dont-need-lodash-underscore/reduce": 1,
+      "you-dont-need-lodash-underscore/reduce-right": 1,
+      "you-dont-need-lodash-underscore/repeat": 1,
+      "you-dont-need-lodash-underscore/reverse": 1,
+      "you-dont-need-lodash-underscore/select": 1,
+      "you-dont-need-lodash-underscore/size": 1,
+      "you-dont-need-lodash-underscore/some": 1,
+      "you-dont-need-lodash-underscore/to-lower": 1,
+      "you-dont-need-lodash-underscore/to-upper": 1,
+      "you-dont-need-lodash-underscore/trim": 1
+    },
+    "settings": {
+      "eslint-plugin-disable": {
+        "paths": {
+          "filenames": [
+            "**/*.tests.js"
+          ],
+          "flowtype": [
+            "**/*.tests.js"
+          ]
+        }
+      }
+    }
+  },
+  "eslintIgnore": [
+    "coverage",
+    "fastlane",
+    "flow-typed",
+    "node_modules"
+  ],
   "homepage": "https://github.com/joncursi/yingyang#readme",
+  "jest": {
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "<rootDir>/**/*.js"
+    ],
+    "coverageDirectory": "coverage",
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/.next/",
+      "<rootDir>/fastlane/",
+      "<rootDir>/flow-typed/",
+      "<rootDir>/node_modules/",
+      "<rootDir>/static/"
+    ],
+    "coverageReporters": [
+      "json",
+      "lcov",
+      "text-summary"
+    ],
+    "testMatch": [
+      "<rootDir>/**/?(*.)tests.js"
+    ]
+  },
+  "keywords": [
+    "love",
+    "soulmate",
+    "wedding"
+  ],
   "license": "MIT",
+  "lint-staged": {
+    "*.js": "eslint --quiet"
+  },
   "main": "index.js",
   "name": "yingyang",
+  "now": {
+    "description": "💍 Wedding website for Michelle and I",
+    "engines": {
+      "node": ">=9.2.1"
+    },
+    "name": "yingyang"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/joncursi/yingyang.git"
   },
   "scripts": {
-    "dev": "next",
+    "analyze": "cross-env ANALYZE=1 next build",
     "build": "next build",
-    "start": "next start"
+    "now-build": "echo \"Don't do anything here\"",
+    "codeclimate": "codeclimate analyze",
+    "codeclimate:ci": "docker run --interactive --tty --env CODECLIMATE_CODE=\"$PWD\" --volume \"$PWD\":/code --volume /var/run/docker.sock:/var/run/docker.sock --volume /tmp/cc:/tmp/cc etops/codeclimate analyze",
+    "cover:open": "npm-run-all cover:open:*",
+    "cover:open:types": "opn $npm_package_config_coverageDir/flow-report/index.html",
+    "cover:open:unit": "opn $npm_package_config_coverageDir/lcov-report/index.html",
+    "coverage": "npm-run-all coverage:*",
+    "coverage:types": "flow-coverage-report -i 'components/**/*.js' -i 'constants/**/*.js' -i 'helpers/**/*.js' -i 'layouts/**/*.js' -i 'pages/**/*.js' -i 'providers/**/*.js' -t html -t json -t text -o 'coverage/flow-report'",
+    "dev": "dotenv node server.js",
+    "postinstall": "npm run types:update",
+    "posttest": "npm run coverage",
+    "precommit": "lint-staged",
+    "production:deploy": "bundle exec fastlane web production",
+    "production:deploy:now": "npm run build && now --dotenv=.env.production --debug",
+    "start": "node server.js",
+    "test": "npm-run-all test:*",
+    "test:lint": "eslint --fix .",
+    "test:types": "flow",
+    "test:unit": "NODE_ENV=test jest --silent",
+    "types:update": "[ \"$NODE_ENV\" != production ] && flow-typed install --overwrite"
   },
   "version": "1.0.0"
 }

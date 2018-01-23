@@ -1,0 +1,18 @@
+---
+engines:
+  fixme:
+    enabled: true
+  markdownlint:
+    enabled: true
+  shellcheck:
+    enabled: true
+ratings:
+  paths:
+    - "**.js"
+exclude_paths:
+  - .next
+  - coverage
+  - fastlane
+  - flow-typed
+  - node_modules
+  - static
