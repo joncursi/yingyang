@@ -1,0 +1,26 @@
+{
+  "author": "Jon Cursi",
+  "bugs": {
+    "url": "https://github.com/joncursi/yingyang/issues"
+  },
+  "dependencies": {
+    "next": "4.2.3",
+    "react": "16.2.0",
+    "react-dom": "16.2.0"
+  },
+  "description": "Wedding website for Michelle and I.",
+  "homepage": "https://github.com/joncursi/yingyang#readme",
+  "license": "MIT",
+  "main": "index.js",
+  "name": "yingyang",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joncursi/yingyang.git"
+  },
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "version": "1.0.0"
+}
