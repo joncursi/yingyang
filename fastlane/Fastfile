@@ -57,7 +57,7 @@ after_all do |lane|
     description: ENV["DESCRIPTION"] || "",
     is_prerelease: false,
     name: "Production v#{ENV["VERSION_NUMBER"]}",
-    repository_name: "cheddur/web",
+    repository_name: "joncursi/yingyang",
     tag_name: last_git_tag,
   )
 end
