@@ -402,13 +402,13 @@
     "posttest": "npm run coverage",
     "precommit": "lint-staged",
     "production:deploy": "bundle exec fastlane web production",
-    "production:deploy:now": "npm run build && now --dotenv=.env.production --debug",
+    "production:deploy:now": "now --dotenv=.env.production --debug",
     "start": "node server.js",
     "test": "npm-run-all test:*",
     "test:lint": "eslint --fix .",
     "test:types": "flow",
     "test:unit": "NODE_ENV=test jest --silent",
-    "types:update": "[ \"$NODE_ENV\" != production ] && flow-typed install --overwrite"
+    "types:update": "if [[ ${NODE_ENV} != \"production\" ]]; then flow-typed install --overwrite; fi"
   },
   "version": "0.1.1"
 }
