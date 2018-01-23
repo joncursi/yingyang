@@ -3,7 +3,6 @@
 [include]
 
 [libs]
-flow-typed/custom/next.js
 
 [options]
 emoji=true

@@ -1,9 +1,6 @@
 /* eslint-disable promise/prefer-await-to-then, promise/prefer-await-to-callbacks */
 /* eslint-plugin-disable flowtype */
 
-const path = require('path');
-const { readdirSync, readFileSync, statSync } = require('fs');
-
 const express = require('express');
 const nextjs = require('next');
 const sm = require('sitemap');
@@ -61,9 +58,9 @@ expressApp.get('/robots.txt', (req, res) => {
 });
 
 // Render a next route
-expressApp.get('*', (req, res) => {
-  return nextHandle(req, res);
-});
+expressApp.get('*', (req, res) => (
+  nextHandle(req, res)
+));
 
 nextApp
   .prepare()
