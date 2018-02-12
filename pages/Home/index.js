@@ -115,7 +115,9 @@ class Home extends React.Component<PropsFlowType, StateFlowType> {
 
         <div className="contentContainer">
 
-          <h1>She said yes!</h1>
+          <h2>She said</h2>
+
+          <h1>Yes!</h1>
 
         </div>
 
