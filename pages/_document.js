@@ -127,6 +127,13 @@ class Document extends DocumentImport<PropsFlowType> {
           />
 
           {/* Styles */}
+          <style jsx global>
+            {`
+              * {
+                font-family: 'Raleway', sans-serif;
+              }
+            `}
+          </style>
 
           {/* Fonts */}
           <link
