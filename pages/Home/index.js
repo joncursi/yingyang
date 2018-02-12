@@ -91,7 +91,7 @@ class Home extends React.Component<PropsFlowType, StateFlowType> {
         <Head>
 
           <script
-            src="http://zeptojs.com/zepto.min.js"
+            src="/static/js/zepto.min.js"
           />
 
           <link
