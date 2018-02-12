@@ -14,7 +14,7 @@ export default css`
     justify-content: center;
     left: 0;
     opacity: 0.15;
-    position: absolute;
+    position: fixed;
     right: 0;
     top: 0;
   }
@@ -37,7 +37,7 @@ export default css`
     font-size: 1.5em;
     letter-spacing: -1px;
     margin: 0;
-    opacity: 0.25;
+    opacity: 0.35;
     position: relative;
     text-transform: uppercase;
     top: 15px;
@@ -48,14 +48,29 @@ export default css`
     font-size: 4.5em;
     letter-spacing: -1px;
     margin: 0;
-    opacity: 0.5;
+    opacity: 0.75;
     position: relative;
     text-transform: uppercase;
   }
 
   @media (min-width: ${DIMENSIONS.BREAKPOINTS.SMALL}px) {
     .contentContainer {
-      padding: 3em;
+      padding: 2em;
+    }
+
+    h2 {
+      font-size: 1.75em;
+      top: 17.5px;
+    }
+
+    h1 {
+      font-size: 5.25em;
+    }
+  }
+
+  @media (min-width: ${DIMENSIONS.BREAKPOINTS.MEDIUM}px) {
+    .contentContainer {
+      padding: 2.5em;
     }
 
     h2 {

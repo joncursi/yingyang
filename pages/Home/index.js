@@ -56,7 +56,7 @@ class Home extends React.Component<PropsFlowType, StateFlowType> {
 
     setInterval(() => {
       this._addHeart();
-    }, 1000);
+    }, 500);
   }
 
   _addHeart() {
