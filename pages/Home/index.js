@@ -106,7 +106,7 @@ class Home extends React.Component<PropsFlowType, StateFlowType> {
             itemProp="name"
             lang="en"
           >
-            SHE SAID YES! :)
+            Michelle & Jon
           </title>
 
         </Head>
