@@ -415,5 +415,5 @@
     "test:unit": "NODE_ENV=test jest --silent",
     "types:update": "if [[ ${NODE_ENV} != \"production\" ]]; then flow-typed install --overwrite; fi"
   },
-  "version": "1.0.0"
+  "version": "1.0.1"
 }
