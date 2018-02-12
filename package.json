@@ -53,6 +53,7 @@
     "random-material-color": "1.0.3",
     "react": "16.2.0",
     "react-dom": "16.2.0",
+    "react-ga": "2.4.1",
     "react-native-web": "0.1.16",
     "sitemap": "1.13.0",
     "styled-jsx": "2.2.4",

@@ -6,6 +6,7 @@ import Head from 'next/head';
 import randomMaterialColor from 'random-material-color';
 
 import AnimatedHeart from '../../components/AnimatedHeart';
+import PageLayout from '../../layouts/PageLayout';
 
 import styles from './styles';
 
@@ -83,7 +84,7 @@ class Home extends React.Component<PropsFlowType, StateFlowType> {
     } = this.state;
 
     return (
-      <React.Fragment>
+      <PageLayout>
 
         <style jsx>{styles}</style>
 
@@ -101,13 +102,6 @@ class Home extends React.Component<PropsFlowType, StateFlowType> {
           <script
             src="/static/js/vegas.min.js"
           />
-
-          <title
-            itemProp="name"
-            lang="en"
-          >
-            Michelle & Jon
-          </title>
 
         </Head>
 
@@ -132,7 +126,7 @@ class Home extends React.Component<PropsFlowType, StateFlowType> {
           />
         ))}
 
-      </React.Fragment>
+      </PageLayout>
     );
   }
 }

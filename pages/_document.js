@@ -9,8 +9,14 @@ import htmlescape from 'htmlescape';
 import type { ContextFlowType } from '../types';
 
 // choose which env variables should be available on the client
-const { NODE_ENV } = process.env;
-const ENV = { NODE_ENV };
+const {
+  GOOGLE_ANALYTICS_TRACKING_ID_WEB,
+  NODE_ENV,
+} = process.env;
+const ENV = {
+  GOOGLE_ANALYTICS_TRACKING_ID_WEB,
+  NODE_ENV,
+};
 
 type PropsFlowType = {
   url: string,
