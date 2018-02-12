@@ -89,6 +89,10 @@ class Document extends DocumentImport<PropsFlowType> {
           />
 
           {/* Icons */}
+          <link
+            href="/static/img/favicon.png"
+            rel="shortcut icon"
+          />
 
           {/* Facebook Open Graph */}
           <meta
@@ -123,6 +127,12 @@ class Document extends DocumentImport<PropsFlowType> {
           />
 
           {/* Styles */}
+
+          {/* Fonts */}
+          <link
+            href="https://fonts.googleapis.com/css?family=Raleway:400,900"
+            rel="stylesheet"
+          />
 
         </Head>
 

@@ -52,7 +52,8 @@
     "react": "16.2.0",
     "react-dom": "16.2.0",
     "sitemap": "1.13.0",
-    "styled-jsx": "2.2.4"
+    "styled-jsx": "2.2.4",
+    "vegas": "2.4.0"
   },
   "description": "💍 Wedding website for Michelle and I",
   "devDependencies": {
