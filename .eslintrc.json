@@ -1,13 +1,9 @@
 {
-  "env": {
-    "jest/globals": true
-  },
   "extends": [
     "airbnb",
     "plugin:flowtype/recommended",
     "plugin:import/errors",
     "plugin:import/warnings",
-    "plugin:jest/recommended",
     "plugin:jsx-a11y/recommended",
     "plugin:react/recommended",
     "prettier"
@@ -23,7 +19,6 @@
     "flowtype-errors",
     "immutable",
     "import",
-    "jest",
     "jsx-a11y",
     "new-with-error",
     "no-loops",
