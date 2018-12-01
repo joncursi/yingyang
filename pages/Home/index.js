@@ -3,31 +3,15 @@
 
 import * as React from 'react';
 import Head from 'next/head';
-import randomMaterialColor from 'random-material-color';
 
-import AnimatedHeart from '../../components/AnimatedHeart';
 import PageLayout from '../../layouts/PageLayout';
 
 import styles from './styles';
 
-let startCount = 1;
-
 type PropsFlowType = {};
 
-type StateFlowType = {
-  hearts: Array<{
-    color: string,
-    id: number,
-    right: number,
-  }>,
-};
-
-class Home extends React.Component<PropsFlowType, StateFlowType> {
+class Home extends React.Component<PropsFlowType> {
   props: PropsFlowType;
-
-  state: StateFlowType = {
-    hearts: [],
-  };
 
   componentDidMount() {
     $('body').vegas({ // eslint-disable-line flowtype-errors/show-errors
@@ -54,35 +38,9 @@ class Home extends React.Component<PropsFlowType, StateFlowType> {
       ],
       transitionDuration: 2000,
     });
-
-    setInterval(() => {
-      this._addHeart();
-    }, 500);
-  }
-
-  _addHeart() {
-    this.state.hearts.push({
-      color: randomMaterialColor.getColor(),
-      id: startCount += 1,
-      right: (Math.random() * (150 - 50)) + 50,
-    });
-
-    this.setState(this.state);
-  }
-
-  _removeHeart(id: number) {
-    const index = this.state.hearts.findIndex((heart): boolean => heart.id === id);
-
-    this.state.hearts.splice(index, 1);
-
-    this.setState(this.state);
   }
 
   render(): React.Node {
-    const {
-      hearts,
-    } = this.state;
-
     return (
       <PageLayout>
 
@@ -114,17 +72,6 @@ class Home extends React.Component<PropsFlowType, StateFlowType> {
           <h1>Yes!</h1>
 
         </div>
-
-        {hearts.map((heart): React.Node => (
-          <AnimatedHeart
-            color={heart.color}
-            key={heart.id}
-            onComplete={(): void => this._removeHeart(heart.id)}
-            style={{
-              right: heart.right,
-            }}
-          />
-        ))}
 
       </PageLayout>
     );
