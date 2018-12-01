@@ -10,7 +10,8 @@ fastlane/.env
 fastlane/report.xml
 
 # Next.js
-.next
+app/.next
+app/static/fonts
 
 # NPM
 node_modules

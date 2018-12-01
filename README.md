@@ -1,23 +1,22 @@
-[![CircleCI](https://circleci.com/gh/joncursi/yingyang.svg?style=shield&circle-token=5b7c90e478366b50bf4e1526fe0c656c7ad077f2)](https://circleci.com/gh/joncursi/yingyang)
-
 # YingYang
 
 💍 Wedding website for Michelle and I.
+
+[![CircleCI](https://circleci.com/gh/joncursi/yingyang.svg?style=shield&circle-token=5b7c90e478366b50bf4e1526fe0c656c7ad077f2)](https://circleci.com/gh/joncursi/yingyang)
 
 ## npm Scripts
 
 There are lots of npm scripts at your disposal during local development.
 Here are some of the more important ones:
 
-| Start command             | Description                                            |
-|:------------------------- |:------------------------------------------------------ |
-| npm run analyze           | Shows interactive visualization of the webpack bundle. |
-| npm run dev               | Starts the local dev server.                           |
-| npm run production:deploy | Ship it to production!                                 |
+| Start command   | Description                                            |
+|:--------------- |:------------------------------------------------------ |
+| npm run analyze | Shows interactive visualization of the webpack bundle. |
+| npm run dev     | Starts the local dev server.                           |
 
 ## Getting Started
 
-1. Clone the project
-2. `npm install`
-3. `npm run dev`
-4. Build!
+1. Install node modules: `npm install`
+2. Install [`dotenv-cli`](https://www.npmjs.com/package/dotenv-cli) globally
+3. Configure [environment variables](https://github.com/joncursi/yingyang/blob/master/.env.example)
+4. Start [Next.js](https://github.com/zeit/next.js/) server: `npm run dev`

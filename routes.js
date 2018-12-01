@@ -1,8 +1,11 @@
-/* eslint-plugin-disable flowtype */
+/**
+ * @flow
+ * @prettier
+ */
 
 const nextRoutes = require('next-routes');
 
-const ROUTES = require('./constants/routes');
+const ROUTES = require('./app/constants/routes');
 
 const routes = nextRoutes();
 

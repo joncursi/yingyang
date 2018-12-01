@@ -8,7 +8,7 @@
 update_fastlane
 
 # Enforce a minimum fastlane version
-fastlane_version "2.80.0"
+fastlane_version "2.108.0"
 
 # Enforce a minimum ruby version
 ruby_version "2.4.2"
@@ -29,7 +29,7 @@ def prebuild(lane: lane)
   ).strip!
   # Commit the version bump
   sh(
-    "git commit -am \"(chore) bump webapp to v#{ENV["VERSION_NUMBER"]}\""
+    "git commit -am \"(chore): Bump to v#{ENV["VERSION_NUMBER"]}\""
   )
   # Push the version bump
   push_to_git_remote
@@ -39,7 +39,7 @@ def prebuild(lane: lane)
     merge_commit_filtering: "exclude_merges",
     pretty: "* %s - %an (%h)",
     # Use the last known release of this platform > lane as a reference
-    tag_match_pattern: "web-#{lane}-*"
+    tag_match_pattern: "yingyang-#{lane}-*"
   )
 end
 
@@ -47,7 +47,7 @@ end
 after_all do |lane|
   # Create a new git tag
   add_git_tag(
-    tag: "web-#{lane}-v#{ENV["VERSION_NUMBER"]}"
+    tag: "yingyang-#{lane}-v#{ENV["VERSION_NUMBER"]}"
   )
   # Push the git tag to remote
   push_git_tags
@@ -65,7 +65,7 @@ end
 error do |lane, exception|
 end
 
-platform :web do
+platform :yingyang do
   before_all do |lane|
     # Run the generic prebuild steps
     prebuild(

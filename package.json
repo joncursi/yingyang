@@ -1,73 +1,41 @@
 {
-  "author": "Jon Cursi",
-  "babel": {
-    "env": {
-      "development": {
-        "presets": [
-          "next/babel"
-        ]
-      },
-      "production": {
-        "presets": [
-          "next/babel"
-        ]
-      },
-      "test": {
-        "presets": [
-          [
-            "next/babel",
-            {
-              "preset-env": {
-                "modules": "commonjs"
-              }
-            }
-          ]
-        ]
-      }
-    },
-    "plugins": [
-      "transform-flow-strip-types",
-      [
-        "lodash",
-        {
-          "id": [
-            "lodash"
-          ]
-        }
-      ]
-    ]
-  },
+  "author": "Jon Cursi <joncursi@gmail.com>",
   "bugs": {
+    "email": "joncursi@gmail.com",
     "url": "https://github.com/joncursi/yingyang/issues"
   },
   "config": {
     "coverageDir": "coverage"
   },
+  "contributors": [
+    "Jon Cursi <joncursi@gmail.com>"
+  ],
   "dependencies": {
-    "babel-plugin-lodash": "3.3.4",
+    "@zeit/next-css": "1.0.1",
     "express": "4.16.4",
     "htmlescape": "1.1.1",
     "material-colors": "1.2.6",
     "next": "7.0.2",
     "next-routes": "1.4.2",
-    "random-material-color": "1.0.3",
     "react": "16.6.3",
+    "react-art": "16.6.3",
     "react-dom": "16.6.3",
     "react-ga": "2.5.6",
     "sitemap": "2.1.0",
-    "styled-jsx": "3.1.2",
-    "vegas": "2.4.4"
+    "styled-jsx": "3.1.2"
   },
   "description": "💍 Wedding website for Michelle and I",
   "devDependencies": {
+    "@babel/preset-flow": "7.0.0",
+    "@commitlint/cli": "7.2.1",
+    "@commitlint/config-conventional": "7.1.2",
     "babel-eslint": "10.0.1",
     "babel-jest": "23.6.0",
-    "babel-plugin-transform-flow-strip-types": "6.22.0",
-    "babili-webpack-plugin": "0.1.2",
     "cross-env": "5.2.0",
     "dotenv": "6.1.0",
     "eslint": "5.9.0",
     "eslint-config-airbnb": "17.1.0",
+    "eslint-config-prettier": "3.3.0",
     "eslint-plugin-disable": "1.0.3",
     "eslint-plugin-filenames": "1.3.2",
     "eslint-plugin-flowtype": "3.2.0",
@@ -76,241 +44,32 @@
     "eslint-plugin-import": "2.14.0",
     "eslint-plugin-jest": "22.1.0",
     "eslint-plugin-jsx-a11y": "6.1.2",
-    "eslint-plugin-lodash": "4.0.0",
     "eslint-plugin-new-with-error": "2.0.0",
     "eslint-plugin-no-loops": "0.3.0",
+    "eslint-plugin-prettier": "3.0.0",
     "eslint-plugin-promise": "4.0.1",
     "eslint-plugin-react": "7.11.1",
     "eslint-plugin-security": "1.4.0",
+    "file-loader": "2.0.0",
     "flow-bin": "0.87.0",
     "flow-typed": "2.5.1",
     "husky": "1.2.0",
     "jest": "23.6.0",
     "lint-staged": "8.1.0",
+    "markdownlint-cli": "0.13.0",
     "npm-run-all": "4.1.5",
+    "prettier": "1.15.3",
     "rimraf": "2.6.2",
+    "url-loader": "1.1.2",
     "webpack-bundle-analyzer": "3.0.3"
   },
-  "eslintConfig": {
-    "env": {
-      "jest/globals": true
-    },
-    "extends": [
-      "airbnb",
-      "plugin:flowtype/recommended",
-      "plugin:import/errors",
-      "plugin:import/warnings",
-      "plugin:jest/recommended",
-      "plugin:jsx-a11y/recommended",
-      "plugin:lodash/recommended",
-      "plugin:react/recommended"
-    ],
-    "parser": "babel-eslint",
-    "parserOptions": {
-      "ecmaVersion": 2017
-    },
-    "plugins": [
-      "disable",
-      "filenames",
-      "flowtype",
-      "flowtype-errors",
-      "immutable",
-      "import",
-      "jest",
-      "jsx-a11y",
-      "lodash",
-      "new-with-error",
-      "no-loops",
-      "promise",
-      "react",
-      "security"
-    ],
-    "rules": {
-      "filenames/match-regex": 2,
-      "filenames/match-exported": [
-        2,
-        [
-          "camel",
-          "pascal"
-        ],
-        "\\.(android|ios)$"
-      ],
-      "flowtype/delimiter-dangle": [
-        2,
-        "always-multiline"
-      ],
-      "flowtype/require-return-type": [
-        2,
-        "always"
-      ],
-      "flowtype/require-valid-file-annotation": [
-        2,
-        "always",
-        {
-          "annotationStyle": "block"
-        }
-      ],
-      "flowtype/require-variable-type": [
-        0
-      ],
-      "flowtype/semi": [
-        2,
-        "always"
-      ],
-      "flowtype/sort-keys": [
-        2,
-        "asc",
-        {
-          "caseSensitive": true,
-          "natural": false
-        }
-      ],
-      "flowtype/type-id-match": [
-        2,
-        "([A-Z][a-z]*)+FlowType$"
-      ],
-      "flowtype-errors/show-errors": 2,
-      "function-paren-newline": 0,
-      "immutable/no-let": 0,
-      "immutable/no-this": 0,
-      "immutable/no-mutation": 2,
-      "import/named": 2,
-      "import/namespace": [
-        2,
-        {
-          "allowComputed": true
-        }
-      ],
-      "import/no-extraneous-dependencies": [
-        2,
-        {
-          "devDependencies": [
-            "**/*.tests.js"
-          ]
-        }
-      ],
-      "import/no-named-as-default": 0,
-      "import/order": [
-        "error",
-        {
-          "groups": [
-            "builtin",
-            "external",
-            "parent",
-            "sibling",
-            "index"
-          ],
-          "newlines-between": "always"
-        }
-      ],
-      "jsx-a11y/href-no-hash": "off",
-      "lodash/prefer-lodash-method": 0,
-      "new-with-error/new-with-error": "error",
-      "no-loops/no-loops": 2,
-      "no-underscore-dangle": [
-        "error",
-        {
-          "allowAfterThis": true
-        }
-      ],
-      "prefer-destructuring": [
-        "off",
-        {
-          "array": true,
-          "object": true
-        },
-        {
-          "enforceForRenamedProperties": true
-        }
-      ],
-      "promise/always-return": "error",
-      "promise/avoid-new": "warn",
-      "promise/catch-or-return": "error",
-      "promise/no-callback-in-promise": "warn",
-      "promise/no-nesting": "warn",
-      "promise/no-promise-in-callback": "warn",
-      "promise/no-return-wrap": "error",
-      "promise/param-names": "error",
-      "promise/prefer-await-to-callbacks": "warn",
-      "promise/prefer-await-to-then": "warn",
-      "react/jsx-filename-extension": [
-        1,
-        {
-          "extensions": [
-            ".js"
-          ]
-        }
-      ],
-      "react/sort-comp": [
-        2,
-        {
-          "order": [
-            "static-methods",
-            "lifecycle",
-            "everything-else",
-            "render"
-          ],
-          "groups": {
-            "static-methods": [
-              "props",
-              "state",
-              "displayName",
-              "contextTypes",
-              "propTypes",
-              "defaultProps",
-              "getInitialProps",
-              "navigationOptions"
-            ],
-            "lifecycle": [
-              "childContextTypes",
-              "constructor",
-              "getDefaultProps",
-              "getInitialState",
-              "getChildContext",
-              "componentWillMount",
-              "componentDidMount",
-              "componentWillReceiveProps",
-              "shouldComponentUpdate",
-              "componentWillUpdate",
-              "componentDidUpdate",
-              "componentWillUnmount"
-            ]
-          }
-        }
-      ],
-      "security/detect-unsafe-regex": "error",
-      "security/detect-non-literal-regexp": "error",
-      "security/detect-non-literal-require": "error",
-      "security/detect-object-injection": "off",
-      "security/detect-possible-timing-attacks": "error",
-      "sort-keys": [
-        "error",
-        "asc",
-        {
-          "caseSensitive": false
-        }
-      ]
-    },
-    "settings": {
-      "eslint-plugin-disable": {
-        "paths": {
-          "filenames": [
-            "**/*.tests.js"
-          ],
-          "flowtype": [
-            "**/*.tests.js"
-          ]
-        }
-      }
+  "homepage": "https://github.com/joncursi/yingyang#readme",
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
     }
   },
-  "eslintIgnore": [
-    "coverage",
-    "fastlane",
-    "flow-typed",
-    "node_modules"
-  ],
-  "homepage": "https://github.com/joncursi/yingyang#readme",
   "jest": {
     "collectCoverage": true,
     "collectCoverageFrom": [
@@ -318,11 +77,11 @@
     ],
     "coverageDirectory": "coverage",
     "coveragePathIgnorePatterns": [
-      "<rootDir>/.next/",
       "<rootDir>/fastlane/",
       "<rootDir>/flow-typed/",
-      "<rootDir>/node_modules/",
-      "<rootDir>/static/"
+      "<rootDir>/app/.next/",
+      "<rootDir>/app/static/",
+      "<rootDir>/node_modules/"
     ],
     "coverageReporters": [
       "json",
@@ -336,47 +95,57 @@
   "keywords": [
     "love",
     "soulmate",
-    "wedding"
+    "wedding",
+    "yingyang"
   ],
   "license": "MIT",
   "lint-staged": {
-    "*.js": "eslint --quiet"
+    "*.{js,json,md}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.js": "eslint --rule 'flowtype-errors/show-errors: 0'",
+    "*.md": "markdownlint --config node_modules/@cheddur/eslint-config/markdownlint.config.json"
   },
-  "main": "index.js",
   "name": "yingyang",
   "now": {
-    "description": "💍 Wedding website for Michelle and I",
     "engines": {
       "node": ">=9.2.1"
     },
-    "name": "yingyang"
+    "files": [
+      "./app/.next",
+      "./app/constants/env.js",
+      "./app/constants/routes.js",
+      "./app/static",
+      "./package.json",
+      "./routes.js",
+      "./server.js"
+    ],
+    "name": "YingYang"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/joncursi/yingyang.git"
   },
   "scripts": {
-    "analyze": "cross-env ANALYZE=1 next build",
-    "build": "next build",
-    "codeclimate": "codeclimate analyze",
-    "codeclimate:ci": "docker run --interactive --tty --env CODECLIMATE_CODE=\"$PWD\" --volume \"$PWD\":/code --volume /var/run/docker.sock:/var/run/docker.sock --volume /tmp/cc:/tmp/cc etops/codeclimate analyze",
+    "analyze": "cross-env ANALYZE=1 next build app",
+    "build": "NODE_OPTIONS=--max_old_space_size=8192 next build app",
+    "now-build": "echo \"Don't do anything here\"",
     "cover:open": "npm-run-all cover:open:*",
     "cover:open:types": "opn $npm_package_config_coverageDir/flow-report/index.html",
     "cover:open:unit": "opn $npm_package_config_coverageDir/lcov-report/index.html",
     "coverage": "npm-run-all coverage:*",
-    "coverage:types": "flow-coverage-report -i 'components/**/*.js' -i 'constants/**/*.js' -i 'helpers/**/*.js' -i 'layouts/**/*.js' -i 'pages/**/*.js' -i 'providers/**/*.js' -t html -t json -t text -o 'coverage/flow-report'",
+    "coverage:types": "flow-coverage-report -i 'components/**/*.js' -i 'constants/**/*.js' -i 'helpers/**/*.js' -i 'layouts/**/*.js' -i 'pages/**/*.js' -i 'reducers/**/*.js' -i 'scripts/**/*.js' -t html -t json -t text -o 'coverage/flow-report'",
     "dev": "dotenv node server.js",
-    "postinstall": "npm run types:update",
-    "posttest": "npm run coverage",
-    "precommit": "lint-staged",
-    "production:deploy": "bundle exec fastlane web production",
-    "production:deploy:now": "now --dotenv=.env.production --debug",
+    "postinstall": "npm run update:types",
+    "production:deploy": "bundle exec fastlane yingyang production",
+    "production:deploy:now": "npm run build && now --dotenv=.env.production --debug",
     "start": "node server.js",
-    "test": "npm-run-all test:*",
-    "test:lint": "eslint --fix .",
+    "test": "npm run test:lint",
+    "test:lint": "eslint --rule 'flowtype-errors/show-errors: 0' --fix .",
     "test:types": "flow",
     "test:unit": "NODE_ENV=test jest --silent",
-    "types:update": "if [[ ${NODE_ENV} != \"production\" ]]; then flow-typed install --overwrite; fi"
+    "update:types": "[ \"$NODE_ENV\" = production ] || flow-typed install --overwrite"
   },
   "version": "1.0.3"
 }
