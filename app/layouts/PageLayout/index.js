@@ -28,6 +28,7 @@ const META_KEYWORDS = [
 ];
 
 type PropsFlowType = {
+  backgroundImageUrl: string,
   children: React.Node,
 };
 
@@ -46,7 +47,7 @@ class PageLayout extends React.Component<PropsFlowType> {
   }
 
   render(): React.Node {
-    const { children } = this.props;
+    const { backgroundImageUrl, children } = this.props;
 
     const imagePath = '/static/img/og_image.jpg';
     const title = 'Michelle & Jon | Wedding Website';
@@ -74,7 +75,16 @@ class PageLayout extends React.Component<PropsFlowType> {
           <meta content={title} property="twitter:text:title" />
         </Head>
 
-        <main>{children}</main>
+        <div className="containerLeft">
+          <main>{children}</main>
+        </div>
+
+        <div
+          className="containerRight"
+          style={{
+            backgroundImage: `url(${backgroundImageUrl})`,
+          }}
+        />
       </div>
     );
   }

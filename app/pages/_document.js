@@ -111,7 +111,8 @@ class Document extends DocumentImport<PropsFlowType> {
               h6,
               p,
               span,
-              div {
+              div,
+              a {
                 color: ${materialColors.white};
               }
             `}
