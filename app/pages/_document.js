@@ -9,6 +9,7 @@ import * as React from 'react';
 import DocumentImport, { Head, Main, NextScript } from 'next/document';
 import flush from 'styled-jsx/server';
 import htmlescape from 'htmlescape';
+import materialColors from 'material-colors';
 
 import type { ContextFlowType } from '../types';
 
@@ -96,6 +97,7 @@ class Document extends DocumentImport<PropsFlowType> {
           <meta content={url} name="twitter:url" />
 
           {/* Styles */}
+          <link rel="stylesheet" href="/static/css/normalize.css" />
           <style jsx global>
             {`
               * {
@@ -111,7 +113,7 @@ class Document extends DocumentImport<PropsFlowType> {
           />
         </Head>
 
-        <body>
+        <body bgColor={materialColors.brown['200']}>
           <Main />
 
           {/* eslint-disable react/no-danger */}
