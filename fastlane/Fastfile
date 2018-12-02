@@ -29,7 +29,7 @@ def prebuild(lane: lane)
   ).strip!
   # Commit the version bump
   sh(
-    "git commit -am \"(chore): Bump to v#{ENV["VERSION_NUMBER"]}\""
+    "git commit -am \"chore(fastlane): Bump to v#{ENV["VERSION_NUMBER"]}\""
   )
   # Push the version bump
   push_to_git_remote
