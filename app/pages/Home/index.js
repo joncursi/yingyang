@@ -15,9 +15,17 @@ const Home = (): React.Node => (
 
     <PageLayout>
       <div className="contentContainer">
-        <h1>Michelle & Jonathan</h1>
+        <h1>
+          Michelle
+          <br />
+          - & -
+          <br />
+          Jonathan
+        </h1>
 
         <h2>September 29, 2019</h2>
+
+        <h3>Rose Valley, PA</h3>
       </div>
     </PageLayout>
   </React.Fragment>

@@ -101,30 +101,25 @@ class Document extends DocumentImport<PropsFlowType> {
           <style jsx global>
             {`
               * {
-                font-family: 'Raleway', sans-serif;
+                font-family: 'Montserrat', sans-serif;
               }
-              @font-face {
-                font-family: 'Melville';
-                src: url('/static/fonts/melville/Melville-Regular.eot');
-                src: url('/static/fonts/melville/Melville-Regular.eot?#iefix')
-                    format('embedded-opentype'),
-                  url('/static/fonts/melville/Melville-Regular.woff2')
-                    format('woff2'),
-                  url('/static/fonts/melville/Melville-Regular.woff')
-                    format('woff'),
-                  url('/static/fonts/melville/Melville-Regular.ttf')
-                    format('truetype'),
-                  url('/static/fonts/melville/Melville-Regular.svg#Melville-Regular')
-                    format('svg');
-                font-weight: normal;
-                font-style: normal;
+              h1,
+              h2,
+              h3,
+              h4,
+              h5,
+              h6,
+              p,
+              span,
+              div {
+                color: ${materialColors.white};
               }
             `}
           </style>
 
           {/* Fonts */}
           <link
-            href="https://fonts.googleapis.com/css?family=Raleway:400,900"
+            href="https://fonts.googleapis.com/css?family=Great+Vibes|Montserrat"
             rel="stylesheet"
           />
         </Head>
