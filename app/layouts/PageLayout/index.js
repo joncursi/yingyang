@@ -47,7 +47,7 @@ class PageLayout extends React.Component<PropsFlowType> {
   render(): React.Node {
     const { backgroundImageUrl, children } = this.props;
 
-    const imagePath = '/static/img/og_image.jpg';
+    const imagePath = '/static/img/splash-1.jpg';
     const title = 'Michelle & Jonathan | Sept. 29, 2019';
 
     return (
