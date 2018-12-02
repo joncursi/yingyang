@@ -22,9 +22,6 @@ export default css`
   h3 {
     font-size: ${2 / 3}em;
   }
-  hr {
-    margin: ${DIMS.LAYOUT_PADDING * 2}px 0;
-  }
 
   @media (min-width: ${DIMS.BREAKPOINTS.SMALL}px) {
     h1 {

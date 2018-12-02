@@ -6,7 +6,10 @@
 import * as React from 'react';
 
 import PageLayout from '../../layouts/PageLayout';
+import TextDivider from '../../components/TextDivider';
 
+import RenderColors from './RenderColors';
+import RenderParty from './RenderParty';
 import styles from './styles';
 
 const Home = (): React.Node => (
@@ -23,19 +26,31 @@ const Home = (): React.Node => (
           Jonathan
         </h1>
 
-        <hr />
+        <TextDivider text="When" />
 
         <h2>September 29, 2019</h2>
 
-        <hr />
+        <TextDivider text="Where" />
 
-        <h3>
-          <a href="https://theoldmillrosevalley.com/">The Old Mill</a>
-        </h3>
+        <h2>
+          <a
+            href="https://theoldmillrosevalley.com/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            The Old Mill
+          </a>
+        </h2>
 
         <h3>9 Old Mill Ln, Rose Valley, PA 19063, USA</h3>
 
-        <hr />
+        <TextDivider text="Our Colors" />
+
+        <RenderColors />
+
+        <TextDivider text="Wedding Party" />
+
+        <RenderParty />
       </div>
     </PageLayout>
   </React.Fragment>

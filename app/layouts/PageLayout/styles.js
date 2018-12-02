@@ -7,22 +7,20 @@ import css from 'styled-jsx/css';
 
 export default css`
   .container {
-    align-items: center;
+    bottom: 0;
     display: flex;
-    flex: 1;
     flex-direction: row;
-    flex-shrink: 0;
-    min-height: 100vh;
-    overflow: hidden;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
   }
   .containerLeft {
-    align-items: center;
     background-image: url('/static/img/chalkboard.jpg');
     background-repeat: repeat;
     display: flex;
     flex: 1;
-    height: -webkit-fill-available;
-    justify-content: center;
+    overflow: scroll;
   }
   main {
     width: 100%;
@@ -31,6 +29,5 @@ export default css`
     background-size: cover;
     display: flex;
     flex: 3;
-    height: -webkit-fill-available;
   }
 `;
