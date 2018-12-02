@@ -10,6 +10,8 @@ import Head from 'next/head';
 
 import { initGA, logPageView } from '../../helpers/analytics';
 
+import styles from './styles';
+
 const META_DESCRIPTION = 'On February 11th, she said YES! #cakefightproposal';
 
 const META_KEYWORDS = [
@@ -50,7 +52,9 @@ class PageLayout extends React.Component<PropsFlowType> {
     const title = 'Michelle & Jon | Wedding Website';
 
     return (
-      <React.Fragment>
+      <div className="container">
+        <style jsx>{styles}</style>
+
         <Head>
           {/* General */}
           <meta content={META_DESCRIPTION} name="description" />
@@ -71,7 +75,7 @@ class PageLayout extends React.Component<PropsFlowType> {
         </Head>
 
         <main>{children}</main>
-      </React.Fragment>
+      </div>
     );
   }
 }

@@ -103,6 +103,22 @@ class Document extends DocumentImport<PropsFlowType> {
               * {
                 font-family: 'Raleway', sans-serif;
               }
+              @font-face {
+                font-family: 'Melville';
+                src: url('/static/fonts/melville/Melville-Regular.eot');
+                src: url('/static/fonts/melville/Melville-Regular.eot?#iefix')
+                    format('embedded-opentype'),
+                  url('/static/fonts/melville/Melville-Regular.woff2')
+                    format('woff2'),
+                  url('/static/fonts/melville/Melville-Regular.woff')
+                    format('woff'),
+                  url('/static/fonts/melville/Melville-Regular.ttf')
+                    format('truetype'),
+                  url('/static/fonts/melville/Melville-Regular.svg#Melville-Regular')
+                    format('svg');
+                font-weight: normal;
+                font-style: normal;
+              }
             `}
           </style>
 
@@ -113,19 +129,13 @@ class Document extends DocumentImport<PropsFlowType> {
           />
         </Head>
 
-        <body bgColor={materialColors.brown['200']}>
+        <body bgColor={materialColors.black}>
           <Main />
 
           {/* eslint-disable react/no-danger */}
           <script
             dangerouslySetInnerHTML={{
               __html: `__ENV__ = ${htmlescape(ENV)}`,
-            }}
-          />
-          <script
-            dangerouslySetInnerHTML={{
-              __html:
-                "if ('serviceWorker' in navigator) navigator.serviceWorker.register('/service-worker.js')",
             }}
           />
           {/* eslint-enable react/no-danger */}
