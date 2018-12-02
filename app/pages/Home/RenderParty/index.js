@@ -11,75 +11,75 @@ const RenderParty = (): React.Node => {
   const people = [
     {
       description:
-        'Kayla has been my best friend since high school! She’s lived overseas for the past 7 years and we’re still going strong!',
+        'Enter description here! Enter description here! Enter description here! Enter description here! Enter description here!',
       imageSrc: '/static/img/kayla.jpeg',
       name: 'Kayla Pillar',
       title: 'Matron of Honor',
     },
     {
       description:
-        'Kayla has been my best friend since high school! She’s lived overseas for the past 7 years and we’re still going strong!',
+        'Enter description here! Enter description here! Enter description here! Enter description here! Enter description here!',
       imageSrc: '/static/img/kayla.jpeg',
       name: 'Nicole Danley',
     },
     {
       description:
-        'Kayla has been my best friend since high school! She’s lived overseas for the past 7 years and we’re still going strong!',
+        'Enter description here! Enter description here! Enter description here! Enter description here! Enter description here!',
       imageSrc: '/static/img/kayla.jpeg',
       name: 'Kristina Wieckowski',
     },
     {
       description:
-        'Kayla has been my best friend since high school! She’s lived overseas for the past 7 years and we’re still going strong!',
+        'Enter description here! Enter description here! Enter description here! Enter description here! Enter description here!',
       imageSrc: '/static/img/kayla.jpeg',
       name: 'Jessica Dering',
     },
     {
       description:
-        'Kayla has been my best friend since high school! She’s lived overseas for the past 7 years and we’re still going strong!',
+        'Enter description here! Enter description here! Enter description here! Enter description here! Enter description here!',
       imageSrc: '/static/img/kayla.jpeg',
       name: 'Emily Housel',
     },
     {
       description:
-        'Kayla has been my best friend since high school! She’s lived overseas for the past 7 years and we’re still going strong!',
+        'Enter description here! Enter description here! Enter description here! Enter description here! Enter description here!',
       imageSrc: '/static/img/kayla.jpeg',
       name: 'Noelle Vochansky',
     },
     {
       description:
-        'Kayla has been my best friend since high school! She’s lived overseas for the past 7 years and we’re still going strong!',
+        'Enter description here! Enter description here! Enter description here! Enter description here! Enter description here!',
       imageSrc: '/static/img/kayla.jpeg',
       name: 'Leonard "Lee" Cursi',
       title: 'Best Man',
     },
     {
       description:
-        'Kayla has been my best friend since high school! She’s lived overseas for the past 7 years and we’re still going strong!',
+        'Enter description here! Enter description here! Enter description here! Enter description here! Enter description here!',
       imageSrc: '/static/img/kayla.jpeg',
       name: 'David Danley',
     },
     {
       description:
-        'Kayla has been my best friend since high school! She’s lived overseas for the past 7 years and we’re still going strong!',
+        'Enter description here! Enter description here! Enter description here! Enter description here! Enter description here!',
       imageSrc: '/static/img/kayla.jpeg',
       name: 'Brian Wieckowski',
     },
     {
       description:
-        'Kayla has been my best friend since high school! She’s lived overseas for the past 7 years and we’re still going strong!',
+        'Enter description here! Enter description here! Enter description here! Enter description here! Enter description here!',
       imageSrc: '/static/img/kayla.jpeg',
       name: 'Kevin Lombarski',
     },
     {
       description:
-        'Kayla has been my best friend since high school! She’s lived overseas for the past 7 years and we’re still going strong!',
+        'Enter description here! Enter description here! Enter description here! Enter description here! Enter description here!',
       imageSrc: '/static/img/kayla.jpeg',
       name: 'Frank Pillar',
     },
     {
       description:
-        'Kayla has been my best friend since high school! She’s lived overseas for the past 7 years and we’re still going strong!',
+        'Enter description here! Enter description here! Enter description here! Enter description here! Enter description here!',
       imageSrc: '/static/img/kayla.jpeg',
       name: 'Christopher DeOliveira',
     },

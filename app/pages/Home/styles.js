@@ -14,36 +14,36 @@ export default css`
   }
   h1 {
     font-family: 'Great Vibes', cursive;
-    font-size: 2em;
+    font-size: 3em;
   }
   h2 {
-    font-size: ${2 / 3}em;
+    font-size: ${4 / 3}em;
   }
   h3 {
-    font-size: ${2 / 3}em;
+    font-size: ${3 / 3}em;
   }
 
   @media (min-width: ${DIMS.BREAKPOINTS.SMALL}px) {
     h1 {
-      font-size: 3em;
+      font-size: 5em;
     }
     h2 {
-      font-size: ${3 / 3}em;
+      font-size: ${3 / 2}em;
     }
     h3 {
-      font-size: ${3 / 4}em;
+      font-size: ${3 / 3}em;
     }
   }
 
   @media (min-width: ${DIMS.BREAKPOINTS.MEDIUM}px) {
     h1 {
-      font-size: 4em;
+      font-size: 6em;
     }
     h2 {
       font-size: ${4 / 3}em;
     }
     h3 {
-      font-size: ${4 / 5}em;
+      font-size: ${4 / 4}em;
     }
   }
 

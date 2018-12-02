@@ -12,19 +12,17 @@ import { initGA, logPageView } from '../../helpers/analytics';
 
 import styles from './styles';
 
-const META_DESCRIPTION = 'On February 11th, she said YES! #cakefightproposal';
+const META_DESCRIPTION =
+  "We're getting married on Sept. 29, 2019! Click here for wedding details and information.";
 
 const META_KEYWORDS = [
   'michelle lombarski',
   'jon cursi',
-  'proposal',
-  'engagement',
   'wedding',
-  'marraige',
+  'marriage',
   'love',
   'ying',
   'yang',
-  'she said yes',
 ];
 
 type PropsFlowType = {
@@ -50,7 +48,7 @@ class PageLayout extends React.Component<PropsFlowType> {
     const { backgroundImageUrl, children } = this.props;
 
     const imagePath = '/static/img/og_image.jpg';
-    const title = 'Michelle & Jon | Wedding Website';
+    const title = 'Michelle & Jonathan | Sept. 29, 2019';
 
     return (
       <div className="container">
@@ -79,12 +77,9 @@ class PageLayout extends React.Component<PropsFlowType> {
           <main>{children}</main>
         </div>
 
-        <div
-          className="containerRight"
-          style={{
-            backgroundImage: `url(${backgroundImageUrl})`,
-          }}
-        />
+        <div className="containerRight">
+          <img alt="Michelle & Jonathan" src={backgroundImageUrl} />
+        </div>
       </div>
     );
   }

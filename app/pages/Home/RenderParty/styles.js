@@ -30,22 +30,22 @@ export default css`
     justify-content: space-between;
   }
   h2 {
-    font-size: ${2 / 1}em;
+    font-size: ${4 / 3}em;
     margin: 0;
+  }
+  h3 {
+    font-size: ${3 / 3}em;
+    margin-top: ${DIMS.LAYOUT_PADDING}px;
+    margin-bottom: 0;
   }
   .title {
     background-color: ${materialColors.white};
     border-radius: 3px;
     color: ${materialColors.black};
     display: table;
-    font-size: 0.85em;
+    font-size: ${3 / 4}em;
     padding: ${DIMS.LAYOUT_PADDING / 2}px;
     text-align: center;
-  }
-  h3 {
-    font-size: ${2 / 3}em;
-    margin-top: ${DIMS.LAYOUT_PADDING}px;
-    margin-bottom: 0;
   }
 
   @media (min-width: ${DIMS.BREAKPOINTS.SMALL}px) {
@@ -53,7 +53,10 @@ export default css`
       font-size: ${3 / 2}em;
     }
     h3 {
-      font-size: ${3 / 4}em;
+      font-size: ${3 / 3}em;
+    }
+    .title {
+      font-size: ${4 / 5}em;
     }
   }
 
@@ -62,7 +65,10 @@ export default css`
       font-size: ${4 / 3}em;
     }
     h3 {
-      font-size: ${4 / 5}em;
+      font-size: ${4 / 4}em;
+    }
+    .title {
+      font-size: ${5 / 6}em;
     }
   }
 
