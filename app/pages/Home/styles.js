@@ -22,6 +22,14 @@ export default css`
   h3 {
     font-size: ${3 / 3}em;
   }
+  .footerDivider {
+    border-color: rgba(255, 255, 255, 0.15);
+  }
+  h6 {
+    margin: ${DIMS.LAYOUT_PADDING}px ${DIMS.LAYOUT_PADDING}px 0
+      ${DIMS.LAYOUT_PADDING}px;
+    opacity: 0.5;
+  }
 
   @media (min-width: ${DIMS.BREAKPOINTS.SMALL}px) {
     h1 {

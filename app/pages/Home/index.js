@@ -140,6 +140,16 @@ const Home = (): React.Node => {
               },
             ]}
           />
+
+          <hr className="footerDivider" />
+
+          <h6>
+            Made with
+            <span aria-label="love" role="img">
+              {' ❤️ '}
+            </span>
+            by Michelle & Jon
+          </h6>
         </div>
       </PageLayout>
     </React.Fragment>
