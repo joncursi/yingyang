@@ -45,7 +45,7 @@ const Home = (): React.Node => {
 
           <h3>
             {`${Math.abs(
-              moment().diff(new Date('09/29/2019'), 'days'),
+              moment().diff(new Date('09/29/2019'), 'days') - 1,
             )} days to go!`}
           </h3>
 

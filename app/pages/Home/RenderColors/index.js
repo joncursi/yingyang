@@ -5,26 +5,24 @@
 
 import * as React from 'react';
 
+import COLORS from '../../../constants/colors';
+
 import styles from './styles';
 
-const RenderColors = (): React.Node => {
-  const colors = ['red', 'orange', 'yellow'];
+const RenderColors = (): React.Node => (
+  <div className="container">
+    <style jsx>{styles}</style>
 
-  return (
-    <div className="container">
-      <style jsx>{styles}</style>
-
-      {colors.map(
-        (color): React.Node => (
-          <div
-            className="color"
-            key={color}
-            style={{ backgroundColor: color }}
-          />
-        ),
-      )}
-    </div>
-  );
-};
+    {Object.keys(COLORS).map(
+      (color): React.Node => (
+        <div
+          className="color"
+          key={color}
+          style={{ backgroundColor: COLORS[color] }}
+        />
+      ),
+    )}
+  </div>
+);
 
 export default RenderColors;
