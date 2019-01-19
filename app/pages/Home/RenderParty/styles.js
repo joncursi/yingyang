@@ -16,9 +16,9 @@ export default css`
   }
   img {
     border: 3px solid ${materialColors.white};
-    height: 50px;
+    height: 60px;
     border-radius: 50%;
-    width: 50px;
+    width: 60px;
   }
   .details {
     align-items: center;

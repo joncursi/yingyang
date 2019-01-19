@@ -10,53 +10,53 @@ import styles from './styles';
 const RenderParty = (): React.Node => {
   const people = [
     {
-      imageSrc: '/static/img/kayla.jpeg',
+      imageSrc: '/static/img/headshots/kayla.jpg',
       name: 'Kayla Pillar',
       title: 'Matron of Honor',
     },
     {
-      imageSrc: '/static/img/kayla.jpeg',
+      imageSrc: '/static/img/headshots/nikki.jpg',
       name: 'Nicole Danley',
     },
     {
-      imageSrc: '/static/img/kayla.jpeg',
+      imageSrc: '/static/img/headshots/kris.jpg',
       name: 'Kristina Wieckowski',
     },
     {
-      imageSrc: '/static/img/kayla.jpeg',
+      imageSrc: '/static/img/headshots/jess.jpg',
       name: 'Jessica Dering',
     },
     {
-      imageSrc: '/static/img/kayla.jpeg',
+      imageSrc: '/static/img/headshots/emily.jpg',
       name: 'Emily Housel',
     },
     {
-      imageSrc: '/static/img/kayla.jpeg',
+      imageSrc: '/static/img/headshots/noelle.jpg',
       name: 'Noelle Vochansky',
     },
     {
-      imageSrc: '/static/img/kayla.jpeg',
+      imageSrc: '/static/img/headshots/lee.jpg',
       name: 'Leonard "Lee" Cursi',
       title: 'Best Man',
     },
     {
-      imageSrc: '/static/img/kayla.jpeg',
+      imageSrc: '/static/img/headshots/dave.jpg',
       name: 'David Danley',
     },
     {
-      imageSrc: '/static/img/kayla.jpeg',
+      imageSrc: '/static/img/headshots/brian.jpg',
       name: 'Brian Wieckowski',
     },
     {
-      imageSrc: '/static/img/kayla.jpeg',
+      imageSrc: '/static/img/headshots/kevin.jpg',
       name: 'Kevin Lombarski',
     },
     {
-      imageSrc: '/static/img/kayla.jpeg',
+      imageSrc: '/static/img/headshots/frank.jpg',
       name: 'Frank Pillar',
     },
     {
-      imageSrc: '/static/img/kayla.jpeg',
+      imageSrc: '/static/img/headshots/chris.jpg',
       name: 'Christopher DeOliveira',
     },
   ];
