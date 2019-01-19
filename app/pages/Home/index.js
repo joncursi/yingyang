@@ -15,10 +15,9 @@ import styles from './styles';
 
 const Home = (): React.Node => {
   const imageUrls = [
-    '/static/img/splash-1.jpg',
-    '/static/img/splash-2.jpg',
-    '/static/img/splash-3.jpg',
-    '/static/img/splash-4.jpg',
+    '/static/img/splashes/splash-1.jpg',
+    '/static/img/splashes/splash-2.jpg',
+    '/static/img/splashes/splash-3.jpg',
   ];
 
   return (
