@@ -43,8 +43,7 @@
   },
   "eslintConfig": {
     "extends": [
-      "@joncursi/eslint-config",
-      "@joncursi/eslint-config/intl"
+      "@joncursi/eslint-config"
     ],
     "plugins": []
   },
