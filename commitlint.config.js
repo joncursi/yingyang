@@ -2,11 +2,6 @@
  * @prettier
  */
 
-/* eslint-disable */
+/* eslint-disable filenames/match-regex, flowtype/require-valid-file-annotation, immutable/no-mutation, import/no-extraneous-dependencies */
 
-module.exports = {
-  extends: ['@commitlint/config-conventional'],
-  rules: {
-    'subject-case': [2, 'always', 'sentence-case'],
-  },
-};
+module.exports = require('@joncursi/eslint-config/commitlint.config');
