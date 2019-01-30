@@ -41,6 +41,19 @@
     "url-loader": "1.1.2",
     "webpack-bundle-analyzer": "3.0.3"
   },
+  "eslintConfig": {
+    "extends": [
+      "@joncursi/eslint-config",
+      "@joncursi/eslint-config/intl"
+    ],
+    "plugins": []
+  },
+  "eslintIgnore": [
+    "coverage",
+    "fastlane",
+    "flow-typed",
+    "node_modules"
+  ],
   "homepage": "https://github.com/joncursi/yingyang#readme",
   "husky": {
     "hooks": {
