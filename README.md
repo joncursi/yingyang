@@ -2,7 +2,7 @@
 
 💍 Wedding website for Michelle and I.
 
-[![CircleCI](https://circleci.com/gh/joncursi/yingyang.svg?style=shield&circle-token=5b7c90e478366b50bf4e1526fe0c656c7ad077f2)](https://circleci.com/gh/joncursi/yingyang)
+[![CircleCI](https://circleci.com/gh/joncursi/yingyang.svg?style=shield)](https://circleci.com/gh/joncursi/yingyang)
 
 ## npm Scripts
 
