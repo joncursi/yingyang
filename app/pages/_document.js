@@ -81,25 +81,43 @@ class Document extends DocumentImport<PropsFlowType> {
             }
             name="robots"
           />
-
           {/* Icons */}
           <link href="/static/img/favicon.png" rel="shortcut icon" />
-
           {/* Facebook Open Graph */}
           <meta content="en_US" property="og:locale" />
           <meta content="YingYang" property="og:site_name" />
           <meta content="website" property="og:type" />
           <meta content={url} property="og:url" />
-
           {/* Twitter Cards */}
           <meta content="US" name="twitter:app:country" />
           <meta content="summary" name="twitter:card" />
           <meta content={url} name="twitter:url" />
-
           {/* Styles */}
           <link rel="stylesheet" href="/static/css/normalize.css" />
+          {/* Fonts */}
+          <link
+            href="https://fonts.googleapis.com/css?family=Montserrat"
+            rel="stylesheet"
+          />
           <style jsx global>
             {`
+              @font-face {
+                font-family: 'Delish Pro';
+                src: url('/static/fonts/delish/DelishPro-Regular.eot');
+                src: url('/static/fonts/delish/DelishPro-Regular.eot?#iefix')
+                    format('embedded-opentype'),
+                  url('/static/fonts/delish/DelishPro-Regular.woff2')
+                    format('woff2'),
+                  url('/static/fonts/delish/DelishPro-Regular.woff')
+                    format('woff'),
+                  url('/static/fonts/delish/DelishPro-Regular.ttf')
+                    format('truetype'),
+                  url('/static/fonts/delish/DelishPro-Regular.svg#DelishPro-Regular')
+                    format('svg');
+                font-weight: normal;
+                font-style: normal;
+              }
+
               * {
                 font-family: 'Montserrat', sans-serif;
               }
@@ -117,12 +135,6 @@ class Document extends DocumentImport<PropsFlowType> {
               }
             `}
           </style>
-
-          {/* Fonts */}
-          <link
-            href="https://fonts.googleapis.com/css?family=Great+Vibes|Montserrat"
-            rel="stylesheet"
-          />
         </Head>
 
         <body bgColor={materialColors.black}>

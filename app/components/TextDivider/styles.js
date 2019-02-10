@@ -11,7 +11,8 @@ export default css`
   .container {
     display: flex;
     flex-direction: row;
-    margin: ${DIMS.LAYOUT_PADDING * 2}px 0;
+    margin: ${DIMS.LAYOUT_PADDING * 3}px 0;
+    opacity: 0.35;
   }
   hr {
     flex: 1;

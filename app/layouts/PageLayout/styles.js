@@ -20,7 +20,7 @@ export default css`
     display: flex;
     flex: 1;
     order: 2;
-    overflow: scroll;
+    overflow-x: hidden;
   }
   main {
     width: 100%;

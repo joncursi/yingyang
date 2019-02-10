@@ -33,7 +33,7 @@ const Home = (): React.Node => {
           <h1>
             Michelle
             <br />
-            - & -
+            ~ & ~
             <br />
             Jonathan
           </h1>

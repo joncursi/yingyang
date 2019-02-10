@@ -13,8 +13,9 @@ export default css`
     text-align: center;
   }
   h1 {
-    font-family: 'Great Vibes', cursive;
+    font-family: 'Delish Pro', cursive;
     font-size: 3em;
+    font-weight: 100;
   }
   h2 {
     font-size: ${4 / 3}em;
@@ -23,7 +24,7 @@ export default css`
     font-size: ${3 / 3}em;
   }
   .footerDivider {
-    border-color: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.35);
   }
   h6 {
     margin: ${DIMS.LAYOUT_PADDING}px ${DIMS.LAYOUT_PADDING}px 0
