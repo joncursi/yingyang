@@ -5,7 +5,7 @@
 
 import css from 'styled-jsx/css';
 
-import DIMS from '../../constants/dims';
+import DIMS from '../../../constants/dims';
 
 export default css`
   .contentContainer {

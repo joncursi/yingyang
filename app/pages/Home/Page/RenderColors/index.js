@@ -5,7 +5,7 @@
 
 import * as React from 'react';
 
-import COLORS from '../../../constants/colors';
+import COLORS from '../../../../constants/colors';
 
 import styles from './styles';
 
