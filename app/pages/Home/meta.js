@@ -22,7 +22,7 @@ const Meta = (): React.Node => (
       'yang',
       'ying',
     ]}
-    title="Michelle Lombarski & Jonathan Cursi's Wedding | 09.29.19"
+    title="Michelle Lombarski and Jonathan Cursi's Wedding Website"
   />
 );
 
