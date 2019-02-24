@@ -114,5 +114,5 @@
     "test:types": "flow",
     "update:types": "[ \"$NODE_ENV\" = production ] || flow-typed install --overwrite"
   },
-  "version": "2.4.0"
+  "version": "2.5.0"
 }
