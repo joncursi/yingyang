@@ -81,6 +81,11 @@ class Document extends DocumentImport<PropsFlowType> {
             }
             name="robots"
           />
+          {/* Google */}
+          <meta
+            content="vpliTwwU3WWzDHUyPAxrNJV8_qsotw03lQwbbm6t3ic"
+            name="google-site-verification"
+          />
           {/* Icons */}
           <link href="/static/img/favicon.png" rel="shortcut icon" />
           {/* Facebook Open Graph */}
