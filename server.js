@@ -26,7 +26,7 @@ const nextHandle = nextRoutes.getRequestHandler(nextApp);
 
 // Configure `sitemap.xml`
 expressApp.get('/sitemap.xml', (req, res) => {
-  const hostname = `${req.protocol}://${req.get('host')}`;
+  const hostname = `https://${req.get('host')}`;
   const sitemap = sm.createSitemap({
     cacheTime: 600000,
     hostname,
@@ -34,6 +34,7 @@ expressApp.get('/sitemap.xml', (req, res) => {
       {
         changefreq: 'monthly',
         priority: 1,
+        url: '/',
       },
     ],
   });
@@ -49,15 +50,16 @@ expressApp.get('/sitemap.xml', (req, res) => {
 
 // Configure `robots.txt`
 expressApp.get('/robots.txt', (req, res) => {
-  const hostname = `${req.protocol}://${req.get('host')}`;
+  const hostname = `https://${req.get('host')}`;
   res.setHeader('content-type', 'text/plain');
-  res.send(
-    `User-agent: *\n${
-      ENV.NODE_ENV === 'production'
-        ? `Sitemap: ${hostname}/sitemap.xml`
-        : 'Disallow: /'
-    }`,
-  );
+  res.send(`User-agent: *
+${
+  ENV.NODE_ENV === 'production'
+    ? `Sitemap: ${hostname}/sitemap.xml`
+    : 'Disallow: /'
+}
+Disallow: /Home
+`);
 });
 
 // Render a next route
