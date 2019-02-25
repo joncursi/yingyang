@@ -101,28 +101,11 @@ class Document extends DocumentImport<PropsFlowType> {
           <link rel="stylesheet" href="/static/css/normalize.css" />
           {/* Fonts */}
           <link
-            href="https://fonts.googleapis.com/css?family=Montserrat"
+            href="https://fonts.googleapis.com/css?family=Great+Vibes|Montserrat"
             rel="stylesheet"
           />
           <style jsx global>
             {`
-              @font-face {
-                font-family: 'Delish Pro';
-                src: url('/static/fonts/delish/DelishPro-Regular.eot');
-                src: url('/static/fonts/delish/DelishPro-Regular.eot?#iefix')
-                    format('embedded-opentype'),
-                  url('/static/fonts/delish/DelishPro-Regular.woff2')
-                    format('woff2'),
-                  url('/static/fonts/delish/DelishPro-Regular.woff')
-                    format('woff'),
-                  url('/static/fonts/delish/DelishPro-Regular.ttf')
-                    format('truetype'),
-                  url('/static/fonts/delish/DelishPro-Regular.svg#DelishPro-Regular')
-                    format('svg');
-                font-weight: normal;
-                font-style: normal;
-              }
-
               * {
                 font-family: 'Montserrat', sans-serif;
               }

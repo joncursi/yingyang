@@ -13,7 +13,7 @@ export default css`
     text-align: center;
   }
   h1 {
-    font-family: 'Delish Pro', cursive;
+    font-family: 'Great Vibes', cursive;
     font-size: 3em;
     font-weight: 100;
   }

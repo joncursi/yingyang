@@ -9,7 +9,7 @@ import moment from 'moment';
 import PageLayout from '../../../layouts/PageLayout';
 import TextDivider from '../../../components/TextDivider';
 
-// import RenderColors from './RenderColors';
+import RenderColors from './RenderColors';
 import RenderParty from './RenderParty';
 import styles from './styles';
 
@@ -33,7 +33,7 @@ const Page = (): React.Node => {
           <h1>
             Michelle
             <br />
-            ~ & ~
+            - & -
             <br />
             Jonathan
           </h1>
@@ -73,14 +73,9 @@ const Page = (): React.Node => {
             </a>
           </h3>
 
-          {/*
-
-
           <TextDivider text="Our Colors" />
 
           <RenderColors />
-          
-          */}
 
           <TextDivider text="The Girls" />
 

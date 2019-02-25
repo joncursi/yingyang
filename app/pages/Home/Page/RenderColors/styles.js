@@ -17,9 +17,9 @@ export default css`
   }
   .color {
     border: 3px solid ${materialColors.white};
-    height: 50px;
+    height: 35px;
     border-radius: 50%;
     margin: ${DIMS.LAYOUT_PADDING}px;
-    width: 50px;
+    width: 35px;
   }
 `;
