@@ -21,7 +21,7 @@ const Page = (): React.Node => {
   ];
 
   return (
-    <React.Fragment>
+    <>
       <style jsx>{styles}</style>
 
       <PageLayout
@@ -152,7 +152,7 @@ const Page = (): React.Node => {
           </h6>
         </div>
       </PageLayout>
-    </React.Fragment>
+    </>
   );
 };
 

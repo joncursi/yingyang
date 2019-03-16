@@ -16,7 +16,7 @@ type PropsFlowType = {
 };
 
 const RenderParty = ({ people }: PropsFlowType): React.Node => (
-  <React.Fragment>
+  <>
     <style jsx>{styles}</style>
 
     {people.map(
@@ -34,7 +34,7 @@ const RenderParty = ({ people }: PropsFlowType): React.Node => (
         </div>
       ),
     )}
-  </React.Fragment>
+  </>
 );
 
 export default RenderParty;
