@@ -16,6 +16,12 @@ export type ContextFlowType = {
   res: Object,
 };
 
+export type IconFlowType = {
+  color?: string,
+  name?: string,
+  size?: number,
+};
+
 export type UrlFlowType = {
   asPath: string,
   back: Function,

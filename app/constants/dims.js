@@ -9,5 +9,8 @@ export default {
     MEDIUM: 768,
     SMALL: 480,
   },
+  HEIGHTS: {
+    HEADER: 50,
+  },
   LAYOUT_PADDING: 12,
 };

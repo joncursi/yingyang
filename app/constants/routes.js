@@ -7,6 +7,8 @@
 
 // eslint-disable-next-line immutable/no-mutation
 module.exports = {
+  // Accomodations
+  ACCOMODATIONS: 'ACCOMODATIONS',
   // Home
   HOME: 'HOME',
 };

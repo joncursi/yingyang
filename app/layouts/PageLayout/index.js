@@ -7,11 +7,13 @@
 
 import * as React from 'react';
 
+import Header from '../../components/Header';
 import { initGA, logPageView } from '../../helpers/analytics';
 
 import styles from './styles';
 
 type PropsFlowType = {
+  activeRoute: string,
   backgroundImageUrl: string,
   children: React.Node,
 };
@@ -31,20 +33,24 @@ class PageLayout extends React.Component<PropsFlowType> {
   }
 
   render(): React.Node {
-    const { backgroundImageUrl, children } = this.props;
+    const { activeRoute, backgroundImageUrl, children } = this.props;
 
     return (
-      <div className="container">
+      <>
         <style jsx>{styles}</style>
 
-        <div className="containerLeft">
-          <main>{children}</main>
-        </div>
+        <Header activeRoute={activeRoute} />
 
-        <div className="containerRight">
-          <img alt="Michelle & Jonathan" src={backgroundImageUrl} />
+        <div className="container">
+          <div className="containerLeft">
+            <main>{children}</main>
+          </div>
+
+          <div className="containerRight">
+            <img alt="Michelle & Jonathan" src={backgroundImageUrl} />
+          </div>
         </div>
-      </div>
+      </>
     );
   }
 }

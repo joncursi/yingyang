@@ -6,10 +6,12 @@
 /* eslint-disable filenames/match-regex, filenames/match-exported */
 
 import * as React from 'react';
+import AppRegistry from 'react-native-web/dist/cjs/exports/AppRegistry';
 import DocumentImport, { Head, Main, NextScript } from 'next/document';
 import flush from 'styled-jsx/server';
 import htmlescape from 'htmlescape';
 import materialColors from 'material-colors';
+import MaterialCommunityIcons from 'react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf';
 
 import type { ContextFlowType } from '../types';
 
@@ -19,6 +21,22 @@ const ENV = {
   GOOGLE_ANALYTICS_TRACKING_ID_WEB,
   NODE_ENV,
 };
+
+// Force Next-generated DOM elements to fill their parent's height.
+// Not required for using of react-native-web, but helps normalize
+// layout for top-level wrapping elements.
+// Disable input, textarea outline because blinking caret is enough.
+const normalizeNextElements = `
+  body > div:first-child,
+  #__next {
+    height: 100%;
+  }
+  input, textarea {
+    outline: none;
+  }
+`;
+
+let index = 0;
 
 type PropsFlowType = {
   url: string,
@@ -38,10 +56,26 @@ class Document extends DocumentImport<PropsFlowType> {
     // eslint-disable-next-line object-curly-newline
     const page = ctx.renderPage();
 
+    // register the app with react-native-web
+    AppRegistry.registerComponent('Main', (): Function => Main);
+
+    // build a separate stylesheet for react-native-web universal components
+    const { getStyleElement } = AppRegistry.getApplication('Main', {});
+    const reactNativeWebStyles = getStyleElement();
     // build a separate stylesheet for styled-jsx styles
     const styledJsxStyles = flush();
     // combine styles
-    const styles = [props.styles, ...styledJsxStyles];
+    const styles = [
+      props.styles,
+      /* eslint-disable react/no-danger, no-plusplus */
+      <style
+        dangerouslySetInnerHTML={{ __html: normalizeNextElements }}
+        key={index++}
+      />,
+      /* eslint-enable react/no-danger, no-plusplus */
+      ...styledJsxStyles,
+      reactNativeWebStyles,
+    ];
 
     // get the current URL being requested
     const url = `https://${ctx.req.headers.host}${ctx.req.url}`;
@@ -99,6 +133,15 @@ class Document extends DocumentImport<PropsFlowType> {
           <meta content={url} name="twitter:url" />
           {/* Styles */}
           <link rel="stylesheet" href="/static/css/normalize.css" />
+          {/* Icons */}
+          <style type="text/css">
+            {`
+              @font-face {
+                src: url(${MaterialCommunityIcons});
+                font-family: MaterialCommunityIcons;
+              }
+            `}
+          </style>
           {/* Fonts */}
           <link
             href="https://fonts.googleapis.com/css?family=Great+Vibes|Montserrat"

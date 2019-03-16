@@ -15,5 +15,11 @@ routes.add({
   pattern: '/',
 });
 
+routes.add({
+  name: ROUTES.ACCOMODATIONS,
+  page: 'Accomodations',
+  pattern: '/accomodations',
+});
+
 // eslint-disable-next-line immutable/no-mutation
 module.exports = routes;

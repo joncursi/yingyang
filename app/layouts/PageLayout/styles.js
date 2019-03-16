@@ -42,7 +42,7 @@ export default css`
       left: 0;
       position: fixed;
       right: 0;
-      top: 0;
+      top: ${DIMS.HEIGHTS.HEADER}px;
     }
     .containerLeft {
       order: 1;

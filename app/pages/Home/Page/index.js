@@ -7,6 +7,7 @@ import * as React from 'react';
 import moment from 'moment';
 
 import PageLayout from '../../../layouts/PageLayout';
+import ROUTES from '../../../constants/routes';
 import TextDivider from '../../../components/TextDivider';
 
 import RenderColors from './RenderColors';
@@ -25,6 +26,7 @@ const Page = (): React.Node => {
       <style jsx>{styles}</style>
 
       <PageLayout
+        activeRoute={ROUTES.HOME}
         backgroundImageUrl={
           imageUrls[Math.floor(Math.random() * imageUrls.length)]
         }
