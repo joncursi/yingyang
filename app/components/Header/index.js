@@ -8,6 +8,7 @@
 import * as React from 'react';
 import { animateScroll } from 'react-scroll';
 
+import ICON_TYPES from '../../constants/iconTypes';
 import Link from '../Link';
 import ROUTES from '../../constants/routes';
 
@@ -94,6 +95,7 @@ class Header extends React.Component<PropsFlowType, StateFlowType> {
       {
         icon: {
           name: 'hotel',
+          type: ICON_TYPES.MATERIAL_COMMUNITY,
         },
         id: 'accomodations',
         isActiveRoute: activeRoute === ROUTES.ACCOMODATIONS,
@@ -106,11 +108,12 @@ class Header extends React.Component<PropsFlowType, StateFlowType> {
       {
         icon: {
           name: 'gift',
+          type: ICON_TYPES.MATERIAL_COMMUNITY,
         },
         id: 'registry',
         isActiveRoute: activeRoute === ROUTES.REGISTRY,
         route: ROUTES.REGISTRY,
-        title: 'Registry',
+        title: 'Wedding Registry',
       },
     ];
 

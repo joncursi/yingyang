@@ -25,6 +25,7 @@ export type IconFlowType = {
     | 'EVIL'
     | 'FEATHER'
     | 'FONT_AWESOME'
+    | 'FONT_AWESOME_5'
     | 'FOUNDATION'
     | 'IONIC'
     | 'MATERIAL'

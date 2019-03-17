@@ -8,6 +8,7 @@ import EntypoIcon from 'react-native-vector-icons/dist/Entypo';
 import EvilIcon from 'react-native-vector-icons/dist/EvilIcons';
 import FeatherIcon from 'react-native-vector-icons/dist/Feather';
 import FontAwesomeIcon from 'react-native-vector-icons/dist/FontAwesome';
+import FontAwesome5Icon from 'react-native-vector-icons/dist/FontAwesome5';
 import FoundationIcon from 'react-native-vector-icons/dist/Foundation';
 import Ionicon from 'react-native-vector-icons/dist/Ionicons';
 import MaterialCommunityIcon from 'react-native-vector-icons/dist/MaterialCommunityIcons';
@@ -39,6 +40,9 @@ const Icon = ({
       break;
     case ICON_TYPES.FONT_AWESOME:
       IconImport = FontAwesomeIcon;
+      break;
+    case ICON_TYPES.FONT_AWESOME_5:
+      IconImport = FontAwesome5Icon;
       break;
     case ICON_TYPES.FOUNDATION:
       IconImport = FoundationIcon;

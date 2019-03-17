@@ -13,6 +13,7 @@ import EvilIcons from 'react-native-vector-icons/Fonts/EvilIcons.ttf';
 import Feather from 'react-native-vector-icons/Fonts/Feather.ttf';
 import flush from 'styled-jsx/server';
 import FontAwesome from 'react-native-vector-icons/Fonts/FontAwesome.ttf';
+import FontAwesome5 from 'react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf';
 import Foundation from 'react-native-vector-icons/Fonts/Foundation.ttf';
 import htmlescape from 'htmlescape';
 import Ionicons from 'react-native-vector-icons/Fonts/Ionicons.ttf';
@@ -161,6 +162,10 @@ class Document extends DocumentImport<PropsFlowType> {
               @font-face {
                 src: url(${FontAwesome});
                 font-family: FontAwesome;
+              }
+              @font-face {
+                src: url(${FontAwesome5});
+                font-family: FontAwesome5_Solid;
               }
               @font-face {
                 src: url(${Foundation});

@@ -32,21 +32,19 @@ const NavItem = ({
     <div className="listItemContainer">
       <style jsx>{styles}</style>
 
-      {route && (
-        <Link
-          style={{
-            ...linkStyles,
-            ...(isActiveRoute ? activeLinkStyles : {}),
-          }}
-          to={route}
-        >
-          <>
-            {icon && <Icon {...icon} size={28} />}
+      <Link
+        style={{
+          ...linkStyles,
+          ...(isActiveRoute ? activeLinkStyles : {}),
+        }}
+        to={route}
+      >
+        <div className="listItemIconContainer">
+          <Icon {...icon} size={28} />
+        </div>
 
-            {title && <span className="listItemTitle">{title}</span>}
-          </>
-        </Link>
-      )}
+        {title && <span className="listItemTitle">{title}</span>}
+      </Link>
     </div>
     {/* eslint-enable jsx-a11y/click-events-have-key-events */}
     {/* eslint-enable jsx-a11y/no-static-element-interactions */}

@@ -65,6 +65,7 @@ export default css`
     align-items: center;
     flex: none;
     justify-content: center;
+    margin: 0 35px;
   }
   .section.right {
     justify-content: flex-start;

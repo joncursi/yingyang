@@ -9,6 +9,7 @@ import Icon from '../../Icon';
 import Link from '../../Link';
 import ListItem from '../../ListItem';
 import COLORS from '../../../constants/colors';
+import ICON_TYPES from '../../../constants/iconTypes';
 import ROUTES from '../../../constants/routes';
 
 import styles from './styles';
@@ -28,7 +29,7 @@ const MobileMenu = ({
     {
       icon: {
         name: 'hotel',
-        type: 'MATERIAL_COMMUNITY',
+        type: ICON_TYPES.MATERIAL_COMMUNITY,
       },
       isActiveRoute: activeRoute === ROUTES.ACCOMODATIONS,
       route: ROUTES.ACCOMODATIONS,
@@ -37,7 +38,7 @@ const MobileMenu = ({
     {
       icon: {
         name: 'gift',
-        type: 'MATERIAL_COMMUNITY',
+        type: ICON_TYPES.MATERIAL_COMMUNITY,
       },
       isActiveRoute: activeRoute === ROUTES.REGISTRY,
       route: ROUTES.REGISTRY,
