@@ -117,6 +117,8 @@ class Header extends React.Component<PropsFlowType, StateFlowType> {
       },
     ];
 
+    const mobileNavLinks = [...leftNavLinks, ...rightNavLinks];
+
     return (
       <div className="container">
         <style jsx>{styles}</style>
@@ -179,9 +181,9 @@ class Header extends React.Component<PropsFlowType, StateFlowType> {
         </header>
 
         <MobileMenu
-          activeRoute={activeRoute}
           handleCloseMenu={(): void => this._toggleHamburger()}
           isOpen={hamburgerIsOpen}
+          mobileNavLinks={mobileNavLinks}
         />
       </div>
     );

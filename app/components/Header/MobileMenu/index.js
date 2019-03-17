@@ -5,107 +5,84 @@
 
 import * as React from 'react';
 
+import type { IconFlowType } from '../../../types';
 import Icon from '../../Icon';
 import Link from '../../Link';
 import ListItem from '../../ListItem';
 import COLORS from '../../../constants/colors';
-import ICON_TYPES from '../../../constants/iconTypes';
-import ROUTES from '../../../constants/routes';
 
 import styles from './styles';
 
 type PropsFlowType = {
-  activeRoute?: string,
   handleCloseMenu: () => void,
   isOpen: boolean,
+  mobileNavLinks: Array<{
+    icon: IconFlowType,
+    id: string,
+    isActiveRoute: boolean,
+    route: string,
+    title: string,
+  }>,
 };
 
 const MobileMenu = ({
-  activeRoute,
   handleCloseMenu,
   isOpen,
-}: PropsFlowType): React.Node => {
-  const mobileNavLinks = [
-    {
-      icon: {
-        name: 'hotel',
-        type: ICON_TYPES.MATERIAL_COMMUNITY,
-      },
-      isActiveRoute: activeRoute === ROUTES.ACCOMODATIONS,
-      route: ROUTES.ACCOMODATIONS,
-      title: 'Guest Accomodations',
-    },
-    {
-      icon: {
-        name: 'gift',
-        type: ICON_TYPES.MATERIAL_COMMUNITY,
-      },
-      isActiveRoute: activeRoute === ROUTES.REGISTRY,
-      route: ROUTES.REGISTRY,
-      title: 'Registry',
-    },
-  ];
+  mobileNavLinks,
+}: PropsFlowType): React.Node => (
+  <div>
+    <style jsx>{styles}</style>
 
-  return (
-    <div>
-      <style jsx>{styles}</style>
-
-      <div
-        className={`container ${
-          isOpen ? 'is-active' : ''
-        } ignore-react-onclickoutside`}
-      >
-        <div className="contentContainer">
-          <nav>
-            <ul>
-              {mobileNavLinks.map(
-                (mobileNavLink): React.Node => (
-                  <li key={mobileNavLink.route}>
-                    <Link to={mobileNavLink.route}>
-                      <div
-                        className={`mobileNavLink ${
-                          mobileNavLink.isActiveRoute ? 'isActiveRoute' : ''
-                        }`}
-                      >
-                        {/*
+    <div
+      className={`container ${
+        isOpen ? 'is-active' : ''
+      } ignore-react-onclickoutside`}
+    >
+      <div className="contentContainer">
+        <nav>
+          <ul>
+            {mobileNavLinks.map(
+              (mobileNavLink): React.Node => (
+                <li key={mobileNavLink.id}>
+                  <Link to={mobileNavLink.route}>
+                    <div
+                      className={`mobileNavLink ${
+                        mobileNavLink.isActiveRoute ? 'isActiveRoute' : ''
+                      }`}
+                    >
+                      {/*
                           primaryTextStyle={coreStyles.listItemPrimaryText}
                         */}
-                        <ListItem
-                          leftIcon={
-                            <Icon
-                              {...mobileNavLink.icon}
-                              color={COLORS.WHITE}
-                              size={20}
-                            />
-                          }
-                          primaryText={mobileNavLink.title}
-                          variant="small"
-                        />
-                      </div>
-                    </Link>
-                  </li>
-                ),
-              )}
-            </ul>
-          </nav>
-        </div>
+                      <ListItem
+                        leftIcon={
+                          <Icon
+                            {...mobileNavLink.icon}
+                            color={COLORS.WHITE}
+                            size={20}
+                          />
+                        }
+                        primaryText={mobileNavLink.title}
+                        variant="small"
+                      />
+                    </div>
+                  </Link>
+                </li>
+              ),
+            )}
+          </ul>
+        </nav>
       </div>
-
-      {/* eslint-disable jsx-a11y/no-static-element-interactions */}
-      {/* eslint-disable jsx-a11y/click-events-have-key-events */}
-      <div
-        className={`mobile-overlay ${isOpen ? 'is-active' : ''}`}
-        onClick={handleCloseMenu}
-      />
-      {/* eslint-enable jsx-a11y/click-events-have-key-events */}
-      {/* eslint-enable jsx-a11y/no-static-element-interactions */}
     </div>
-  );
-};
 
-// eslint-disable-next-line immutable/no-mutation
-MobileMenu.defaultProps = {
-  activeRoute: undefined,
-};
+    {/* eslint-disable jsx-a11y/no-static-element-interactions */}
+    {/* eslint-disable jsx-a11y/click-events-have-key-events */}
+    <div
+      className={`mobile-overlay ${isOpen ? 'is-active' : ''}`}
+      onClick={handleCloseMenu}
+    />
+    {/* eslint-enable jsx-a11y/click-events-have-key-events */}
+    {/* eslint-enable jsx-a11y/no-static-element-interactions */}
+  </div>
+);
 
 export default MobileMenu;
