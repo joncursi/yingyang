@@ -7,6 +7,7 @@
 
 import * as React from 'react';
 
+import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import { initGA, logPageView } from '../../helpers/analytics';
 
@@ -44,6 +45,8 @@ class PageLayout extends React.Component<PropsFlowType> {
         <div className="container">
           <div className="containerLeft">
             <main>{children}</main>
+
+            <Footer />
           </div>
 
           <div className="containerRight">

@@ -45,6 +45,7 @@ export default css`
       top: ${DIMS.HEIGHTS.HEADER}px;
     }
     .containerLeft {
+      flex-direction: column;
       order: 1;
     }
     .containerRight {

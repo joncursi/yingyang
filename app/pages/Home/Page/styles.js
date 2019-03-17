@@ -9,7 +9,7 @@ import DIMS from '../../../constants/dims';
 
 export default css`
   .contentContainer {
-    padding: ${DIMS.LAYOUT_PADDING}px;
+    padding: 0 ${DIMS.LAYOUT_PADDING}px;
     text-align: center;
   }
   h1 {
@@ -22,14 +22,6 @@ export default css`
   }
   h3 {
     font-size: ${3 / 3}em;
-  }
-  .footerDivider {
-    border-color: rgba(255, 255, 255, 0.35);
-  }
-  h6 {
-    margin: ${DIMS.LAYOUT_PADDING}px ${DIMS.LAYOUT_PADDING}px 0
-      ${DIMS.LAYOUT_PADDING}px;
-    opacity: 0.5;
   }
 
   @media (min-width: ${DIMS.BREAKPOINTS.SMALL}px) {
