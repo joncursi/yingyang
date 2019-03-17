@@ -39,10 +39,8 @@ export default css`
   }
   .listItemTitle {
     color: ${COLORS.BLACK};
-    user-select: none;
-  }
-  .listItemTitle.withIcon {
     margin-left: 10px;
+    user-select: none;
   }
   .profileContainer {
     align-items: center;

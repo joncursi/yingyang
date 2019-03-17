@@ -8,10 +8,20 @@
 import * as React from 'react';
 import AppRegistry from 'react-native-web/dist/cjs/exports/AppRegistry';
 import DocumentImport, { Head, Main, NextScript } from 'next/document';
+import Entypo from 'react-native-vector-icons/Fonts/Entypo.ttf';
+import EvilIcons from 'react-native-vector-icons/Fonts/EvilIcons.ttf';
+import Feather from 'react-native-vector-icons/Fonts/Feather.ttf';
 import flush from 'styled-jsx/server';
+import FontAwesome from 'react-native-vector-icons/Fonts/FontAwesome.ttf';
+import Foundation from 'react-native-vector-icons/Fonts/Foundation.ttf';
 import htmlescape from 'htmlescape';
+import Ionicons from 'react-native-vector-icons/Fonts/Ionicons.ttf';
 import materialColors from 'material-colors';
 import MaterialCommunityIcons from 'react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf';
+import MaterialIcons from 'react-native-vector-icons/Fonts/MaterialIcons.ttf';
+import Octicons from 'react-native-vector-icons/Fonts/Octicons.ttf';
+import SimpleLineIcons from 'react-native-vector-icons/Fonts/SimpleLineIcons.ttf';
+import Zocial from 'react-native-vector-icons/Fonts/Zocial.ttf';
 
 import type { ContextFlowType } from '../types';
 
@@ -137,8 +147,48 @@ class Document extends DocumentImport<PropsFlowType> {
           <style type="text/css">
             {`
               @font-face {
+                src: url(${Entypo});
+                font-family: Entypo;
+              }
+              @font-face {
+                src: url(${EvilIcons});
+                font-family: EvilIcons;
+              }
+              @font-face {
+                src: url(${Feather});
+                font-family: Feather;
+              }
+              @font-face {
+                src: url(${FontAwesome});
+                font-family: FontAwesome;
+              }
+              @font-face {
+                src: url(${Foundation});
+                font-family: Foundation;
+              }
+              @font-face {
+                src: url(${Ionicons});
+                font-family: Ionicons;
+              }
+              @font-face {
                 src: url(${MaterialCommunityIcons});
                 font-family: MaterialCommunityIcons;
+              }
+              @font-face {
+                src: url(${MaterialIcons});
+                font-family: MaterialIcons;
+              }
+              @font-face {
+                src: url(${Octicons});
+                font-family: Octicons;
+              }
+              @font-face {
+                src: url(${SimpleLineIcons});
+                font-family: SimpleLineIcons;
+              }
+              @font-face {
+                src: url(${Zocial});
+                font-family: Zocial;
               }
             `}
           </style>

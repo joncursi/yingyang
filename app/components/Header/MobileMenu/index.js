@@ -4,8 +4,8 @@
  */
 
 import * as React from 'react';
-import MaterialCommunityIcon from 'react-native-vector-icons/dist/MaterialCommunityIcons';
 
+import Icon from '../../Icon';
 import Link from '../../Link';
 import ListItem from '../../ListItem';
 import COLORS from '../../../constants/colors';
@@ -28,6 +28,7 @@ const MobileMenu = ({
     {
       icon: {
         name: 'hotel',
+        type: 'MATERIAL_COMMUNITY',
       },
       isActiveRoute: activeRoute === ROUTES.ACCOMODATIONS,
       route: ROUTES.ACCOMODATIONS,
@@ -36,6 +37,7 @@ const MobileMenu = ({
     {
       icon: {
         name: 'gift',
+        type: 'MATERIAL_COMMUNITY',
       },
       isActiveRoute: activeRoute === ROUTES.REGISTRY,
       route: ROUTES.REGISTRY,
@@ -69,7 +71,7 @@ const MobileMenu = ({
                         */}
                         <ListItem
                           leftIcon={
-                            <MaterialCommunityIcon
+                            <Icon
                               {...mobileNavLink.icon}
                               color={COLORS.WHITE}
                               size={20}

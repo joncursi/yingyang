@@ -20,6 +20,18 @@ export type IconFlowType = {
   color?: string,
   name?: string,
   size?: number,
+  type?:
+    | 'ENTYPO'
+    | 'EVIL'
+    | 'FEATHER'
+    | 'FONT_AWESOME'
+    | 'FOUNDATION'
+    | 'IONIC'
+    | 'MATERIAL'
+    | 'MATERIAL_COMMUNITY'
+    | 'OCTICON'
+    | 'SIMPLE_LINE'
+    | 'ZOCIAL',
 };
 
 export type UrlFlowType = {

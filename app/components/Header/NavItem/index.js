@@ -5,17 +5,16 @@
 
 import * as React from 'react';
 import compose from 'recompose/compose';
-import MaterialCommunityIcon from 'react-native-vector-icons/dist/MaterialCommunityIcons';
 import onClickOutside from 'react-onclickoutside';
 
 import type { IconFlowType } from '../../../types';
+import Icon from '../../Icon';
 import Link from '../../Link';
 
 import styles, { activeLinkStyles, linkStyles } from './styles';
 
 type PropsFlowType = {
   icon: IconFlowType,
-  id: string,
   isActiveRoute: boolean,
   route: string,
   title: string,
@@ -23,7 +22,6 @@ type PropsFlowType = {
 
 const NavItem = ({
   icon,
-  id,
   title,
   isActiveRoute,
   route,
@@ -43,13 +41,9 @@ const NavItem = ({
           to={route}
         >
           <>
-            {icon && <MaterialCommunityIcon {...icon} size={28} />}
+            {icon && <Icon {...icon} size={28} />}
 
-            {title && (
-              <span className={`listItemTitle ${id} ${icon ? 'withIcon' : ''}`}>
-                {title}
-              </span>
-            )}
+            {title && <span className="listItemTitle">{title}</span>}
           </>
         </Link>
       )}
