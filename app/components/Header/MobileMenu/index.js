@@ -38,40 +38,38 @@ const MobileMenu = ({
         isOpen ? 'is-active' : ''
       } ignore-react-onclickoutside`}
     >
-      <div className="contentContainer">
-        <nav>
-          <ul>
-            {mobileNavLinks.map(
-              (mobileNavLink): React.Node => (
-                <li key={mobileNavLink.id}>
-                  <Link to={mobileNavLink.route}>
-                    <div
-                      className={`mobileNavLink ${
-                        mobileNavLink.isActiveRoute ? 'isActiveRoute' : ''
-                      }`}
-                    >
-                      {/*
+      <nav>
+        <ul>
+          {mobileNavLinks.map(
+            (mobileNavLink): React.Node => (
+              <li key={mobileNavLink.id}>
+                <Link to={mobileNavLink.route}>
+                  <div
+                    className={`mobileNavLink ${
+                      mobileNavLink.isActiveRoute ? 'isActiveRoute' : ''
+                    }`}
+                  >
+                    {/*
                           primaryTextStyle={coreStyles.listItemPrimaryText}
                         */}
-                      <ListItem
-                        leftIcon={
-                          <Icon
-                            {...mobileNavLink.icon}
-                            color={COLORS.WHITE}
-                            size={20}
-                          />
-                        }
-                        primaryText={mobileNavLink.title}
-                        variant="small"
-                      />
-                    </div>
-                  </Link>
-                </li>
-              ),
-            )}
-          </ul>
-        </nav>
-      </div>
+                    <ListItem
+                      leftIcon={
+                        <Icon
+                          {...mobileNavLink.icon}
+                          color={COLORS.WHITE}
+                          size={20}
+                        />
+                      }
+                      primaryText={mobileNavLink.title}
+                      variant="small"
+                    />
+                  </div>
+                </Link>
+              </li>
+            ),
+          )}
+        </ul>
+      </nav>
     </div>
 
     {/* eslint-disable jsx-a11y/no-static-element-interactions */}

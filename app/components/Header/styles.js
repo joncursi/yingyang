@@ -13,20 +13,6 @@ const LOGO_HEIGHT = DIMS.HEIGHTS.HEADER * 0.5;
 const LOGO_WIDTH = LOGO_HEIGHT * LOGO_ASPECT_RATIO;
 export const NAV_ITEM_COLOR = 'rgba(0, 0, 0, 0.60)';
 
-export const globalStyles = css.global`
-  .listItemTitle.accomodations,
-  .listItemTitle.registry {
-    display: none;
-  }
-
-  @media (min-width: ${DIMS.BREAKPOINTS.MEDIUM}px) {
-    .listItemTitle.accomodations,
-    .listItemTitle.registry {
-      display: flex;
-    }
-  }
-`;
-
 export default css`
   .container {
     width: 100%;
@@ -57,7 +43,7 @@ export default css`
   .section.left {
     justify-content: flex-end;
   }
-  img.logoFull {
+  img.logo {
     height: ${LOGO_HEIGHT}px;
     width: ${LOGO_WIDTH}px;
   }
@@ -90,18 +76,6 @@ export default css`
     font-weight: 500;
     height: 100%;
     position: relative;
-  }
-
-  .navItem.accomodations,
-  .navItem.registry {
-    display: none;
-  }
-
-  @media (min-width: ${DIMS.BREAKPOINTS.SMALL}px) {
-    .navItem.accomodations,
-    .navItem.registry {
-      display: block;
-    }
   }
 
   @media (min-width: ${DIMS.BREAKPOINTS.LARGE}px) {

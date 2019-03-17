@@ -16,7 +16,7 @@ import { activeLinkStyles, linkStyles } from './NavItem/styles';
 import MobileMenu from './MobileMenu';
 import MobileTrigger from './MobileTrigger';
 import NavItem from './NavItem';
-import styles, { globalStyles } from './styles';
+import styles from './styles';
 
 type PropsFlowType = {
   activeRoute: string,
@@ -122,9 +122,6 @@ class Header extends React.Component<PropsFlowType, StateFlowType> {
     return (
       <div className="container">
         <style jsx>{styles}</style>
-        <style global jsx>
-          {globalStyles}
-        </style>
 
         <header className="headerContainer">
           <div className="sectionsContainer">
@@ -158,7 +155,7 @@ class Header extends React.Component<PropsFlowType, StateFlowType> {
               >
                 <img
                   alt="Michelle Lombarski & Jonathan Cursi's Wedding Website"
-                  className="logoFull"
+                  className="logo"
                   src="/static/img/logo.jpg"
                 />
               </Link>

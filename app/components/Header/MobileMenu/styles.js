@@ -21,8 +21,6 @@ export default css`
   .container.is-active {
     display: block;
   }
-  .contentContainer {
-  }
   ul {
     list-style-type: none;
     margin: 0;

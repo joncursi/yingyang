@@ -28,8 +28,6 @@ export default css`
     text-transform: none;
     width: ${DIMS.HEIGHTS.HEADER}px;
   }
-  .hamburger.is-active {
-  }
   .hamburger-box {
     display: inline-block;
     height: 17.33px;

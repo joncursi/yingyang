@@ -38,13 +38,19 @@ export default css`
     flex-direction: row;
   }
   .listItemIconContainer {
-    display: initial;
+    display: none;
   }
   .listItemTitle {
     color: ${COLORS.BLACK};
     display: none;
     margin-left: 10px;
     user-select: none;
+  }
+
+  @media (min-width: ${DIMS.BREAKPOINTS.SMALL}px) {
+    .listItemIconContainer {
+      display: initial;
+    }
   }
 
   @media (min-width: ${DIMS.BREAKPOINTS.MEDIUM}px) {
