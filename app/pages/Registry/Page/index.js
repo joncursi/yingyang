@@ -14,7 +14,10 @@ const Page = (): React.Node => (
   <>
     <style jsx>{styles}</style>
 
-    <PageLayout activeRoute={ROUTES.REGISTRY} backgroundImageUrl="URL_HERE">
+    <PageLayout
+      activeRoute={ROUTES.REGISTRY}
+      backgroundImageUrl="/static/img/splashes/registry-1.png"
+    >
       <div className="contentContainer">
         <p>Coming soon!</p>
       </div>

@@ -19,6 +19,7 @@ export default css`
     background-repeat: repeat;
     display: flex;
     flex: 1;
+    flex-direction: column;
     order: 2;
     overflow-x: hidden;
   }
@@ -45,7 +46,6 @@ export default css`
       top: ${DIMS.HEIGHTS.HEADER}px;
     }
     .containerLeft {
-      flex-direction: column;
       order: 1;
     }
     .containerRight {

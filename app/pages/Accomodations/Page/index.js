@@ -10,19 +10,29 @@ import ROUTES from '../../../constants/routes';
 
 import styles from './styles';
 
-const Page = (): React.Node => (
-  <>
-    <style jsx>{styles}</style>
+const Page = (): React.Node => {
+  const imageUrls = [
+    // '/static/img/splashes/accomodations-1.jpg',
+    '/static/img/splashes/accomodations-2.jpg',
+    // '/static/img/splashes/accomodations-3.jpg',
+  ];
 
-    <PageLayout
-      activeRoute={ROUTES.ACCOMODATIONS}
-      backgroundImageUrl="URL_HERE"
-    >
-      <div className="contentContainer">
-        <p>Coming soon!</p>
-      </div>
-    </PageLayout>
-  </>
-);
+  return (
+    <>
+      <style jsx>{styles}</style>
+
+      <PageLayout
+        activeRoute={ROUTES.ACCOMODATIONS}
+        backgroundImageUrl={
+          imageUrls[Math.floor(Math.random() * imageUrls.length)]
+        }
+      >
+        <div className="contentContainer">
+          <p>Coming soon!</p>
+        </div>
+      </PageLayout>
+    </>
+  );
+};
 
 export default Page;
