@@ -15,7 +15,9 @@ const Page = (): React.Node => (
     <style jsx>{styles}</style>
 
     <PageLayout activeRoute={ROUTES.REGISTRY} backgroundImageUrl="URL_HERE">
-      <div className="contentContainer" />
+      <div className="contentContainer">
+        <p>Coming soon!</p>
+      </div>
     </PageLayout>
   </>
 );

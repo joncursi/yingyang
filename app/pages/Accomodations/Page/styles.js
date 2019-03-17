@@ -9,7 +9,7 @@ import DIMS from '../../../constants/dims';
 
 export default css`
   .contentContainer {
-    padding: ${DIMS.LAYOUT_PADDING}px;
+    padding: 0 ${DIMS.LAYOUT_PADDING}px;
     text-align: center;
   }
 `;

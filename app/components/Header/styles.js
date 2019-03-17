@@ -77,6 +77,15 @@ export default css`
     height: 100%;
     position: relative;
   }
+  .navItem {
+    display: none;
+  }
+
+  @media (min-width: ${DIMS.BREAKPOINTS.SMALL}px) {
+    .navItem {
+      display: initial;
+    }
+  }
 
   @media (min-width: ${DIMS.BREAKPOINTS.LARGE}px) {
     .headerContainer {

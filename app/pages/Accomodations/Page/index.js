@@ -18,7 +18,9 @@ const Page = (): React.Node => (
       activeRoute={ROUTES.ACCOMODATIONS}
       backgroundImageUrl="URL_HERE"
     >
-      <div className="contentContainer" />
+      <div className="contentContainer">
+        <p>Coming soon!</p>
+      </div>
     </PageLayout>
   </>
 );
