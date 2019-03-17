@@ -33,6 +33,14 @@ const MobileMenu = ({
       route: ROUTES.ACCOMODATIONS,
       title: 'Guest Accomodations',
     },
+    {
+      icon: {
+        name: 'gift',
+      },
+      isActiveRoute: activeRoute === ROUTES.REGISTRY,
+      route: ROUTES.REGISTRY,
+      title: 'Registry',
+    },
   ];
 
   return (

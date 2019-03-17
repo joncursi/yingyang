@@ -45,7 +45,7 @@ export default css`
   .hamburger-inner,
   .hamburger-inner::before,
   .hamburger-inner::after {
-    background-color: ${COLORS.DARK_BROWN};
+    background-color: ${COLORS.WEDDING.DARK_BROWN};
     border-radius: 4px;
     height: 3px;
     position: absolute;
@@ -54,7 +54,7 @@ export default css`
   .hamburger.is-active .hamburger-inner,
   .hamburger.is-active .hamburger-inner::before,
   .hamburger.is-active .hamburger-inner::after {
-    background-color: ${COLORS.GOLD};
+    background-color: ${COLORS.WEDDING.GOLD};
   }
   .hamburger-inner::before,
   .hamburger-inner::after {

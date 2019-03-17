@@ -102,6 +102,18 @@ class Header extends React.Component<PropsFlowType, StateFlowType> {
       },
     ];
 
+    const rightNavLinks = [
+      {
+        icon: {
+          name: 'gift',
+        },
+        id: 'registry',
+        isActiveRoute: activeRoute === ROUTES.REGISTRY,
+        route: ROUTES.REGISTRY,
+        title: 'Registry',
+      },
+    ];
+
     return (
       <div className="container">
         <style jsx>{styles}</style>
@@ -117,7 +129,7 @@ class Header extends React.Component<PropsFlowType, StateFlowType> {
                   {leftNavLinks.map(
                     (navItem): React.Node => (
                       <li className={`navItem ${navItem.id}`} key={navItem.id}>
-                        <NavItem {...navItem} side="left" />
+                        <NavItem {...navItem} />
                       </li>
                     ),
                   )}
@@ -147,7 +159,19 @@ class Header extends React.Component<PropsFlowType, StateFlowType> {
               </Link>
             </div>
 
-            <div className="section right" />
+            <div className="section right">
+              <nav>
+                <ul>
+                  {rightNavLinks.map(
+                    (navItem): React.Node => (
+                      <li className={`navItem ${navItem.id}`} key={navItem.id}>
+                        <NavItem {...navItem} />
+                      </li>
+                    ),
+                  )}
+                </ul>
+              </nav>
+            </div>
           </div>
         </header>
 

@@ -10,7 +10,7 @@ import DIMS from '../../../constants/dims';
 
 export default css`
   .container {
-    background-color: ${COLORS.DUSTY_ROSE};
+    background-color: ${COLORS.WEDDING.DUSTY_ROSE};
     display: none;
     left: 0;
     position: fixed;
