@@ -55,7 +55,7 @@ const MobileMenu = ({
                         <mobileNavLink.Icon color={COLORS.WHITE} size={20} />
                       </ListItemIcon>
 
-                      <ListItemText primaryText={mobileNavLink.title} />
+                      <ListItemText primary={mobileNavLink.title} />
 
                       <ListItemIcon>
                         <KeyboardArrowRightIcon />

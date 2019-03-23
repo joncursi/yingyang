@@ -20,7 +20,7 @@ const Meta = (): React.Node => (
       'hotel block',
       'media pa',
     ]}
-    title="Guest Accomodations"
+    title="Hotel Accomodations"
   />
 );
 
