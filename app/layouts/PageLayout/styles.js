@@ -44,7 +44,7 @@ export default css`
     }
     .containerRight {
       display: flex;
-      flex: 3;
+      flex: 4;
       margin-top: 0;
       order: 2;
     }

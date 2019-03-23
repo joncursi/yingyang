@@ -30,10 +30,14 @@ const Page = (): React.Node => (
     <PageLayout
       activeRoute={ROUTES.HOME}
       rightContainer={
-        <img
-          alt="Michelle & Jonathan"
-          src={imageUrls[Math.floor(Math.random() * imageUrls.length)]}
-        />
+        <div className="rightContainer">
+          <div className="overlay" />
+
+          <img
+            alt="Michelle & Jonathan"
+            src={imageUrls[Math.floor(Math.random() * imageUrls.length)]}
+          />
+        </div>
       }
     >
       <Paper elevation={0} square>
@@ -120,7 +124,7 @@ const Page = (): React.Node => (
             people={[
               {
                 imageSrc: '/static/img/headshots/lee.jpg',
-                name: 'Leonard "Lee" Cursi',
+                name: 'Lee Cursi',
                 title: 'Best Man',
               },
               {

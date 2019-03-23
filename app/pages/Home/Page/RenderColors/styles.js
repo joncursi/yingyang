@@ -15,9 +15,9 @@ export default css`
     justify-content: center;
   }
   .color {
-    height: 35px;
+    height: 30px;
     border-radius: 50%;
     margin: ${DIMS.LAYOUT_PADDING}px;
-    width: 35px;
+    width: 30px;
   }
 `;

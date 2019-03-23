@@ -13,19 +13,21 @@ const Footer = (): React.Node => (
   <>
     <style jsx>{styles}</style>
 
-    <Divider />
+    <div className="container">
+      <Divider />
 
-    <footer>
-      <Typography variant="overline">
-        <span className="text">
-          Made with
-          <span aria-label="love" role="img">
-            {' ❤️ '}
+      <footer>
+        <Typography variant="overline">
+          <span className="text">
+            Made with
+            <span aria-label="love" role="img">
+              {' ❤️ '}
+            </span>
+            by Michelle & Jon
           </span>
-          by Michelle & Jon
-        </span>
-      </Typography>
-    </footer>
+        </Typography>
+      </footer>
+    </div>
   </>
 );
 

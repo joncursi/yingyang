@@ -43,7 +43,7 @@ const NavItem = ({
         </div>
 
         {title && (
-          <Typography variant="subtitle">
+          <Typography variant="subtitle1">
             <span className="listItemTitle">{title}</span>
           </Typography>
         )}

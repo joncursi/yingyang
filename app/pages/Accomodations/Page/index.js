@@ -51,7 +51,7 @@ const details = [
     link: {
       to: 'tel:+14844438899',
     },
-    primaryText: 'Call',
+    primaryText: 'Phone Number',
     secondaryText: '(484) 443 - 8899',
   },
   {
@@ -59,14 +59,14 @@ const details = [
     id: 'transportation',
     primaryText: 'Transportation',
     secondaryText:
-      'A shuttle will be provided to transport you to and from the venue',
+      'A shuttle will be available to transport you to and from the venue.',
   },
   {
     Icon: FreeBreakfastIcon,
     id: 'breakfast',
     primaryText: 'Breakfast',
     secondaryText:
-      'Please join us for a complimentary hot breakfast at 9am in the hotel lobby',
+      'Please join us at 9am on Monday morning in the hotel lobby for a complimentary hot breakfast.',
   },
   {
     Icon: CalendarIcon,
@@ -78,7 +78,7 @@ const details = [
     },
     primaryText: 'Reservations',
     secondaryText:
-      'A block of rooms has been reserved for September 28, 2019 - September 30, 2019. The special room rate will be available until September 7th or until the group block is sold-out, whichever comes first.',
+      'A block of rooms has been reserved for September 28 - 30. The special room rate will be available until September 7th (or until the group block has been sold-out).',
   },
 ];
 
@@ -92,21 +92,25 @@ const Page = (): React.Node => (
     <PageLayout
       activeRoute={ROUTES.ACCOMODATIONS}
       rightContainer={
-        <img
-          alt="Hampton Inn & Suites, Media PA"
-          src="/static/img/splashes/accomodations-2.jpg"
-        />
+        <div className="rightContainer">
+          <div className="overlay" />
+
+          <img
+            alt="Hampton Inn & Suites, Media PA"
+            src="/static/img/splashes/accomodations-2.jpg"
+          />
+        </div>
       }
     >
       <div className="contentContainer">
         <Paper elevation={0} square>
           {details.map(
-            (detail): React.Node => {
+            (detail, i): React.Node => {
               const children = (
                 <ListItem
                   button={!!detail.link}
                   classes={{ root: 'accomodationsListItemRoot' }}
-                  divider
+                  divider={i !== details.length - 1}
                   key={detail.id}
                 >
                   <ListItemIcon>
