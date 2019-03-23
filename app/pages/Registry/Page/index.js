@@ -60,22 +60,27 @@ type PropsFlowType = {};
 class Page extends React.Component<PropsFlowType> {
   props: PropsFlowType;
 
-  _loadZolaPlugin() {
-    return {
-      __html: `<a class="zola-registry-embed" data-registry-key="michelleandjonathan92919" href="https://www.zola.com/registry/michelleandjonathan92919">Our Zola Wedding Registry<script>!function(e,t,n){var s,a=e.getElementsByTagName(t)[0];e.getElementById(n)||(s=e.createElement(t),s.id=n,s.async=!0,s.src="https://widget.zola.com/js/widget.js",a.parentNode.insertBefore(s,a))}(document,"script","zola-wjs");</script></a>`,
-    };
+  componentDidMount() {
+    this._loadZolaPlugin();
   }
 
-  shouldComponentUpdate() {
-    console.log('me');
+  _loadZolaPlugin() {
+    if (this.instance && typeof document !== 'undefined') {
+      const s = document.createElement('script');
+
+      /* eslint-disable immutable/no-mutation */
+      s.type = 'text/javascript';
+      s.async = true;
+      s.innerHTML = `!function(e,t,n){var s,a=e.getElementsByTagName(t)[0];e.getElementById(n)||(s=e.createElement(t),s.id=n,s.async=!0,s.src="https://widget.zola.com/js/widget.js",a.parentNode.insertBefore(s,a))}(document,"script","zola-wjs");`;
+      /* eslint-enable immutable/no-mutation */
+
+      this.instance.appendChild(s);
+    }
   }
+
+  instance: Function;
 
   render(): React.Node {
-    if (typeof document !== 'undefined') {
-      const el = document.getElementById('zola-plugin');
-      console.log(el);
-      el.remove();
-    }
     return (
       <>
         <style global jsx>
@@ -85,10 +90,19 @@ class Page extends React.Component<PropsFlowType> {
         <PageLayout
           activeRoute={ROUTES.REGISTRY}
           rightContainer={
-            <div
-              dangerouslySetInnerHTML={this._loadZolaPlugin()}
-              id="zola-plugin"
-            />
+            <a
+              className="zola-registry-embed"
+              data-registry-key="michelleandjonathan92919"
+              href="https://www.zola.com/registry/michelleandjonathan92919"
+            >
+              Our Zola Wedding Registry
+              <div
+                ref={el => {
+                  // eslint-disable-next-line immutable/no-mutation
+                  this.instance = el;
+                }}
+              />
+            </a>
           }
         >
           <div className="contentContainer">
