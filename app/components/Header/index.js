@@ -9,6 +9,7 @@ import * as React from 'react';
 import { animateScroll } from 'react-scroll';
 import GiftIcon from 'mdi-material-ui/Gift';
 import HotelIcon from 'mdi-material-ui/Hotel';
+import Paper from '@material-ui/core/Paper';
 
 import Link from '../Link';
 import ROUTES from '../../constants/routes';
@@ -115,69 +116,79 @@ class Header extends React.Component<PropsFlowType, StateFlowType> {
     const mobileNavLinks = [...leftNavLinks, ...rightNavLinks];
 
     return (
-      <div className="container">
+      <>
         <style jsx>{styles}</style>
 
-        <header className="headerContainer">
-          <div className="sectionsContainer">
-            <div className="section left">
-              <nav>
-                <ul>
-                  {leftNavLinks.map(
-                    (navItem): React.Node => (
-                      <li className={`navItem ${navItem.id}`} key={navItem.id}>
-                        <NavItem {...navItem} />
-                      </li>
-                    ),
-                  )}
-                </ul>
-              </nav>
+        <div className="container">
+          <Paper>
+            <header className="headerContainer">
+              <div className="sectionsContainer">
+                <div className="section left">
+                  <nav>
+                    <ul>
+                      {leftNavLinks.map(
+                        (navItem): React.Node => (
+                          <li
+                            className={`navItem ${navItem.id}`}
+                            key={navItem.id}
+                          >
+                            <NavItem {...navItem} />
+                          </li>
+                        ),
+                      )}
+                    </ul>
+                  </nav>
 
-              <MobileTrigger
-                handleCloseMenu={(): void => this._toggleHamburger()}
-                isOpen={hamburgerIsOpen}
-              />
-            </div>
+                  <MobileTrigger
+                    handleCloseMenu={(): void => this._toggleHamburger()}
+                    isOpen={hamburgerIsOpen}
+                  />
+                </div>
 
-            <div className="section center">
-              <Link
-                style={{
-                  ...linkStyles,
-                  ...(activeRoute === ROUTES.HOME ? activeLinkStyles : {}),
-                  display: 'flex',
-                }}
-                to={ROUTES.HOME}
-              >
-                <img
-                  alt="Michelle Lombarski & Jonathan Cursi's Wedding Website"
-                  className="logo"
-                  src="/static/img/logo.jpg"
-                />
-              </Link>
-            </div>
+                <div className="section center">
+                  <Link
+                    style={{
+                      ...linkStyles,
+                      ...(activeRoute === ROUTES.HOME ? activeLinkStyles : {}),
+                      display: 'flex',
+                    }}
+                    to={ROUTES.HOME}
+                  >
+                    <img
+                      alt="Michelle Lombarski & Jonathan Cursi's Wedding Website"
+                      className="logo"
+                      src="/static/img/logo.jpg"
+                    />
+                  </Link>
+                </div>
 
-            <div className="section right">
-              <nav>
-                <ul>
-                  {rightNavLinks.map(
-                    (navItem): React.Node => (
-                      <li className={`navItem ${navItem.id}`} key={navItem.id}>
-                        <NavItem {...navItem} />
-                      </li>
-                    ),
-                  )}
-                </ul>
-              </nav>
-            </div>
-          </div>
-        </header>
+                <div className="section right">
+                  <nav>
+                    <ul>
+                      {rightNavLinks.map(
+                        (navItem): React.Node => (
+                          <li
+                            className={`navItem ${navItem.id}`}
+                            key={navItem.id}
+                          >
+                            <NavItem {...navItem} />
+                          </li>
+                        ),
+                      )}
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </header>
+          </Paper>
 
-        <MobileMenu
-          handleCloseMenu={(): void => this._toggleHamburger()}
-          isOpen={hamburgerIsOpen}
-          mobileNavLinks={mobileNavLinks}
-        />
-      </div>
+          <MobileMenu
+            handleCloseMenu={(): void => this._toggleHamburger()}
+            isOpen={hamburgerIsOpen}
+            mobileNavLinks={mobileNavLinks}
+          />
+        </div>
+      </>
     );
   }
 }

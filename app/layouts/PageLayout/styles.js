@@ -25,6 +25,7 @@ export default css`
   }
   .containerRight {
     display: block;
+    margin-top: ${DIMS.HEIGHTS.HEADER}px;
     order: 1;
   }
 
@@ -42,6 +43,7 @@ export default css`
     .containerRight {
       display: flex;
       flex: 3;
+      margin-top: 0;
       order: 2;
     }
   }

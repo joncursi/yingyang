@@ -6,7 +6,6 @@
 import * as React from 'react';
 import AirportShuttleIcon from '@material-ui/icons/AirportShuttle';
 import CalendarIcon from 'mdi-material-ui/Calendar';
-import Divider from '@material-ui/core/Divider';
 import FreeBreakfastIcon from '@material-ui/icons/FreeBreakfast';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
@@ -97,8 +96,6 @@ const Page = (): React.Node => (
       }
     >
       <div className="contentContainer">
-        <Divider />
-
         <Paper elevation={0} square>
           {details.map(
             (detail): React.Node => {

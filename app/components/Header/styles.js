@@ -15,7 +15,9 @@ export const NAV_ITEM_COLOR = 'rgba(0, 0, 0, 0.60)';
 
 export default css`
   .container {
+    position: fixed;
     width: 100%;
+    z-index: 100;
   }
   .headerContainer {
     background-color: ${COLORS.WHITE};

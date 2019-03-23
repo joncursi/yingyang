@@ -4,7 +4,6 @@
  */
 
 import * as React from 'react';
-import Divider from '@material-ui/core/Divider';
 import moment from 'moment';
 
 import PageLayout from '../../../layouts/PageLayout';
@@ -35,8 +34,6 @@ const Page = (): React.Node => {
           />
         }
       >
-        <Divider />
-
         <div className="contentContainer">
           <h1>
             Michelle
