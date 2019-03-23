@@ -20,7 +20,7 @@ import Link from '../../../components/Link';
 import PageLayout from '../../../layouts/PageLayout';
 import ROUTES from '../../../constants/routes';
 
-import styles from './styles';
+import styles, { globalStyles } from './styles';
 
 const details = [
   {
@@ -84,6 +84,9 @@ const details = [
 
 const Page = (): React.Node => (
   <>
+    <style global jsx>
+      {globalStyles}
+    </style>
     <style jsx>{styles}</style>
 
     <PageLayout
@@ -100,7 +103,12 @@ const Page = (): React.Node => (
           {details.map(
             (detail): React.Node => {
               const children = (
-                <ListItem button={!!detail.link} divider key={detail.id}>
+                <ListItem
+                  button={!!detail.link}
+                  classes={{ root: 'accomodationsListItemRoot' }}
+                  divider
+                  key={detail.id}
+                >
                   <ListItemIcon>
                     <detail.Icon />
                   </ListItemIcon>

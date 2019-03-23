@@ -10,7 +10,7 @@ import DIMS from '../../../constants/dims';
 
 export const globalStyles = css.global`
   .mobileMenuListItem {
-    padding-right: 0;
+    padding-right: 0 !important;
   }
 `;
 

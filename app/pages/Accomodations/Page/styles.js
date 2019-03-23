@@ -7,6 +7,12 @@ import css from 'styled-jsx/css';
 
 import DIMS from '../../../constants/dims';
 
+export const globalStyles = css.global`
+  .accomodationsListItemRoot {
+    padding-right: 0;
+  }
+`;
+
 export default css`
   img {
     display: block;

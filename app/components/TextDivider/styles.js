@@ -7,15 +7,19 @@ import css from 'styled-jsx/css';
 
 import DIMS from '../../constants/dims';
 
+export const globalStyles = css.global`
+  .textDividerRoot {
+    flex: 1;
+  }
+`;
+
 export default css`
   .container {
+    align-items: center;
     display: flex;
     flex-direction: row;
-    margin: ${DIMS.LAYOUT_PADDING * 3}px 0;
+    margin: ${DIMS.LAYOUT_PADDING * 2}px 0;
     opacity: 0.35;
-  }
-  hr {
-    flex: 1;
   }
   span {
     font-size: 80%;

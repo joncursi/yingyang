@@ -6,6 +6,7 @@
 import * as React from 'react';
 import compose from 'recompose/compose';
 import onClickOutside from 'react-onclickoutside';
+import Typography from '@material-ui/core/Typography';
 
 import Link from '../../Link';
 
@@ -41,7 +42,11 @@ const NavItem = ({
           <Icon size={28} />
         </div>
 
-        {title && <span className="listItemTitle">{title}</span>}
+        {title && (
+          <Typography variant="subtitle">
+            <span className="listItemTitle">{title}</span>
+          </Typography>
+        )}
       </Link>
     </div>
     {/* eslint-enable jsx-a11y/click-events-have-key-events */}

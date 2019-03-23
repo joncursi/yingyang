@@ -5,7 +5,6 @@
 
 import css from 'styled-jsx/css';
 
-import COLORS from '../../constants/colors';
 import DIMS from '../../constants/dims';
 
 const LOGO_ASPECT_RATIO = 500 / 475;
@@ -20,7 +19,6 @@ export default css`
     z-index: 100;
   }
   .headerContainer {
-    background-color: ${COLORS.WHITE};
     position: relative;
     top: 0;
     width: 100%;

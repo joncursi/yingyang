@@ -5,6 +5,7 @@
 
 import css from 'styled-jsx/css';
 
+import COLORS from '../../constants/colors';
 import DIMS from '../../constants/dims';
 
 export default css`
@@ -38,6 +39,7 @@ export default css`
       top: ${DIMS.HEIGHTS.HEADER}px;
     }
     .containerLeft {
+      border-right: 1px solid ${COLORS.BLACK_12};
       order: 1;
     }
     .containerRight {

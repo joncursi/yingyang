@@ -4,6 +4,10 @@
  */
 
 import * as React from 'react';
+import Avatar from '@material-ui/core/Avatar';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemAvatar from '@material-ui/core/ListItemAvatar';
+import ListItemText from '@material-ui/core/ListItemText';
 
 import styles from './styles';
 
@@ -21,17 +25,13 @@ const RenderParty = ({ people }: PropsFlowType): React.Node => (
 
     {people.map(
       (person): React.Node => (
-        <div className="person" key={person.name}>
-          <img alt={person.name} src={person.imageSrc} />
+        <ListItem key={person.name}>
+          <ListItemAvatar>
+            <Avatar alt={person.name} src={person.imageSrc} />
+          </ListItemAvatar>
 
-          <div className="details">
-            <div>
-              <h2>{person.name}</h2>
-
-              {person.title && <div className="title">{person.title}</div>}
-            </div>
-          </div>
-        </div>
+          <ListItemText primary={person.name} secondary={person.title} />
+        </ListItem>
       ),
     )}
   </>

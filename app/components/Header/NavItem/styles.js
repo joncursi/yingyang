@@ -21,7 +21,7 @@ export const linkStyles = {
   height: '100%',
   paddingLeft: DIMS.LAYOUT_PADDING,
   paddingRight: DIMS.LAYOUT_PADDING,
-  paddingTop: ACTIVE_BORDER_WIDTH * 3,
+  paddingTop: ACTIVE_BORDER_WIDTH * 2,
   width: '100%',
 };
 
@@ -41,7 +41,6 @@ export default css`
     display: none;
   }
   .listItemTitle {
-    color: ${COLORS.BLACK};
     display: none;
     margin-left: 10px;
     user-select: none;

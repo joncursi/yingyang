@@ -5,7 +5,10 @@
 
 import * as React from 'react';
 import moment from 'moment';
+import Paper from '@material-ui/core/Paper';
+import Typography from '@material-ui/core/Typography';
 
+import Link from '../../../components/Link';
 import PageLayout from '../../../layouts/PageLayout';
 import ROUTES from '../../../constants/routes';
 import TextDivider from '../../../components/TextDivider';
@@ -14,69 +17,66 @@ import RenderColors from './RenderColors';
 import RenderParty from './RenderParty';
 import styles from './styles';
 
-const Page = (): React.Node => {
-  const imageUrls = [
-    '/static/img/splashes/home-1.jpg',
-    '/static/img/splashes/home-2.jpg',
-    '/static/img/splashes/home-3.jpg',
-  ];
+const imageUrls = [
+  '/static/img/splashes/home-1.jpg',
+  '/static/img/splashes/home-2.jpg',
+  '/static/img/splashes/home-3.jpg',
+];
 
-  return (
-    <>
-      <style jsx>{styles}</style>
+const Page = (): React.Node => (
+  <>
+    <style jsx>{styles}</style>
 
-      <PageLayout
-        activeRoute={ROUTES.HOME}
-        rightContainer={
-          <img
-            alt="Michelle & Jonathan"
-            src={imageUrls[Math.floor(Math.random() * imageUrls.length)]}
-          />
-        }
-      >
+    <PageLayout
+      activeRoute={ROUTES.HOME}
+      rightContainer={
+        <img
+          alt="Michelle & Jonathan"
+          src={imageUrls[Math.floor(Math.random() * imageUrls.length)]}
+        />
+      }
+    >
+      <Paper elevation={0} square>
         <div className="contentContainer">
-          <h1>
-            Michelle
-            <br />
-            - & -
-            <br />
-            Jonathan
-          </h1>
+          <Typography>
+            <h1>
+              Michelle
+              <br />
+              - & -
+              <br />
+              Jonathan
+            </h1>
+          </Typography>
 
           <TextDivider text="When" />
 
-          <h2>September 29, 2019</h2>
+          <Typography variant="h5">September 29, 2019</Typography>
 
-          <h3>
+          <Typography variant="overline">
             {`${Math.abs(
               moment().diff(new Date('09/29/2019'), 'days') - 1,
             )} days to go!`}
-          </h3>
+          </Typography>
 
           <TextDivider text="Where" />
 
-          <h2>
-            <a
-              href="https://theoldmillrosevalley.com/"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
+          <Typography variant="h5">
+            <Link target="_blank" to="https://theoldmillrosevalley.com/">
               The Old Mill
-            </a>
-          </h2>
+            </Link>
+          </Typography>
 
-          <h3>
-            <a
-              href="https://goo.gl/maps/a6ZBcxufE1G2"
-              rel="noopener noreferrer"
+          <Typography variant="overline">
+            <Link
               style={{
                 textDecoration: 'none',
               }}
               target="_blank"
+              to="https://goo.gl/maps/a6ZBcxufE1G2"
             >
               9 Old Mill Lane, Rose Valley, PA 19063
-            </a>
-          </h3>
+            </Link>
+          </Typography>
 
           <TextDivider text="Our Colors" />
 
@@ -146,9 +146,9 @@ const Page = (): React.Node => {
             ]}
           />
         </div>
-      </PageLayout>
-    </>
-  );
-};
+      </Paper>
+    </PageLayout>
+  </>
+);
 
 export default Page;

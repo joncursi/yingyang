@@ -4,8 +4,10 @@
  */
 
 import * as React from 'react';
+import Divider from '@material-ui/core/Divider';
+import Typography from '@material-ui/core/Typography';
 
-import styles from './styles';
+import styles, { globalStyles } from './styles';
 
 type PropsFlowType = {
   text: string,
@@ -13,13 +15,18 @@ type PropsFlowType = {
 
 const TextDivider = ({ text }: PropsFlowType): React.Node => (
   <div className="container">
+    <style global jsx>
+      {globalStyles}
+    </style>
     <style jsx>{styles}</style>
 
-    <hr />
+    <Divider classes={{ root: 'textDividerRoot' }} />
 
-    <span>{text}</span>
+    <Typography variant="overline">
+      <span>{text}</span>
+    </Typography>
 
-    <hr />
+    <Divider classes={{ root: 'textDividerRoot' }} />
   </div>
 );
 

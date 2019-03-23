@@ -6,11 +6,52 @@
 /* global document */
 
 import * as React from 'react';
+import Amazon from 'mdi-material-ui/Amazon';
+import Bullseye from 'mdi-material-ui/Bullseye';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
+import OpenInNewIcon from '@material-ui/icons/OpenInNew';
+import Paper from '@material-ui/core/Paper';
+import WalletGiftcard from 'mdi-material-ui/WalletGiftcard';
 
+import Link from '../../../components/Link';
 import PageLayout from '../../../layouts/PageLayout';
 import ROUTES from '../../../constants/routes';
 
-import styles from './styles';
+const registries = [
+  {
+    Icon: WalletGiftcard,
+    id: 'zola',
+    link: {
+      target: '_blank',
+      to:
+        'https://hamptoninn3.hilton.com/en/hotels/pennsylvania/hampton-inn-and-suites-philadelphia-media-PHLSPHX/index.html',
+    },
+    primaryText: 'Zola',
+    secondaryText: 'Something here',
+  },
+  {
+    Icon: Amazon,
+    id: 'amazon',
+    link: {
+      target: '_blank',
+      to: 'https://www.amazon.com/wedding/share/michelleandjon',
+    },
+    primaryText: 'Amazon',
+    secondaryText: 'Something here',
+  },
+  {
+    Icon: Bullseye,
+    id: 'target',
+    link: {
+      target: '_blank',
+      to: 'https://www.target.com/gift-registry/gift/michelleandjon',
+    },
+    primaryText: 'Target',
+    secondaryText: 'Something here',
+  },
+];
 
 type PropsFlowType = {};
 
@@ -39,32 +80,57 @@ class Page extends React.Component<PropsFlowType> {
 
   render(): React.Node {
     return (
-      <>
-        <style jsx>{styles}</style>
+      <PageLayout
+        activeRoute={ROUTES.REGISTRY}
+        rightContainer={
+          <a
+            className="zola-registry-embed"
+            data-registry-key="michelleandjonathan92919"
+            href="https://www.zola.com/registry/michelleandjonathan92919"
+          >
+            Our Zola Wedding Registry
+            <div
+              ref={el => {
+                // eslint-disable-next-line immutable/no-mutation
+                this.instance = el;
+              }}
+            />
+          </a>
+        }
+      >
+        <div className="contentContainer">
+          <Paper elevation={0} square>
+            {registries.map(
+              (registry): React.Node => {
+                const children = (
+                  <ListItem button={!!registry.link} divider key={registry.id}>
+                    <ListItemIcon>
+                      <registry.Icon />
+                    </ListItemIcon>
 
-        <PageLayout
-          activeRoute={ROUTES.REGISTRY}
-          rightContainer={
-            <a
-              className="zola-registry-embed"
-              data-registry-key="michelleandjonathan92919"
-              href="https://www.zola.com/registry/michelleandjonathan92919"
-            >
-              Our Zola Wedding Registry
-              <div
-                ref={el => {
-                  // eslint-disable-next-line immutable/no-mutation
-                  this.instance = el;
-                }}
-              />
-            </a>
-          }
-        >
-          <div className="contentContainer">
-            <p>Work in progress.</p>
-          </div>
-        </PageLayout>
-      </>
+                    <ListItemText
+                      primary={registry.primaryText}
+                      secondary={registry.secondaryText}
+                    />
+
+                    {!!registry.link && (
+                      <ListItemIcon>
+                        <OpenInNewIcon fontSize="small" />
+                      </ListItemIcon>
+                    )}
+                  </ListItem>
+                );
+
+                if (registry.link) {
+                  return <Link {...registry.link}>{children}</Link>;
+                }
+
+                return children;
+              },
+            )}
+          </Paper>
+        </div>
+      </PageLayout>
     );
   }
 }

@@ -7,6 +7,7 @@
 
 export default {
   BLACK: '#000',
+  BLACK_12: 'rgba(0, 0, 0, 0.12)',
   SCREEN_BACKGROUND: '#f2f2f2',
   TRANSPARENT: 'rgba(0, 0, 0, 0)',
   WEDDING: {

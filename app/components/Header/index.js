@@ -120,7 +120,7 @@ class Header extends React.Component<PropsFlowType, StateFlowType> {
         <style jsx>{styles}</style>
 
         <div className="container">
-          <Paper>
+          <Paper square>
             <header className="headerContainer">
               <div className="sectionsContainer">
                 <div className="section left">
