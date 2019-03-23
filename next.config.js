@@ -65,14 +65,6 @@ module.exports = withCSS({
       },
     );
 
-    // Remove minifed react aliases for material-ui so production builds work
-    /* eslint-disable no-param-reassign */
-    if (config.resolve.alias) {
-      delete config.resolve.alias.react;
-      delete config.resolve.alias['react-dom'];
-    }
-    /* eslint-enable no-param-reassign */
-
     return config;
   },
 });

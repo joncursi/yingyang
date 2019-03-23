@@ -6,25 +6,12 @@
 /* eslint-disable filenames/match-regex, filenames/match-exported */
 
 import * as React from 'react';
-import AppRegistry from 'react-native-web/dist/cjs/exports/AppRegistry';
 import DocumentImport, { Head, Main, NextScript } from 'next/document';
-import Entypo from 'react-native-vector-icons/Fonts/Entypo.ttf';
-import EvilIcons from 'react-native-vector-icons/Fonts/EvilIcons.ttf';
-import Feather from 'react-native-vector-icons/Fonts/Feather.ttf';
 import flush from 'styled-jsx/server';
-import FontAwesome from 'react-native-vector-icons/Fonts/FontAwesome.ttf';
-import FontAwesome5 from 'react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf';
-import Foundation from 'react-native-vector-icons/Fonts/Foundation.ttf';
 import htmlescape from 'htmlescape';
-import Ionicons from 'react-native-vector-icons/Fonts/Ionicons.ttf';
-import materialColors from 'material-colors';
-import MaterialCommunityIcons from 'react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf';
-import MaterialIcons from 'react-native-vector-icons/Fonts/MaterialIcons.ttf';
-import Octicons from 'react-native-vector-icons/Fonts/Octicons.ttf';
-import SimpleLineIcons from 'react-native-vector-icons/Fonts/SimpleLineIcons.ttf';
-import Zocial from 'react-native-vector-icons/Fonts/Zocial.ttf';
 
 import type { ContextFlowType } from '../types';
+import COLORS from '../constants/colors';
 
 // choose which env variables should be available on the client
 const { GOOGLE_ANALYTICS_TRACKING_ID_WEB, NODE_ENV } = process.env;
@@ -50,6 +37,7 @@ const normalizeNextElements = `
 let index = 0;
 
 type PropsFlowType = {
+  pageContext: Object | null,
   url: string,
 };
 
@@ -63,30 +51,60 @@ class Document extends DocumentImport<PropsFlowType> {
   static async getInitialProps(ctx: CtxFlowType): Promise<PropsFlowType> {
     const props = await super.getInitialProps(ctx);
 
-    // build the page
+    // Render app and page and get the context of the page with collected side effects.
+    let pageContext;
     // eslint-disable-next-line object-curly-newline
-    const page = ctx.renderPage();
+    const page = ctx.renderPage(
+      (Component): any => {
+        const WrappedComponent = (componentProps): React.Node => {
+          pageContext = componentProps.pageContext;
+          return <Component {...componentProps} />;
+        };
 
-    // register the app with react-native-web
-    AppRegistry.registerComponent('Main', (): Function => Main);
+        /*
+        WrappedComponent.propTypes = {
+          pageContext: PropTypes.object.isRequired,
+        };
+        */
 
-    // build a separate stylesheet for react-native-web universal components
-    const { getStyleElement } = AppRegistry.getApplication('Main', {});
-    const reactNativeWebStyles = getStyleElement();
-    // build a separate stylesheet for styled-jsx styles
-    const styledJsxStyles = flush();
-    // combine styles
-    const styles = [
-      props.styles,
-      /* eslint-disable react/no-danger, no-plusplus */
+        return WrappedComponent;
+      },
+    );
+
+    let css;
+    // It might be undefined, e.g. after an error.
+    if (pageContext) {
+      css = pageContext.sheetsRegistry.toString();
+    }
+
+    /* eslint-disable react/no-danger, no-plusplus */
+    // next styles
+    const nextStyles = (
       <style
         dangerouslySetInnerHTML={{ __html: normalizeNextElements }}
         key={index++}
-      />,
-      /* eslint-enable react/no-danger, no-plusplus */
-      ...styledJsxStyles,
-      reactNativeWebStyles,
-    ];
+      />
+    );
+    // material ui styles
+    const materialUiStyles = (
+      <style dangerouslySetInnerHTML={{ __html: css }} id="jss-server-side" />
+    );
+    // build a separate stylesheet for styled-jsx styles
+    const styledJsxStyles = flush() || null;
+    /* eslint-enable react/no-danger, no-plusplus */
+
+    // combine styles
+    const styles = (
+      <>
+        {props.styles}
+
+        {nextStyles}
+
+        {materialUiStyles}
+
+        {styledJsxStyles}
+      </>
+    );
 
     // get the current URL being requested
     const url = `https://${ctx.req.headers.host}${ctx.req.url}`;
@@ -95,37 +113,28 @@ class Document extends DocumentImport<PropsFlowType> {
     return {
       ...page,
       ...props,
+      pageContext,
       styles,
       url,
     };
   }
 
   render(): React.Node {
-    const { url } = this.props;
+    const { pageContext, url } = this.props;
 
     return (
-      <html lang="en">
+      <html lang="en" style={{ height: '100%' }}>
         <Head>
           {/* General */}
           <meta charSet="utf-8" />
           <meta content="text/html; charset=utf-8" httpEquiv="content-type" />
           <meta
-            content={
-              'user-scalable=0, initial-scale=1, ' +
-              'minimum-scale=1, width=device-width, height=device-height'
-            }
+            content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no"
             name="viewport"
           />
           <meta content="YingYang" name="application-name" />
           <meta content="Jon Cursi" name="creator" />
-          <meta
-            content={
-              ENV.NODE_ENV === 'production'
-                ? 'index,follow'
-                : 'noindex,nofollow'
-            }
-            name="robots"
-          />
+          <meta content="noindex,nofollow" name="robots" />
           {/* Google */}
           <meta
             content="vpliTwwU3WWzDHUyPAxrNJV8_qsotw03lQwbbm6t3ic"
@@ -214,88 +223,36 @@ class Document extends DocumentImport<PropsFlowType> {
           <meta content="US" name="twitter:app:country" />
           <meta content="summary" name="twitter:card" />
           <meta content={url} name="twitter:url" />
-          {/* Styles */}
-          <link rel="stylesheet" href="/static/css/normalize.css" />
-          {/* Icons */}
-          <style type="text/css">
-            {`
-              @font-face {
-                src: url(${Entypo});
-                font-family: Entypo;
-              }
-              @font-face {
-                src: url(${EvilIcons});
-                font-family: EvilIcons;
-              }
-              @font-face {
-                src: url(${Feather});
-                font-family: Feather;
-              }
-              @font-face {
-                src: url(${FontAwesome});
-                font-family: FontAwesome;
-              }
-              @font-face {
-                src: url(${FontAwesome5});
-                font-family: FontAwesome5_Solid;
-              }
-              @font-face {
-                src: url(${Foundation});
-                font-family: Foundation;
-              }
-              @font-face {
-                src: url(${Ionicons});
-                font-family: Ionicons;
-              }
-              @font-face {
-                src: url(${MaterialCommunityIcons});
-                font-family: MaterialCommunityIcons;
-              }
-              @font-face {
-                src: url(${MaterialIcons});
-                font-family: MaterialIcons;
-              }
-              @font-face {
-                src: url(${Octicons});
-                font-family: Octicons;
-              }
-              @font-face {
-                src: url(${SimpleLineIcons});
-                font-family: SimpleLineIcons;
-              }
-              @font-face {
-                src: url(${Zocial});
-                font-family: Zocial;
-              }
-            `}
-          </style>
+          {/* Material UI */}
+          <meta
+            content={
+              pageContext ? pageContext.theme.palette.primary.main : null
+            }
+            name="theme-color"
+          />
           {/* Fonts */}
           <link
             href="https://fonts.googleapis.com/css?family=Great+Vibes|Montserrat"
             rel="stylesheet"
           />
+          <link
+            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"
+            rel="stylesheet"
+          />
+          {/* Styles */}
           <style jsx global>
             {`
               * {
-                font-family: 'Montserrat', sans-serif;
+                font-family: 'Roboto', sans-serif;
               }
-              h1,
-              h2,
-              h3,
-              h4,
-              h5,
-              h6,
-              p,
-              span,
-              div,
-              a {
-                color: ${materialColors.white};
+              #__next {
+                height: 100%;
               }
             `}
           </style>
         </Head>
 
-        <body bgColor={materialColors.black}>
+        <body bgColor={COLORS.SCREEN_BACKGROUND} style={{ height: '100%' }}>
           <Main />
 
           {/* eslint-disable react/no-danger */}

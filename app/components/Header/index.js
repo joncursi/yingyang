@@ -7,8 +7,9 @@
 
 import * as React from 'react';
 import { animateScroll } from 'react-scroll';
+import GiftIcon from 'mdi-material-ui/Gift';
+import HotelIcon from 'mdi-material-ui/Hotel';
 
-import ICON_TYPES from '../../constants/iconTypes';
 import Link from '../Link';
 import ROUTES from '../../constants/routes';
 
@@ -93,10 +94,7 @@ class Header extends React.Component<PropsFlowType, StateFlowType> {
 
     const leftNavLinks = [
       {
-        icon: {
-          name: 'hotel',
-          type: ICON_TYPES.MATERIAL_COMMUNITY,
-        },
+        Icon: HotelIcon,
         id: 'accomodations',
         isActiveRoute: activeRoute === ROUTES.ACCOMODATIONS,
         route: ROUTES.ACCOMODATIONS,
@@ -106,10 +104,7 @@ class Header extends React.Component<PropsFlowType, StateFlowType> {
 
     const rightNavLinks = [
       {
-        icon: {
-          name: 'gift',
-          type: ICON_TYPES.MATERIAL_COMMUNITY,
-        },
+        Icon: GiftIcon,
         id: 'registry',
         isActiveRoute: activeRoute === ROUTES.REGISTRY,
         route: ROUTES.REGISTRY,

@@ -4,8 +4,8 @@
  */
 
 import css from 'styled-jsx/css';
-import materialColors from 'material-colors';
 
+import COLORS from '../../../../constants/colors';
 import DIMS from '../../../../constants/dims';
 
 export default css`
@@ -15,7 +15,7 @@ export default css`
     margin: ${DIMS.LAYOUT_PADDING * 3}px 0;
   }
   img {
-    border: 3px solid ${materialColors.white};
+    border: 3px solid ${COLORS.WHITE};
     height: 60px;
     border-radius: 50%;
     width: 60px;
@@ -32,7 +32,7 @@ export default css`
     margin: 0;
   }
   .title {
-    color: ${materialColors.white};
+    color: ${COLORS.WHITE};
     font-size: ${4 / 4}em;
     margin-top: ${DIMS.LAYOUT_PADDING / 2}px;
     opacity: 0.5;

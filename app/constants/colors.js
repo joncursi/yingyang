@@ -5,10 +5,9 @@
 
 /* eslint-disable sort-keys */
 
-import materialColors from 'material-colors';
-
 export default {
-  BLACK: materialColors.black,
+  BLACK: '#000',
+  SCREEN_BACKGROUND: '#f2f2f2',
   TRANSPARENT: 'rgba(0, 0, 0, 0)',
   WEDDING: {
     DUSTY_ROSE: '#c78d82',
@@ -18,5 +17,5 @@ export default {
     BLUE_GREEN: '#4b5151',
     GOLD: '#a17335',
   },
-  WHITE: materialColors.white,
+  WHITE: '#fff',
 };

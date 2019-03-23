@@ -4,8 +4,8 @@
  */
 
 import css from 'styled-jsx/css';
-import materialColors from 'material-colors';
 
+import COLORS from '../../../../constants/colors';
 import DIMS from '../../../../constants/dims';
 
 export default css`
@@ -16,7 +16,7 @@ export default css`
     justify-content: center;
   }
   .color {
-    border: 3px solid ${materialColors.white};
+    border: 3px solid ${COLORS.WHITE};
     height: 35px;
     border-radius: 50%;
     margin: ${DIMS.LAYOUT_PADDING}px;

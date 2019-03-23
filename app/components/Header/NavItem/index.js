@@ -7,21 +7,19 @@ import * as React from 'react';
 import compose from 'recompose/compose';
 import onClickOutside from 'react-onclickoutside';
 
-import type { IconFlowType } from '../../../types';
-import Icon from '../../Icon';
 import Link from '../../Link';
 
 import styles, { activeLinkStyles, linkStyles } from './styles';
 
 type PropsFlowType = {
-  icon: IconFlowType,
+  Icon: Function,
   isActiveRoute: boolean,
   route: string,
   title: string,
 };
 
 const NavItem = ({
-  icon,
+  Icon,
   title,
   isActiveRoute,
   route,
@@ -40,7 +38,7 @@ const NavItem = ({
         to={route}
       >
         <div className="listItemIconContainer">
-          <Icon {...icon} size={28} />
+          <Icon size={28} />
         </div>
 
         {title && <span className="listItemTitle">{title}</span>}

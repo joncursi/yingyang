@@ -16,25 +16,6 @@ export type ContextFlowType = {
   res: Object,
 };
 
-export type IconFlowType = {
-  color?: string,
-  name?: string,
-  size?: number,
-  type?:
-    | 'ENTYPO'
-    | 'EVIL'
-    | 'FEATHER'
-    | 'FONT_AWESOME'
-    | 'FONT_AWESOME_5'
-    | 'FOUNDATION'
-    | 'IONIC'
-    | 'MATERIAL'
-    | 'MATERIAL_COMMUNITY'
-    | 'OCTICON'
-    | 'SIMPLE_LINE'
-    | 'ZOCIAL',
-};
-
 export type UrlFlowType = {
   asPath: string,
   back: Function,

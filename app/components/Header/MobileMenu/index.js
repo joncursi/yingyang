@@ -4,11 +4,12 @@
  */
 
 import * as React from 'react';
+import KeyboardArrowRightIcon from '@material-ui/icons/KeyboardArrowRight';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
 
-import type { IconFlowType } from '../../../types';
-import Icon from '../../Icon';
 import Link from '../../Link';
-import ListItem from '../../ListItem';
 import COLORS from '../../../constants/colors';
 
 import styles from './styles';
@@ -17,7 +18,7 @@ type PropsFlowType = {
   handleCloseMenu: () => void,
   isOpen: boolean,
   mobileNavLinks: Array<{
-    icon: IconFlowType,
+    Icon: Function,
     id: string,
     isActiveRoute: boolean,
     route: string,
@@ -49,20 +50,17 @@ const MobileMenu = ({
                       mobileNavLink.isActiveRoute ? 'isActiveRoute' : ''
                     }`}
                   >
-                    {/*
-                          primaryTextStyle={coreStyles.listItemPrimaryText}
-                        */}
-                    <ListItem
-                      leftIcon={
-                        <Icon
-                          {...mobileNavLink.icon}
-                          color={COLORS.WHITE}
-                          size={20}
-                        />
-                      }
-                      primaryText={mobileNavLink.title}
-                      variant="small"
-                    />
+                    <ListItem button divider>
+                      <ListItemIcon>
+                        <mobileNavLink.Icon color={COLORS.WHITE} size={20} />
+                      </ListItemIcon>
+
+                      <ListItemText primaryText={mobileNavLink.title} />
+
+                      <ListItemIcon>
+                        <KeyboardArrowRightIcon />
+                      </ListItemIcon>
+                    </ListItem>
                   </div>
                 </Link>
               </li>

@@ -4,8 +4,8 @@
  */
 
 import css from 'styled-jsx/css';
-import materialColors from 'material-colors';
 
+import COLORS from '../../constants/colors';
 import DIMS from '../../constants/dims';
 
 export default css`
@@ -31,7 +31,7 @@ export default css`
     order: 1;
   }
   img {
-    border-bottom: 3px solid ${materialColors.white};
+    border-bottom: 3px solid ${COLORS.WHITE};
     display: block;
     height: auto;
     width: 100%;
