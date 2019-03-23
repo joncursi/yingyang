@@ -8,6 +8,12 @@ import css from 'styled-jsx/css';
 import COLORS from '../../../constants/colors';
 import DIMS from '../../../constants/dims';
 
+export const globalStyles = css.global`
+  .mobileMenuListItem {
+    padding-right: 0;
+  }
+`;
+
 export default css`
   .container {
     background-color: ${COLORS.WEDDING.DUSTY_ROSE};
@@ -29,7 +35,6 @@ export default css`
   li {
   }
   .mobileNavLink {
-    margin: ${DIMS.LAYOUT_PADDING}px;
     opacity: 0.75;
   }
   .mobileNavLink.isActiveRoute {

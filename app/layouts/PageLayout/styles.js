@@ -5,7 +5,6 @@
 
 import css from 'styled-jsx/css';
 
-import COLORS from '../../constants/colors';
 import DIMS from '../../constants/dims';
 
 export default css`
@@ -15,8 +14,6 @@ export default css`
     flex-direction: column;
   }
   .containerLeft {
-    background-image: url('/static/img/chalkboard.jpg');
-    background-repeat: repeat;
     display: flex;
     flex: 1;
     flex-direction: column;
@@ -29,12 +26,6 @@ export default css`
   .containerRight {
     display: block;
     order: 1;
-  }
-  img {
-    border-bottom: 3px solid ${COLORS.WHITE};
-    display: block;
-    height: auto;
-    width: 100%;
   }
 
   @media (min-width: ${DIMS.BREAKPOINTS.LARGE}px) {
@@ -52,12 +43,6 @@ export default css`
       display: flex;
       flex: 3;
       order: 2;
-    }
-    img {
-      border-bottom: none;
-      height: 100%;
-      object-fit: cover;
-      width: 100%;
     }
   }
 `;

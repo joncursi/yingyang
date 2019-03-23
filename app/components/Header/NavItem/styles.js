@@ -18,10 +18,10 @@ export const linkStyles = {
   borderBottomWidth: ACTIVE_BORDER_WIDTH,
   color: NAV_ITEM_COLOR,
   display: 'flex',
-  height: `calc(100% - ${ACTIVE_BORDER_WIDTH * 1.5}px)`,
+  height: '100%',
   paddingLeft: DIMS.LAYOUT_PADDING,
   paddingRight: DIMS.LAYOUT_PADDING,
-  paddingTop: ACTIVE_BORDER_WIDTH,
+  paddingTop: ACTIVE_BORDER_WIDTH * 3,
   width: '100%',
 };
 

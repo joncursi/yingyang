@@ -4,6 +4,7 @@
  */
 
 import * as React from 'react';
+import Divider from '@material-ui/core/Divider';
 import moment from 'moment';
 
 import PageLayout from '../../../layouts/PageLayout';
@@ -27,10 +28,15 @@ const Page = (): React.Node => {
 
       <PageLayout
         activeRoute={ROUTES.HOME}
-        backgroundImageUrl={
-          imageUrls[Math.floor(Math.random() * imageUrls.length)]
+        rightContainer={
+          <img
+            alt="Michelle & Jonathan"
+            src={imageUrls[Math.floor(Math.random() * imageUrls.length)]}
+          />
         }
       >
+        <Divider />
+
         <div className="contentContainer">
           <h1>
             Michelle

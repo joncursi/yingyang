@@ -45,6 +45,7 @@ export default css`
   }
   img.logo {
     height: ${LOGO_HEIGHT}px;
+    margin-bottom: 5px;
     width: ${LOGO_WIDTH}px;
   }
   .section.center {

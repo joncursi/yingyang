@@ -10,9 +10,8 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 
 import Link from '../../Link';
-import COLORS from '../../../constants/colors';
 
-import styles from './styles';
+import styles, { globalStyles } from './styles';
 
 type PropsFlowType = {
   handleCloseMenu: () => void,
@@ -32,6 +31,9 @@ const MobileMenu = ({
   mobileNavLinks,
 }: PropsFlowType): React.Node => (
   <div>
+    <style global jsx>
+      {globalStyles}
+    </style>
     <style jsx>{styles}</style>
 
     <div
@@ -50,15 +52,24 @@ const MobileMenu = ({
                       mobileNavLink.isActiveRoute ? 'isActiveRoute' : ''
                     }`}
                   >
-                    <ListItem button divider>
+                    <ListItem
+                      button
+                      classes={{ root: 'mobileMenuListItem' }}
+                      divider
+                    >
                       <ListItemIcon>
-                        <mobileNavLink.Icon color={COLORS.WHITE} size={20} />
+                        <mobileNavLink.Icon color="secondary" size={20} />
                       </ListItemIcon>
 
-                      <ListItemText primary={mobileNavLink.title} />
+                      <ListItemText
+                        primary={mobileNavLink.title}
+                        primaryTypographyProps={{
+                          color: 'secondary',
+                        }}
+                      />
 
                       <ListItemIcon>
-                        <KeyboardArrowRightIcon />
+                        <KeyboardArrowRightIcon color="secondary" />
                       </ListItemIcon>
                     </ListItem>
                   </div>

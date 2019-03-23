@@ -6,6 +6,7 @@
 import * as React from 'react';
 import AirportShuttleIcon from '@material-ui/icons/AirportShuttle';
 import CalendarIcon from 'mdi-material-ui/Calendar';
+import Divider from '@material-ui/core/Divider';
 import FreeBreakfastIcon from '@material-ui/icons/FreeBreakfast';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
@@ -20,13 +21,7 @@ import Link from '../../../components/Link';
 import PageLayout from '../../../layouts/PageLayout';
 import ROUTES from '../../../constants/routes';
 
-// import styles from './styles';
-
-const imageUrls = [
-  // '/static/img/splashes/accomodations-1.jpg',
-  '/static/img/splashes/accomodations-2.jpg',
-  // '/static/img/splashes/accomodations-3.jpg',
-];
+import styles from './styles';
 
 const details = [
   {
@@ -90,16 +85,21 @@ const details = [
 
 const Page = (): React.Node => (
   <>
-    {/* <style jsx>{styles}</style> */}
+    <style jsx>{styles}</style>
 
     <PageLayout
       activeRoute={ROUTES.ACCOMODATIONS}
-      backgroundImageUrl={
-        imageUrls[Math.floor(Math.random() * imageUrls.length)]
+      rightContainer={
+        <img
+          alt="Hampton Inn & Suites, Media PA"
+          src="/static/img/splashes/accomodations-2.jpg"
+        />
       }
     >
       <div className="contentContainer">
-        <Paper square>
+        <Divider />
+
+        <Paper elevation={0} square>
           {details.map(
             (detail): React.Node => {
               const children = (

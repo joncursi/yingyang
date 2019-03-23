@@ -11,8 +11,6 @@ const Footer = (): React.Node => (
   <footer>
     <style jsx>{styles}</style>
 
-    <hr className="divider" />
-
     <h6>
       Made with
       <span aria-label="love" role="img">

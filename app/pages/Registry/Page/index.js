@@ -18,15 +18,21 @@ class Page extends React.Component<PropsFlowType> {
   props: PropsFlowType;
 
   componentDidMount() {
-    const s = document.createElement('script');
+    this._loadZolaPlugin();
+  }
 
-    /* eslint-disable immutable/no-mutation */
-    s.type = 'text/javascript';
-    s.async = true;
-    s.innerHTML = `!function(e,t,n){var s,a=e.getElementsByTagName(t)[0];e.getElementById(n)||(s=e.createElement(t),s.id=n,s.async=!0,s.src="https://widget.zola.com/js/widget.js",a.parentNode.insertBefore(s,a))}(document,"script","zola-wjs");`;
-    /* eslint-enable immutable/no-mutation */
+  _loadZolaPlugin() {
+    if (this.instance && typeof document !== 'undefined') {
+      const s = document.createElement('script');
 
-    this.instance.appendChild(s);
+      /* eslint-disable immutable/no-mutation */
+      s.type = 'text/javascript';
+      s.async = true;
+      s.innerHTML = `!function(e,t,n){var s,a=e.getElementsByTagName(t)[0];e.getElementById(n)||(s=e.createElement(t),s.id=n,s.async=!0,s.src="https://widget.zola.com/js/widget.js",a.parentNode.insertBefore(s,a))}(document,"script","zola-wjs");`;
+      /* eslint-enable immutable/no-mutation */
+
+      this.instance.appendChild(s);
+    }
   }
 
   instance: Function;
@@ -38,9 +44,7 @@ class Page extends React.Component<PropsFlowType> {
 
         <PageLayout
           activeRoute={ROUTES.REGISTRY}
-          backgroundImageUrl="/static/img/splashes/registry-1.png"
-        >
-          <div className="contentContainer">
+          rightContainer={
             <a
               className="zola-registry-embed"
               data-registry-key="michelleandjonathan92919"
@@ -54,6 +58,10 @@ class Page extends React.Component<PropsFlowType> {
                 }}
               />
             </a>
+          }
+        >
+          <div className="contentContainer">
+            <p>Work in progress.</p>
           </div>
         </PageLayout>
       </>

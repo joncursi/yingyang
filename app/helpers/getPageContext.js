@@ -8,7 +8,6 @@ import {
   createMuiTheme,
 } from '@material-ui/core/styles';
 import green from '@material-ui/core/colors/green';
-import orange from '@material-ui/core/colors/orange';
 import { SheetsRegistry } from 'jss';
 
 import COLORS from '../constants/colors';
@@ -23,9 +22,9 @@ const theme = createMuiTheme({
       main: green[500],
     },
     secondary: {
-      dark: orange[700],
-      light: orange[300],
-      main: COLORS.WEDDING.SIERRA,
+      dark: COLORS.WHITE,
+      light: COLORS.WHITE,
+      main: COLORS.WHITE,
     },
   },
   typography: {

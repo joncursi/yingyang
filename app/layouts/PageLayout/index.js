@@ -15,8 +15,8 @@ import styles from './styles';
 
 type PropsFlowType = {
   activeRoute: string,
-  backgroundImageUrl: string,
   children: React.Node,
+  rightContainer: React.Node,
 };
 
 class PageLayout extends React.Component<PropsFlowType> {
@@ -34,7 +34,7 @@ class PageLayout extends React.Component<PropsFlowType> {
   }
 
   render(): React.Node {
-    const { activeRoute, backgroundImageUrl, children } = this.props;
+    const { activeRoute, children, rightContainer } = this.props;
 
     return (
       <>
@@ -49,9 +49,7 @@ class PageLayout extends React.Component<PropsFlowType> {
             <Footer />
           </div>
 
-          <div className="containerRight">
-            <img alt="Michelle & Jonathan" src={backgroundImageUrl} />
-          </div>
+          <div className="containerRight">{rightContainer}</div>
         </div>
       </>
     );
