@@ -27,8 +27,7 @@ const registries = [
     id: 'zola',
     link: {
       target: '_blank',
-      to:
-        'https://hamptoninn3.hilton.com/en/hotels/pennsylvania/hampton-inn-and-suites-philadelphia-media-PHLSPHX/index.html',
+      to: 'https://www.zola.com/registry/michelleandjonathan92919',
     },
     primaryText: 'Zola',
     secondaryText: 'Something here',
