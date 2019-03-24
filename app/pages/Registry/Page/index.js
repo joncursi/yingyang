@@ -25,32 +25,38 @@ const registries = [
   {
     Icon: WalletGiftcard,
     id: 'zola',
+    /*
     link: {
       target: '_blank',
       to: 'https://www.zola.com/registry/michelleandjonathan92919',
     },
+    */
     primaryText: 'Zola',
-    secondaryText: 'Something here',
+    secondaryText: 'Coming soon!',
   },
   {
     Icon: Amazon,
     id: 'amazon',
+    /*
     link: {
       target: '_blank',
       to: 'https://www.amazon.com/wedding/share/michelleandjon',
     },
+    */
     primaryText: 'Amazon',
-    secondaryText: 'Something here',
+    secondaryText: 'Coming soon!',
   },
   {
     Icon: Bullseye,
     id: 'target',
+    /*
     link: {
       target: '_blank',
       to: 'https://www.target.com/gift-registry/gift/michelleandjon',
     },
+    */
     primaryText: 'Target',
-    secondaryText: 'Something here',
+    secondaryText: 'Coming soon!',
   },
 ];
 
@@ -90,6 +96,17 @@ class Page extends React.Component<PropsFlowType> {
         <PageLayout
           activeRoute={ROUTES.REGISTRY}
           rightContainer={
+            <div className="rightContainer">
+              <div className="overlay" />
+
+              <img
+                alt="Registry Coming Soon!"
+                src="/static/img/splashes/registry-1.png"
+              />
+            </div>
+          }
+          /*
+          rightContainer={
             <a
               className="zola-registry-embed"
               data-registry-key="michelleandjonathan92919"
@@ -107,6 +124,7 @@ class Page extends React.Component<PropsFlowType> {
           rightContainerStyle={{
             overflowY: 'scroll',
           }}
+          */
         >
           <div className="contentContainer">
             <Divider />
