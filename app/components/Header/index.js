@@ -158,7 +158,7 @@ class Header extends React.Component<PropsFlowType, StateFlowType> {
                     <img
                       alt="Michelle Lombarski & Jonathan Cursi's Wedding Website"
                       className="logo"
-                      src="/static/img/logo.jpg"
+                      src="/static/img/logo.png"
                     />
                   </Link>
                 </div>

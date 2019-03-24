@@ -17,10 +17,15 @@ type PropsFlowType = {
   activeRoute: string,
   children: React.Node,
   rightContainer: React.Node,
+  rightContainerStyle?: Object,
 };
 
 class PageLayout extends React.Component<PropsFlowType> {
   props: PropsFlowType;
+
+  static defaultProps = {
+    rightContainerStyle: undefined,
+  };
 
   componentDidMount() {
     /* eslint-disable no-underscore-dangle */
@@ -34,7 +39,12 @@ class PageLayout extends React.Component<PropsFlowType> {
   }
 
   render(): React.Node {
-    const { activeRoute, children, rightContainer } = this.props;
+    const {
+      activeRoute,
+      children,
+      rightContainer,
+      rightContainerStyle,
+    } = this.props;
 
     return (
       <>
@@ -49,7 +59,9 @@ class PageLayout extends React.Component<PropsFlowType> {
             <Footer />
           </div>
 
-          <div className="containerRight">{rightContainer}</div>
+          <div className="containerRight" style={rightContainerStyle}>
+            {rightContainer}
+          </div>
         </div>
       </>
     );

@@ -19,7 +19,7 @@ import Link from '../../../components/Link';
 import PageLayout from '../../../layouts/PageLayout';
 import ROUTES from '../../../constants/routes';
 
-import globalStyles from './styles';
+import styles, { globalStyles } from './styles';
 
 const registries = [
   {
@@ -86,6 +86,7 @@ class Page extends React.Component<PropsFlowType> {
         <style global jsx>
           {globalStyles}
         </style>
+        <style jsx>{styles}</style>
 
         <PageLayout
           activeRoute={ROUTES.REGISTRY}
@@ -95,7 +96,7 @@ class Page extends React.Component<PropsFlowType> {
               data-registry-key="michelleandjonathan92919"
               href="https://www.zola.com/registry/michelleandjonathan92919"
             >
-              Our Zola Wedding Registry
+              Loading...
               <div
                 ref={el => {
                   // eslint-disable-next-line immutable/no-mutation
@@ -104,6 +105,9 @@ class Page extends React.Component<PropsFlowType> {
               />
             </a>
           }
+          rightContainerStyle={{
+            overflowY: 'scroll',
+          }}
         >
           <div className="contentContainer">
             <Divider />
