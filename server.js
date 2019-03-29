@@ -11,6 +11,7 @@ const sm = require('sitemap');
 
 const ENV = require('./app/constants/env');
 const nextRoutes = require('./routes');
+const ROUTES = require('./app/constants/routes');
 
 // Create the express server
 const expressApp = express();
@@ -30,13 +31,38 @@ expressApp.get('/sitemap.xml', (req, res) => {
   const sitemap = sm.createSitemap({
     cacheTime: 600000,
     hostname,
-    urls: [
-      {
-        changefreq: 'monthly',
-        priority: 1,
-        url: '/',
-      },
-    ],
+  });
+
+  nextRoutes.routes.forEach(route => {
+    switch (true) {
+      case route.name === ROUTES.HOME: {
+        sitemap.add({
+          changefreq: 'weekly',
+          priority: 1,
+          url: route.pattern,
+        });
+        break;
+      }
+      case route.name === ROUTES.ACCOMODATIONS: {
+        sitemap.add({
+          changefreq: 'monthly',
+          priority: 0.5,
+          url: route.pattern,
+        });
+        break;
+      }
+      case route.name === ROUTES.REGISTRY: {
+        sitemap.add({
+          changefreq: 'monthly',
+          priority: 0.5,
+          url: route.pattern,
+        });
+        break;
+      }
+      default: {
+        break;
+      }
+    }
   });
   sitemap.toXML((err, xml) => {
     if (err) {
