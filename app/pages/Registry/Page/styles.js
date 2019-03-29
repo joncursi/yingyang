@@ -13,18 +13,6 @@ export const globalStyles = css.global`
   }
 `;
 
-/*
-export default css`
-  a.zola-registry-embed {
-    align-items: center;
-    display: flex;
-    height: 100%;
-    justify-content: center;
-    width: 100%;
-  }
-`;
-*/
-
 export default css`
   .rightContainer {
     position: relative;

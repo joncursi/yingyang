@@ -108,8 +108,7 @@ class Header extends React.Component<PropsFlowType, StateFlowType> {
         Icon: GiftIcon,
         id: 'registry',
         isActiveRoute: activeRoute === ROUTES.REGISTRY,
-        // route: ROUTES.REGISTRY,
-        route: 'https://www.michelleandjon.love/registry',
+        route: ROUTES.REGISTRY,
         title: 'Wedding Registry',
       },
     ];
