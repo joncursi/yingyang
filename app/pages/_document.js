@@ -134,7 +134,14 @@ class Document extends DocumentImport<PropsFlowType> {
           />
           <meta content="YingYang" name="application-name" />
           <meta content="Jon Cursi" name="creator" />
-          <meta content="noindex,nofollow" name="robots" />
+          <meta
+            content={
+              ENV.NODE_ENV === 'production'
+                ? 'index,follow'
+                : 'noindex,nofollow'
+            }
+            name="robots"
+          />
           {/* Google */}
           <meta
             content="vpliTwwU3WWzDHUyPAxrNJV8_qsotw03lQwbbm6t3ic"
