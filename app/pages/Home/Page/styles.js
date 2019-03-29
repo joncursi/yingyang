@@ -23,16 +23,6 @@ export default css`
     height: 100%;
     width: 100%;
   }
-  .overlay {
-    background-image: url(/static/img/splashes/overlay.png);
-    background-repeat: repeat;
-    bottom: 0;
-    left: 0;
-    opacity: 0.25;
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
   img {
     display: block;
     height: auto;

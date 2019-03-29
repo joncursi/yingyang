@@ -31,8 +31,6 @@ const Page = (): React.Node => (
       activeRoute={ROUTES.HOME}
       rightContainer={
         <div className="rightContainer">
-          <div className="overlay" />
-
           <img
             alt="Michelle & Jonathan"
             src={imageUrls[Math.floor(Math.random() * imageUrls.length)]}

@@ -132,8 +132,12 @@ class Document extends DocumentImport<PropsFlowType> {
             content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no"
             name="viewport"
           />
-          <meta content="YingYang" name="application-name" />
+          <meta
+            content="Michelle Lombarski and Jonathan Cursi's Wedding Website"
+            name="application-name"
+          />
           <meta content="Jon Cursi" name="creator" />
+          <meta content="#ffffff" name="theme-color" />
           <meta
             content={
               ENV.NODE_ENV === 'production'
@@ -148,79 +152,99 @@ class Document extends DocumentImport<PropsFlowType> {
             name="google-site-verification"
           />
           {/* Favicons */}
+          <link rel="shortcut icon" href="/static/img/favicons/favicon.ico" />
           <link
-            rel="apple-touch-icon"
+            rel="apple-touch-icon-precomposed"
             sizes="57x57"
-            href="/static/img/favicons/apple-icon-57x57.png"
+            href="/static/img/favicons/apple-touch-icon-57x57.png"
           />
           <link
-            rel="apple-touch-icon"
-            sizes="60x60"
-            href="/static/img/favicons/apple-icon-60x60.png"
-          />
-          <link
-            rel="apple-touch-icon"
-            sizes="72x72"
-            href="/static/img/favicons/apple-icon-72x72.png"
-          />
-          <link
-            rel="apple-touch-icon"
-            sizes="76x76"
-            href="/static/img/favicons/apple-icon-76x76.png"
-          />
-          <link
-            rel="apple-touch-icon"
+            rel="apple-touch-icon-precomposed"
             sizes="114x114"
-            href="/static/img/favicons/apple-icon-114x114.png"
+            href="/static/img/favicons/apple-touch-icon-114x114.png"
           />
           <link
-            rel="apple-touch-icon"
-            sizes="120x120"
-            href="/static/img/favicons/apple-icon-120x120.png"
+            rel="apple-touch-icon-precomposed"
+            sizes="72x72"
+            href="/static/img/favicons/apple-touch-icon-72x72.png"
           />
           <link
-            rel="apple-touch-icon"
+            rel="apple-touch-icon-precomposed"
             sizes="144x144"
-            href="/static/img/favicons/apple-icon-144x144.png"
+            href="/static/img/favicons/apple-touch-icon-144x144.png"
           />
           <link
-            rel="apple-touch-icon"
+            rel="apple-touch-icon-precomposed"
+            sizes="60x60"
+            href="/static/img/favicons/apple-touch-icon-60x60.png"
+          />
+          <link
+            rel="apple-touch-icon-precomposed"
+            sizes="120x120"
+            href="/static/img/favicons/apple-touch-icon-120x120.png"
+          />
+          <link
+            rel="apple-touch-icon-precomposed"
+            sizes="76x76"
+            href="/static/img/favicons/apple-touch-icon-76x76.png"
+          />
+          <link
+            rel="apple-touch-icon-precomposed"
             sizes="152x152"
-            href="/static/img/favicons/apple-icon-152x152.png"
-          />
-          <link
-            rel="apple-touch-icon"
-            sizes="180x180"
-            href="/static/img/favicons/apple-icon-180x180.png"
+            href="/static/img/favicons/apple-touch-icon-152x152.png"
           />
           <link
             rel="icon"
             type="image/png"
-            sizes="192x192"
-            href="/static/img/favicons/android-icon-192x192.png"
+            href="/static/img/favicons/favicon-196x196.png"
+            sizes="196x196"
           />
           <link
             rel="icon"
             type="image/png"
-            sizes="32x32"
-            href="/static/img/favicons/favicon-32x32.png"
-          />
-          <link
-            rel="icon"
-            type="image/png"
-            sizes="96x96"
             href="/static/img/favicons/favicon-96x96.png"
+            sizes="96x96"
           />
           <link
             rel="icon"
             type="image/png"
-            sizes="16x16"
-            href="/static/img/favicons/favicon-16x16.png"
+            href="/static/img/favicons/favicon-32x32.png"
+            sizes="32x32"
           />
-          <link rel="manifest" href="/manifest.json" />
-          <meta name="msapplication-TileColor" content="#ffffff" />
-          <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
-          <meta name="theme-color" content="#ffffff" />
+          <link
+            rel="icon"
+            type="image/png"
+            href="/static/img/favicons/favicon-16x16.png"
+            sizes="16x16"
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            href="/static/img/favicons/favicon-128.png"
+            sizes="128x128"
+          />
+          <meta name="msapplication-TileColor" content="#FFFFFF" />
+          <meta
+            name="msapplication-TileImage"
+            content="/static/img/favicons/mstile-144x144.png"
+          />
+          <meta
+            name="msapplication-square70x70logo"
+            content="/static/img/favicons/mstile-70x70.png"
+          />
+          <meta
+            name="msapplication-square150x150logo"
+            content="/static/img/favicons/mstile-150x150.png"
+          />
+          <meta
+            name="msapplication-wide310x150logo"
+            content="/static/img/favicons/mstile-310x150.png"
+          />
+          <meta
+            name="msapplication-square310x310logo"
+            content="/static/img/favicons/mstile-310x310.png"
+          />
+
           {/* Facebook Open Graph */}
           <meta content="en_US" property="og:locale" />
           <meta content="YingYang" property="og:site_name" />
