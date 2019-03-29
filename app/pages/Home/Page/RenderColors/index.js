@@ -21,8 +21,8 @@ const RenderColors = (): React.Node => (
           style={
             COLORS.WEDDING[color] === COLORS.WEDDING.GOLD
               ? {
-                  background: `radial-gradient(ellipse farthest-corner at right bottom, #472819 0%, #472819 8%, #d99e4c 30%, #a87b32 40%, transparent 80%),
-                radial-gradient(ellipse farthest-corner at left top, #865c25 0%, #e2b566 8%, #9f7c3c 25%, #2c1b14 62.5%, #2c1b14 100%)`,
+                  backgroundImage: 'url(/static/img/bronze.jpeg)',
+                  backgroundSize: 'cover',
                 }
               : {
                   backgroundColor: COLORS.WEDDING[color],

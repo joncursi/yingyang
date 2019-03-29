@@ -7,6 +7,8 @@ import css from 'styled-jsx/css';
 
 import DIMS from '../../../../constants/dims';
 
+const SWATCH_SIZE = 36;
+
 export default css`
   .container {
     align-items: center;
@@ -15,9 +17,9 @@ export default css`
     justify-content: center;
   }
   .color {
-    height: 30px;
+    height: ${SWATCH_SIZE}px;
     border-radius: 50%;
     margin: ${DIMS.LAYOUT_PADDING}px;
-    width: 30px;
+    width: ${SWATCH_SIZE}px;
   }
 `;
