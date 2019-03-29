@@ -9,10 +9,10 @@ import RenderMetaTags from '../../components/RenderMetaTags';
 
 const Meta = (): React.Node => (
   <RenderMetaTags
-    description="Wedding registry details coming soon!"
+    description="Check out our wedding registries on Amazon (online) and Target (online and in-store)!"
     imageUrl="/static/img/splashes/registry-1.png"
-    keywords={['registry', 'wedding registry']}
-    title="Wedding Registry"
+    keywords={['amazon', 'registry', 'target', 'wedding registry']}
+    title="Wedding Registry | Michelle Lombarski & Jonathan Cursi's Wedding Website"
   />
 );
 

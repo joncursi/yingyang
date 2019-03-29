@@ -97,7 +97,7 @@ const Page = (): React.Node => (
 
           <img
             alt="Hampton Inn & Suites, Media PA"
-            src="/static/img/splashes/accomodations-2.jpg"
+            src="/static/img/splashes/accomodations-1.jpg"
           />
         </div>
       }

@@ -20,7 +20,7 @@ const Meta = (): React.Node => (
       'hotel block',
       'media pa',
     ]}
-    title="Hotel Accomodations"
+    title="Hotel Accomodations | Michelle Lombarski & Jonathan Cursi's Wedding Website"
   />
 );
 

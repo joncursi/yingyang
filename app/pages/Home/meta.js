@@ -10,7 +10,7 @@ import RenderMetaTags from '../../components/RenderMetaTags';
 const Meta = (): React.Node => (
   <RenderMetaTags
     description="Michelle and Jon are getting married on Sept. 29, 2019! Click here for wedding details and more information."
-    imageUrl="/static/img/home-1.jpg"
+    imageUrl="/static/img/splashes/home-1.jpg"
     keywords={[
       'jon cursi',
       'jonathan cursi',
