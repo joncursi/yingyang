@@ -111,7 +111,7 @@ const Page = (): React.Node => (
               },
               {
                 imageSrc: '/static/img/headshots/noelle.jpg',
-                name: 'Noelle Vochansky',
+                name: 'Noelle Cursi',
               },
             ]}
           />
