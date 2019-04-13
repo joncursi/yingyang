@@ -9,4 +9,4 @@ flow-typed/custom/next.js
 emoji=true
 
 [version]
-^0.95.1
+^0.97.0
