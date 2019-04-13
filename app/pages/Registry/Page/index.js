@@ -27,7 +27,7 @@ const registries = [
       to: 'https://www.amazon.com/wedding/share/michelleandjon',
     },
     primaryText: 'Amazon',
-    secondaryText: 'Registry items available online only',
+    secondaryText: 'Registry items available online',
   },
   {
     Icon: Bullseye,
@@ -37,7 +37,7 @@ const registries = [
       to: 'https://www.target.com/gift-registry/gift/michelleandjon',
     },
     primaryText: 'Target',
-    secondaryText: 'Registry items available online or in-store',
+    secondaryText: 'Registry items available online and in-store',
   },
 ];
 
