@@ -100,7 +100,7 @@
     "dev": "node server.js",
     "postinstall": "npm run update:types",
     "production:deploy": "bundle exec fastlane yingyang production",
-    "production:deploy:now": "npm run build && now --debug --local-config=now.json.production",
+    "production:deploy:now": "npm run build && now --debug --local-config=now.production.json",
     "start": "node server.js",
     "test": "npm run test:lint",
     "test:lint": "eslint --rule 'flowtype-errors/show-errors: 0' --fix .",
