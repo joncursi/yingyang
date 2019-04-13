@@ -1,7 +1,5 @@
 *
-!/app/.next/**
-!/app/constants/routes.js
-!/app/static/**
+!app/**
 !package.json
 !routes.js
 !server.js
