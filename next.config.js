@@ -8,9 +8,20 @@
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const withCSS = require('@zeit/next-css');
 
+if (process.env.NODE_ENV !== 'production') {
+  // eslint-disable-next-line global-require
+  require('now-env');
+}
+
 // eslint-disable-next-line immutable/no-mutation
 module.exports = withCSS({
-  // Disable file-system routing of `pages` directory
+  // environment variables that are made accessible to the client
+  env: {
+    GOOGLE_ANALYTICS_TRACKING_ID_WEB:
+      process.env.GOOGLE_ANALYTICS_TRACKING_ID_WEB,
+    // NODE_ENV: process.env.NODE_ENV,
+  },
+  // disable file-system routing of `pages` directory
   useFileSystemPublicRoutes: false,
   webpack(config) {
     // use the bundle analyzer if `ANALYZE` is enabled
@@ -25,12 +36,6 @@ module.exports = withCSS({
     }
 
     config.module.rules.push(
-      // support .mjs files
-      {
-        test: /\.mjs$/,
-        type: 'javascript/auto',
-        use: [],
-      },
       // load images
       {
         test: /\.(jpe?g|png|svg|gif)$/,

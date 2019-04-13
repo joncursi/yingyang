@@ -9,7 +9,6 @@ const express = require('express');
 const nextjs = require('next');
 const sm = require('sitemap');
 
-const ENV = require('./app/constants/env');
 const nextRoutes = require('./routes');
 const ROUTES = require('./app/constants/routes');
 
@@ -18,7 +17,7 @@ const expressApp = express();
 // Create the next app
 const nextApp = nextjs({
   // Set the `dev` flag in development to enable Hot Module Replacement
-  dev: ENV.NODE_ENV === 'development',
+  dev: process.env.NODE_ENV === 'development',
   // Custom `pages` location
   dir: './app',
 });
@@ -80,7 +79,7 @@ expressApp.get('/robots.txt', (req, res) => {
   res.setHeader('content-type', 'text/plain');
   res.send(`User-agent: *
 ${
-  ENV.NODE_ENV === 'production'
+  process.env.NODE_ENV === 'production'
     ? `Sitemap: ${hostname}/sitemap.xml`
     : 'Disallow: /'
 }
@@ -94,12 +93,12 @@ expressApp.get('*', (req, res) => nextHandle(req, res));
 nextApp
   .prepare()
   .then(() =>
-    expressApp.listen(ENV.PORT, err => {
+    expressApp.listen(process.env.PORT, err => {
       if (err) {
         throw err;
       }
       // eslint-disable-next-line no-console
-      console.log(`> Serving on http://localhost:${ENV.PORT}`);
+      console.log(`> Serving on http://localhost:${process.env.PORT}`);
     }),
   )
   .catch(error => {
