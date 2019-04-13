@@ -91,7 +91,6 @@
   "scripts": {
     "analyze": "cross-env ANALYZE=1 next build app",
     "build": "NODE_OPTIONS=--max_old_space_size=8192 next build app",
-    "now-build": "echo \"Don't do anything here\"",
     "cover:open": "npm-run-all cover:open:*",
     "cover:open:types": "opn $npm_package_config_coverageDir/flow-report/index.html",
     "cover:open:unit": "opn $npm_package_config_coverageDir/lcov-report/index.html",
@@ -100,7 +99,7 @@
     "dev": "node server.js",
     "postinstall": "npm run update:types",
     "production:deploy": "bundle exec fastlane yingyang production",
-    "production:deploy:now": "npm run build && now --debug --local-config=now.production.json",
+    "production:deploy:now": "now --local-config=now.production.json",
     "start": "node server.js",
     "test": "npm run test:lint",
     "test:lint": "eslint --rule 'flowtype-errors/show-errors: 0' --fix .",
