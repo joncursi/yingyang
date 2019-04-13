@@ -86,20 +86,9 @@
   },
   "name": "yingyang",
   "now": {
-    "engines": {
-      "node": ">=9.2.1"
-    },
-    "files": [
-      "./app/.next",
-      "./app/constants/env.js",
-      "./app/constants/routes.js",
-      "./app/static",
-      "./package.json",
-      "./routes.js",
-      "./server.js"
-    ],
     "name": "YingYang",
-    "scope": "joncursi"
+    "scope": "joncursi",
+    "version": 2
   },
   "repository": {
     "type": "git",
