@@ -8,9 +8,17 @@
 import * as React from 'react';
 import DocumentImport, { Head, Main, NextScript } from 'next/document';
 import flush from 'styled-jsx/server';
+import htmlescape from 'htmlescape';
 
 import type { ContextFlowType } from '../types';
 import COLORS from '../constants/colors';
+
+// choose which env variables should be available on the client
+const { GOOGLE_ANALYTICS_TRACKING_ID_WEB, NODE_ENV } = process.env;
+const ENV = {
+  GOOGLE_ANALYTICS_TRACKING_ID_WEB,
+  NODE_ENV,
+};
 
 // Force Next-generated DOM elements to fill their parent's height.
 // Not required for using of react-native-web, but helps normalize
@@ -132,7 +140,7 @@ class Document extends DocumentImport<PropsFlowType> {
           <meta content="#ffffff" name="theme-color" />
           <meta
             content={
-              process.env.NODE_ENV === 'production'
+              ENV.NODE_ENV === 'production'
                 ? 'index,follow'
                 : 'noindex,nofollow'
             }
@@ -277,6 +285,14 @@ class Document extends DocumentImport<PropsFlowType> {
 
         <body bgColor={COLORS.SCREEN_BACKGROUND} style={{ height: '100%' }}>
           <Main />
+
+          {/* eslint-disable react/no-danger */}
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `__ENV__ = ${htmlescape(ENV)}`,
+            }}
+          />
+          {/* eslint-enable react/no-danger */}
 
           <NextScript />
         </body>

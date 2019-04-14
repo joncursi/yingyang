@@ -1,7 +1,0 @@
-*
-!app
-!app/**
-!next.config.js
-!package.json
-!routes.js
-!server.js

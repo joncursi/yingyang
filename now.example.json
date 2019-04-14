@@ -1,8 +1,0 @@
-{
-  "env": {
-    "ANALYZE": false,
-    "GOOGLE_ANALYTICS_TRACKING_ID_WEB": "<TRACKING_ID>",
-    "NODE_ENV": "development",
-    "PORT": "3000"
-  }
-}

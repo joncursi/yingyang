@@ -1,6 +1,10 @@
 # Code Coverage
 coverage
 
+# Environment variables
+.env
+.env.production
+
 # Fastlane
 fastlane/.env
 fastlane/README.md
@@ -8,10 +12,6 @@ fastlane/report.xml
 
 # Next.js
 app/.next
-
-# Now / environment variables
-now.json
-now.production.json
 
 # NPM
 node_modules

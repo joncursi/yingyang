@@ -7,9 +7,11 @@
 
 import ReactGA from 'react-ga';
 
+import ENV from '../constants/env';
+
 export const initGA = () => {
-  ReactGA.initialize(process.env.GOOGLE_ANALYTICS_TRACKING_ID_WEB, {
-    debug: process.env.NODE_ENV === 'development',
+  ReactGA.initialize(ENV.GOOGLE_ANALYTICS_TRACKING_ID_WEB, {
+    debug: ENV.NODE_ENV === 'development',
   });
 };
 
