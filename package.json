@@ -124,5 +124,5 @@
     "test:types": "flow",
     "update:types": "[ \"$NODE_ENV\" = production ] || flow-typed install --overwrite"
   },
-  "version": "4.3.12"
+  "version": "4.3.13"
 }
