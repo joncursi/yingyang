@@ -87,22 +87,6 @@
     "*.md": "markdownlint --config node_modules/@joncursi/eslint-config/markdownlint.config.json"
   },
   "name": "yingyang",
-  "now": {
-    "engines": {
-      "node": ">=9.2.1"
-    },
-    "files": [
-      "./app/.next",
-      "./app/constants/env.js",
-      "./app/constants/routes.js",
-      "./app/static",
-      "./package.json",
-      "./routes.js",
-      "./server.js"
-    ],
-    "name": "yingyang",
-    "version": 1
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/joncursi/yingyang.git"
