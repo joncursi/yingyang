@@ -16,6 +16,12 @@ routes.add({
 });
 
 routes.add({
+  name: ROUTES.DETAILS,
+  page: 'Details',
+  pattern: '/details',
+});
+
+routes.add({
   name: ROUTES.HOME,
   page: 'Home',
   pattern: '/',

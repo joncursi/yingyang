@@ -9,6 +9,7 @@ import * as React from 'react';
 import { animateScroll } from 'react-scroll';
 import GiftIcon from 'mdi-material-ui/Gift';
 import HotelIcon from 'mdi-material-ui/Hotel';
+import InformationOutlineIcon from 'mdi-material-ui/InformationOutline';
 import Paper from '@material-ui/core/Paper';
 
 import Link from '../Link';
@@ -95,11 +96,18 @@ class Header extends React.Component<PropsFlowType, StateFlowType> {
 
     const leftNavLinks = [
       {
+        Icon: InformationOutlineIcon,
+        id: 'details',
+        isActiveRoute: activeRoute === ROUTES.DETAILS,
+        route: ROUTES.DETAILS,
+        title: 'Details',
+      },
+      {
         Icon: HotelIcon,
         id: 'accomodations',
         isActiveRoute: activeRoute === ROUTES.ACCOMODATIONS,
         route: ROUTES.ACCOMODATIONS,
-        title: 'Hotel Accomodations',
+        title: 'Accomodations',
       },
     ];
 
@@ -109,7 +117,7 @@ class Header extends React.Component<PropsFlowType, StateFlowType> {
         id: 'registry',
         isActiveRoute: activeRoute === ROUTES.REGISTRY,
         route: ROUTES.REGISTRY,
-        title: 'Wedding Registry',
+        title: 'Registry',
       },
     ];
 
