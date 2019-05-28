@@ -28,6 +28,12 @@ routes.add({
 });
 
 routes.add({
+  name: ROUTES.PHOTOS,
+  page: 'Photos',
+  pattern: '/photos',
+});
+
+routes.add({
   name: ROUTES.REGISTRY,
   page: 'Registry',
   pattern: '/registry',

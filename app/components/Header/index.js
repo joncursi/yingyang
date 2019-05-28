@@ -7,6 +7,7 @@
 
 import * as React from 'react';
 import { animateScroll } from 'react-scroll';
+import CameraIcon from 'mdi-material-ui/Camera';
 import GiftIcon from 'mdi-material-ui/Gift';
 import HotelIcon from 'mdi-material-ui/Hotel';
 import InformationOutlineIcon from 'mdi-material-ui/InformationOutline';
@@ -118,6 +119,13 @@ class Header extends React.Component<PropsFlowType, StateFlowType> {
         isActiveRoute: activeRoute === ROUTES.REGISTRY,
         route: ROUTES.REGISTRY,
         title: 'Registry',
+      },
+      {
+        Icon: CameraIcon,
+        id: 'photos',
+        isActiveRoute: activeRoute === ROUTES.PHOTOS,
+        route: ROUTES.PHOTOS,
+        title: 'Photos',
       },
     ];
 

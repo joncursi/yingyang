@@ -58,7 +58,7 @@ export default css`
     pointer-events: all;
   }
 
-  @media (min-width: ${DIMS.BREAKPOINTS.SMALL}px) {
+  @media (min-width: ${DIMS.BREAKPOINTS.MEDIUM}px) {
     .container.is-active {
       display: none;
     }

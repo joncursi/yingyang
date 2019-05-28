@@ -66,7 +66,7 @@ export default css`
     bottom: -7px;
   }
 
-  @media (min-width: ${DIMS.BREAKPOINTS.SMALL}px) {
+  @media (min-width: ${DIMS.BREAKPOINTS.MEDIUM}px) {
     .hamburger {
       display: none;
       pointer-events: none;

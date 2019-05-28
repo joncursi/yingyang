@@ -37,25 +37,12 @@ export default css`
     height: 100%;
     flex-direction: row;
   }
-  .listItemIconContainer {
-    display: none;
-  }
   .listItemTitle {
     display: none;
-    margin-left: 10px;
     user-select: none;
   }
 
-  @media (min-width: ${DIMS.BREAKPOINTS.SMALL}px) {
-    .listItemIconContainer {
-      display: initial;
-    }
-  }
-
   @media (min-width: ${DIMS.BREAKPOINTS.MEDIUM}px) {
-    .listItemIconContainer {
-      display: none;
-    }
     .listItemTitle {
       display: initial;
     }

@@ -13,14 +13,12 @@ import Link from '../../Link';
 import styles, { activeLinkStyles, linkStyles } from './styles';
 
 type PropsFlowType = {
-  Icon: Function,
   isActiveRoute: boolean,
   route: string,
   title: string,
 };
 
 const NavItem = ({
-  Icon,
   title,
   isActiveRoute,
   route,
@@ -38,10 +36,6 @@ const NavItem = ({
         }}
         to={route}
       >
-        <div className="listItemIconContainer">
-          <Icon size={28} />
-        </div>
-
         {title && (
           <Typography variant="subtitle1">
             <span className="listItemTitle">{title}</span>

@@ -8,5 +8,6 @@ module.exports = {
   ACCOMODATIONS: 'ACCOMODATIONS',
   DETAILS: 'DETAILS',
   HOME: 'HOME',
+  PHOTOS: 'PHOTOS',
   REGISTRY: 'REGISTRY',
 };

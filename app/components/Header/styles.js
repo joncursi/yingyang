@@ -82,7 +82,7 @@ export default css`
     display: none;
   }
 
-  @media (min-width: ${DIMS.BREAKPOINTS.SMALL}px) {
+  @media (min-width: ${DIMS.BREAKPOINTS.MEDIUM}px) {
     .navItem {
       display: initial;
     }

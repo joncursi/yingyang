@@ -16,7 +16,7 @@ import styles from './styles';
 type PropsFlowType = {
   activeRoute: string,
   children: React.Node,
-  rightContainer: React.Node,
+  rightContainer?: React.Node,
   rightContainerStyle?: Object,
 };
 
@@ -24,6 +24,7 @@ class PageLayout extends React.Component<PropsFlowType> {
   props: PropsFlowType;
 
   static defaultProps = {
+    rightContainer: undefined,
     rightContainerStyle: undefined,
   };
 
@@ -59,9 +60,11 @@ class PageLayout extends React.Component<PropsFlowType> {
             <Footer />
           </div>
 
-          <div className="containerRight" style={rightContainerStyle}>
-            {rightContainer}
-          </div>
+          {rightContainer && (
+            <div className="containerRight" style={rightContainerStyle}>
+              {rightContainer}
+            </div>
+          )}
         </div>
       </>
     );
