@@ -5,7 +5,7 @@
 
 // eslint-disable-next-line immutable/no-mutation
 module.exports = {
-  ACCOMODATIONS: 'ACCOMODATIONS',
+  ACCOMMODATIONS: 'ACCOMMODATIONS',
   DETAILS: 'DETAILS',
   HOME: 'HOME',
   PHOTOS: 'PHOTOS',

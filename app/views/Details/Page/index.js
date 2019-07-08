@@ -68,7 +68,7 @@ const Page = (): React.Node => (
               const children = (
                 <ListItem
                   button={!!detail.link}
-                  classes={{ root: 'accomodationsListItemRoot' }}
+                  classes={{ root: 'accommodationsListItemRoot' }}
                   divider={i !== details.length - 1}
                   key={detail.id}
                 >

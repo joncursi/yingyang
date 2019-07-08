@@ -90,14 +90,14 @@ const Page = (): React.Node => (
     <style jsx>{styles}</style>
 
     <PageLayout
-      activeRoute={ROUTES.ACCOMODATIONS}
+      activeRoute={ROUTES.ACCOMMODATIONS}
       rightContainer={
         <div className="rightContainer">
           <div className="overlay" />
 
           <img
             alt="Hampton Inn & Suites, Media PA"
-            src="/static/img/splashes/accomodations-1.jpg"
+            src="/static/img/splashes/accommodations-1.jpg"
           />
         </div>
       }
@@ -109,7 +109,7 @@ const Page = (): React.Node => (
               const children = (
                 <ListItem
                   button={!!detail.link}
-                  classes={{ root: 'accomodationsListItemRoot' }}
+                  classes={{ root: 'accommodationsListItemRoot' }}
                   divider={i !== details.length - 1}
                   key={detail.id}
                 >

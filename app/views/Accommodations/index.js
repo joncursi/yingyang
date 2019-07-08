@@ -8,7 +8,7 @@ import * as React from 'react';
 import Meta from './meta';
 import Page from './Page';
 
-const Accomodations = (): React.Node => (
+const Accommodations = (): React.Node => (
   <>
     <Page />
 
@@ -16,4 +16,4 @@ const Accomodations = (): React.Node => (
   </>
 );
 
-export default Accomodations;
+export default Accommodations;

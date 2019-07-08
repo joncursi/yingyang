@@ -10,9 +10,9 @@ const ROUTES = require('./app/constants/routes');
 const routes = nextRoutes();
 
 routes.add({
-  name: ROUTES.ACCOMODATIONS,
-  page: 'Accomodations',
-  pattern: '/accomodations',
+  name: ROUTES.ACCOMMODATIONS,
+  page: 'Accommodations',
+  pattern: '/accommodations',
 });
 
 routes.add({

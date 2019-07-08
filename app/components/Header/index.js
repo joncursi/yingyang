@@ -105,10 +105,10 @@ class Header extends React.Component<PropsFlowType, StateFlowType> {
       },
       {
         Icon: HotelIcon,
-        id: 'accomodations',
-        isActiveRoute: activeRoute === ROUTES.ACCOMODATIONS,
-        route: ROUTES.ACCOMODATIONS,
-        title: 'Accomodations',
+        id: 'accommodations',
+        isActiveRoute: activeRoute === ROUTES.ACCOMMODATIONS,
+        route: ROUTES.ACCOMMODATIONS,
+        title: 'Accommodations',
       },
     ];
 

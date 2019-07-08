@@ -42,7 +42,7 @@ expressApp.get('/sitemap.xml', (req, res) => {
         });
         break;
       }
-      case route.name === ROUTES.ACCOMODATIONS: {
+      case route.name === ROUTES.ACCOMMODATIONS: {
         sitemap.add({
           changefreq: 'monthly',
           priority: 0.5,

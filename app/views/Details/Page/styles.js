@@ -8,7 +8,7 @@ import css from 'styled-jsx/css';
 import DIMS from '../../../constants/dims';
 
 export const globalStyles = css.global`
-  .accomodationsListItemRoot {
+  .accommodationsListItemRoot {
     padding-right: 0;
   }
 `;
