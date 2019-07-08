@@ -1,6 +1,6 @@
 {
   "engines": {
-    "node": ">=9.2.1"
+    "node": ">=10.16.0"
   },
   "files": [
     "./app/.next",
