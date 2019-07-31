@@ -24,7 +24,7 @@ const details = [
     Icon: AccountTieIcon,
     id: 'attire',
     primaryText: 'Attire',
-    secondaryText: 'Semi-formal',
+    secondaryText: 'Formal',
   },
   {
     Icon: PineTreeIcon,
