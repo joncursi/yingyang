@@ -34,7 +34,7 @@
     "recompose": "0.30.0",
     "sitemap": "2.1.0",
     "styled-jsx": "3.2.1",
-    "validator": "10.11.0"
+    "validator": "13.7.0"
   },
   "description": "💍 Wedding website for Michelle and I",
   "devDependencies": {
